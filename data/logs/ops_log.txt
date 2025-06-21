@@ -30,3 +30,260 @@
 [2025-06-20 02:12:38] Mongo URI appears configured.
 [2025-06-20 02:12:44] Full stack zone selected. You may need multiple tabs.
 [2025-06-20 02:12:44] >>> CODE RED COMPLETE <<<
+[2025-06-20 02:15:59] >>> CODE RED INITIATED <<<
+[2025-06-20 02:15:59] System check complete.
+[2025-06-20 02:15:59] Pip offloader found.
+[2025-06-20 02:16:05] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.44MB
+[2025-06-20 02:16:05] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 02:16:05] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 02:16:05.157124']' returned non-zero exit status 1.
+[2025-06-20 02:16:05] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 02:16:05] Pip offloader executed.
+[2025-06-20 02:16:05] GitHub connected.
+[2025-06-20 02:16:05] Mongo URI appears configured.
+[2025-06-20 02:16:19] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 02:16:19] >>> CODE RED COMPLETE <<<
+[2025-06-20 02:39:29] >>> CODE RED INITIATED <<<
+[2025-06-20 02:39:29] System check complete.
+[2025-06-20 02:39:29] Pip offloader found.
+[2025-06-20 02:39:34] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.48MB
+[2025-06-20 02:39:34] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 02:39:34] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 02:39:34.910681']' returned non-zero exit status 1.
+[2025-06-20 02:39:34] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 02:39:34] Pip offloader executed.
+[2025-06-20 02:39:34] GitHub connected.
+[2025-06-20 02:39:34] Mongo URI appears configured.
+[2025-06-20 02:39:45] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 02:39:45] >>> CODE RED COMPLETE <<<
+[2025-06-20 02:50:36] >>> CODE RED INITIATED <<<
+[2025-06-20 02:50:37] System check complete.
+[2025-06-20 02:50:37] Pip offloader found.
+[2025-06-20 02:50:42] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.49MB
+[2025-06-20 02:50:42] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 02:50:42] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 02:50:42.577507']' returned non-zero exit status 1.
+[2025-06-20 02:50:42] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 02:50:42] Pip offloader executed.
+[2025-06-20 02:50:42] GitHub connected.
+[2025-06-20 02:50:42] Mongo URI appears configured.
+[2025-06-20 02:50:48] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 02:50:48] >>> CODE RED COMPLETE <<<
+[2025-06-20 02:52:17] >>> CODE RED INITIATED <<<
+[2025-06-20 02:52:17] System check complete.
+[2025-06-20 02:52:17] Pip offloader found.
+[2025-06-20 02:52:22] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.49MB
+[2025-06-20 02:52:22] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 02:52:22] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 02:52:22.847326']' returned non-zero exit status 1.
+[2025-06-20 02:52:22] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 02:52:22] Pip offloader executed.
+[2025-06-20 02:52:22] GitHub connected.
+[2025-06-20 02:52:22] Mongo URI appears configured.
+[2025-06-20 02:52:31] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 02:52:31] >>> CODE RED COMPLETE <<<
+[2025-06-20 02:53:52] >>> CODE RED INITIATED <<<
+[2025-06-20 02:53:53] System check complete.
+[2025-06-20 02:53:53] Pip offloader found.
+[2025-06-20 02:53:58] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.49MB
+[2025-06-20 02:53:58] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 02:53:58] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 02:53:58.429986']' returned non-zero exit status 1.
+[2025-06-20 02:53:58] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 02:53:58] Pip offloader executed.
+[2025-06-20 02:53:58] GitHub connected.
+[2025-06-20 02:53:58] Mongo URI appears configured.
+[2025-06-20 02:54:05] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 02:54:05] >>> CODE RED COMPLETE <<<
+[2025-06-20 02:55:26] >>> CODE RED INITIATED <<<
+[2025-06-20 02:55:27] System check complete.
+[2025-06-20 02:55:27] Pip offloader found.
+[2025-06-20 02:55:32] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.49MB
+[2025-06-20 02:55:32] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 02:55:32] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 02:55:32.535960']' returned non-zero exit status 1.
+[2025-06-20 02:55:32] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 02:55:32] Pip offloader executed.
+[2025-06-20 02:55:32] GitHub connected.
+[2025-06-20 02:55:32] Mongo URI appears configured.
+[2025-06-20 02:55:37] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 02:55:37] >>> CODE RED COMPLETE <<<
+[2025-06-20 03:01:10] >>> CODE RED INITIATED <<<
+[2025-06-20 03:01:10] System check complete.
+[2025-06-20 03:01:10] Pip offloader found.
+[2025-06-20 03:01:15] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.50MB
+[2025-06-20 03:01:15] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 03:01:15] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 03:01:15.791612']' returned non-zero exit status 1.
+[2025-06-20 03:01:15] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 03:01:15] Pip offloader executed.
+[2025-06-20 03:01:15] GitHub connected.
+[2025-06-20 03:01:15] Mongo URI appears configured.
+[2025-06-20 03:01:19] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 03:01:19] >>> CODE RED COMPLETE <<<
+[2025-06-20 03:09:04] >>> CODE RED INITIATED <<<
+[2025-06-20 03:09:04] System check complete.
+[2025-06-20 03:09:04] Pip offloader found.
+[2025-06-20 03:09:10] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.50MB
+[2025-06-20 03:09:10] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 03:09:10] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 03:09:10.298056']' returned non-zero exit status 1.
+[2025-06-20 03:09:10] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 03:09:10] Pip offloader executed.
+[2025-06-20 03:09:10] GitHub connected.
+[2025-06-20 03:09:10] Mongo URI appears configured.
+[2025-06-20 03:09:17] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 03:09:17] >>> CODE RED COMPLETE <<<
+[2025-06-20 03:14:42] >>> CODE RED INITIATED <<<
+[2025-06-20 03:14:42] System check complete.
+[2025-06-20 03:14:42] Pip offloader found.
+[2025-06-20 03:14:48] [OFFLOADER] Mirror Size: 0.00MB | Disk Used: 268455497.51MB
+[2025-06-20 03:14:48] [OFFLOADER] Threshold exceeded. Triggering GitHub push and cleanup...
+[2025-06-20 03:14:48] [OFFLOADER] Git push failed: Command '['git', 'commit', '-m', '🧹 Auto-push at 2025-06-20 03:14:48.390046']' returned non-zero exit status 1.
+[2025-06-20 03:14:48] [OFFLOADER] Local pip-mirror cleared.
+[2025-06-20 03:14:48] Pip offloader executed.
+[2025-06-20 03:14:48] GitHub connected.
+[2025-06-20 03:14:48] Mongo URI appears configured.
+[2025-06-20 03:14:50] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 03:14:50] >>> CODE RED COMPLETE <<<
+[2025-06-20 03:59:39] >>> CODE RED INITIATED <<<
+[2025-06-20 03:59:39] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 03:59:39] Pip offloader missing. Generating stub...
+[2025-06-20 03:59:39] Created pip_offloader.py
+[2025-06-20 03:59:39] Pip offloader executed.
+[2025-06-20 03:59:39] GitHub NOT connected.
+[2025-06-20 03:59:39] Mongo URI appears configured.
+[2025-06-20 03:59:51] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 03:59:51] >>> CODE RED COMPLETE <<<
+[2025-06-20 04:08:43] >>> CODE RED INITIATED <<<
+[2025-06-20 04:08:43] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 04:08:43] Pip offloader missing. Generating stub...
+[2025-06-20 04:08:43] Created pip_offloader.py
+[2025-06-20 04:08:43] Pip offloader executed.
+[2025-06-20 04:08:43] GitHub NOT connected.
+[2025-06-20 04:08:43] Mongo URI appears configured.
+[2025-06-20 04:08:47] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 04:08:47] >>> CODE RED COMPLETE <<<
+[2025-06-20 04:31:35] >>> CODE RED INITIATED <<<
+[2025-06-20 04:31:35] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 04:31:35] Pip offloader found.
+[2025-06-20 04:31:35] Pip offloader executed.
+[2025-06-20 04:31:35] GitHub NOT connected.
+[2025-06-20 04:31:35] Mongo URI appears configured.
+[2025-06-20 04:31:38] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 04:31:38] >>> CODE RED COMPLETE <<<
+[2025-06-20 04:32:06] >>> CODE RED INITIATED <<<
+[2025-06-20 04:32:06] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 04:32:06] Pip offloader found.
+[2025-06-20 04:32:06] Pip offloader executed.
+[2025-06-20 04:32:06] GitHub NOT connected.
+[2025-06-20 04:32:06] Mongo URI appears configured.
+[2025-06-20 04:32:11] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 04:32:11] >>> CODE RED COMPLETE <<<
+[2025-06-20 06:04:05] >>> CODE RED INITIATED <<<
+[2025-06-20 06:04:05] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 06:04:05] Pip offloader found.
+[2025-06-20 06:04:05] Pip offloader executed.
+[2025-06-20 06:04:05] GitHub NOT connected.
+[2025-06-20 06:04:05] Mongo URI appears configured.
+[2025-06-20 06:04:08] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 06:04:08] >>> CODE RED COMPLETE <<<
+[2025-06-20 21:27:19] >>> CODE RED INITIATED <<<
+[2025-06-20 21:27:19] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 21:27:19] Pip offloader found.
+[2025-06-20 21:27:19] Pip offloader executed.
+[2025-06-20 21:27:19] GitHub NOT connected.
+[2025-06-20 21:27:19] Mongo URI appears configured.
+[2025-06-20 21:27:22] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 21:27:22] >>> CODE RED COMPLETE <<<
+[2025-06-20 21:47:25] >>> CODE RED INITIATED <<<
+[2025-06-20 21:47:25] System check failed: Command '['python3', 'status_check.py']' returned non-zero exit status 2.
+[2025-06-20 21:47:25] Pip offloader missing. Generating stub...
+[2025-06-20 21:47:25] Created pip_offloader.py
+[2025-06-20 21:47:25] Pip offloader executed.
+[2025-06-20 21:47:25] GitHub NOT connected.
+[2025-06-20 21:47:25] Mongo URI appears configured.
+[2025-06-20 21:47:26] Full stack zone selected. You may need multiple tabs.
+[2025-06-20 21:47:26] >>> CODE RED COMPLETE <<<
+[2025-06-20 22:19:34] 🧠 Running system diagnostics...
+[2025-06-20 22:19:34] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:19:34] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:19:34] Logs written to ops_log.txt
+[2025-06-20 22:19:34] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:19:34] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:19:38] 🧠 Running system diagnostics...
+[2025-06-20 22:19:38] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:19:38] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:19:38] Logs written to ops_log.txt
+[2025-06-20 22:19:38] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:19:38] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:19:44] 🧠 Running system diagnostics...
+[2025-06-20 22:19:44] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:19:44] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:19:44] Logs written to ops_log.txt
+[2025-06-20 22:19:44] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:19:44] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:19:46] 🧠 Running system diagnostics...
+[2025-06-20 22:19:46] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:19:46] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:19:46] Logs written to ops_log.txt
+[2025-06-20 22:19:46] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:19:46] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:19:53] 🧠 Running system diagnostics...
+[2025-06-20 22:19:53] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:19:53] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:19:53] Logs written to ops_log.txt
+[2025-06-20 22:19:53] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:19:53] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:01] 🧠 Running system diagnostics...
+[2025-06-20 22:23:01] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:01] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:01] Logs written to ops_log.txt
+[2025-06-20 22:23:01] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:01] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:03] 🧠 Running system diagnostics...
+[2025-06-20 22:23:03] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:03] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:03] Logs written to ops_log.txt
+[2025-06-20 22:23:03] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:03] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:04] 🧠 Running system diagnostics...
+[2025-06-20 22:23:04] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:04] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:04] Logs written to ops_log.txt
+[2025-06-20 22:23:04] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:04] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:06] 🧠 Running system diagnostics...
+[2025-06-20 22:23:06] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:06] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:06] Logs written to ops_log.txt
+[2025-06-20 22:23:06] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:06] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:08] 🧠 Running system diagnostics...
+[2025-06-20 22:23:08] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:08] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:08] Logs written to ops_log.txt
+[2025-06-20 22:23:08] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:08] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:09] 🧠 Running system diagnostics...
+[2025-06-20 22:23:09] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:09] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:09] Logs written to ops_log.txt
+[2025-06-20 22:23:09] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:09] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:23:10] 🧠 Running system diagnostics...
+[2025-06-20 22:23:10] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:23:10] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:23:10] Logs written to ops_log.txt
+[2025-06-20 22:23:10] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:23:10] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:26:03] 🧠 Running system diagnostics...
+[2025-06-20 22:26:03] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:26:03] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:26:03] Logs written to ops_log.txt
+[2025-06-20 22:26:03] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:26:03] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:26:10] 🧠 Running system diagnostics...
+[2025-06-20 22:26:10] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:26:10] 🧰 System readiness check complete for: SKIP zone
+[2025-06-20 22:26:10] Logs written to ops_log.txt
+[2025-06-20 22:26:10] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:26:10] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO
+[2025-06-20 22:36:45] 🧠 Running system diagnostics...
+[2025-06-20 22:36:45] python3: can't open file '/home/lucasreynolds1988/status_check.py': [Errno 2] No such file or directory
+[2025-06-20 22:36:45] 🧰 System readiness check complete for: BOTH zone
+[2025-06-20 22:36:45] Logs written to ops_log.txt
+[2025-06-20 22:36:45] ⚠️ Skipping GitHub push: /home/lucasreynolds1988/.profile is outside the repo
+[2025-06-20 22:36:45] 🚚 Routing /home/lucasreynolds1988/.profile → MONGO

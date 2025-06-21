@@ -1,15 +1,24 @@
+# ~/Soap/rotor_fusion.py
+
 import os
-import shutil
 import subprocess
 import hashlib
 import json
 from pathlib import Path
+import shutil
+import base64
+from pymongo import MongoClient
 
+# === CONFIGURATION ===
 GITHUB_REPO_DIR = "/home/lucasreynolds1988/Soap"
 GCS_BUCKET = "gs://ati-rotor-bucket/fusion-backup"
 FUSION_LOG = os.path.expanduser("~/Soap/.fusion-log.json")
+MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
+MONGO_DB = "fusion"
+MONGO_COLL = "files"
 
-# Track already pushed files (sha256)
+# === CORE FUNCTIONS ===
+
 def load_log():
     if os.path.exists(FUSION_LOG):
         with open(FUSION_LOG, "r") as f:
@@ -35,25 +44,61 @@ def classify_file(file_path):
 
 def git_push(file_path):
     try:
-        rel_path = os.path.relpath(file_path, GITHUB_REPO_DIR)
-        subprocess.run(["git", "-C", GITHUB_REPO_DIR, "add", rel_path])
-        subprocess.run(["git", "-C", GITHUB_REPO_DIR, "commit", "-m", f"🧠 Fusion: {rel_path}"])
-        subprocess.run(["git", "-C", GITHUB_REPO_DIR, "push", "origin", "main"])
+        file_path = Path(file_path).resolve()
+        repo_root = Path(GITHUB_REPO_DIR).resolve()
+        if not str(file_path).startswith(str(repo_root)):
+            print(f"⚠️ Skipping GitHub push: {file_path} is outside the repo")
+            return False
+
+        rel_path = os.path.relpath(file_path, repo_root)
+        subprocess.run(["git", "-C", str(repo_root), "add", rel_path], check=True)
+        subprocess.run(["git", "-C", str(repo_root), "commit", "-m", f"🧠 Fusion: {rel_path}"], check=True)
+        subprocess.run(["git", "-C", str(repo_root), "push", "origin", "main"], check=True)
         return True
     except Exception as e:
-        print(f"Git push failed for {file_path}: {e}")
+        print(f"❌ Git push failed for {file_path}: {e}")
         return False
 
-def mongo_stub(file_path):
-    print(f"[Mongo Stub] Marking {file_path.name} for MongoDB ingest")
-    return True  # placeholder for real logic
+def mongo_upload(file_path):
+    try:
+        client = MongoClient(MONGO_URI)
+        db = client[MONGO_DB]
+        collection = db[MONGO_COLL]
+
+        CHUNK_SIZE = 13 * 1024 * 1024  # 13MB
+        with open(file_path, "rb") as f:
+            data = f.read()
+
+        file_id = hashlib.sha1(data).hexdigest()
+        chunks = [base64.b64encode(data[i:i + CHUNK_SIZE]).decode("utf-8")
+                  for i in range(0, len(data), CHUNK_SIZE)]
+
+        for index, chunk in enumerate(chunks):
+            doc = {
+                "file_id": file_id,
+                "filename": file_path.name,
+                "path": str(file_path),
+                "chunk_index": index,
+                "chunk_data": chunk,
+                "total_chunks": len(chunks)
+            }
+            collection.insert_one(doc)
+
+        print(f"[MongoDB] ✅ Uploaded in {len(chunks)} chunks: {file_path.name}")
+        return True
+
+    except Exception as e:
+        print(f"❌ MongoDB upload failed for {file_path}: {e}")
+        return False
+
 
 def gcs_upload(file_path):
     try:
         subprocess.run(["gsutil", "cp", str(file_path), GCS_BUCKET], check=True)
         return True
     except subprocess.CalledProcessError as e:
-        print(f"GCS upload failed: {file_path} — {e}")
+        print(f"❌ GCS upload failed: {file_path}\n{e}")
+        print("💡 TIP: Run `gsutil mb GCS_BUCKET_URL` to create the bucket if missing.")
         return False
 
 def process_file(file_path, log):
@@ -69,8 +114,11 @@ def process_file(file_path, log):
 
     if kind == "github":
         success = git_push(file_path)
+        if not success:
+            print(f"⏪ Fallback to GCS: {file_path}")
+            success = gcs_upload(file_path)
     elif kind == "mongo":
-        success = mongo_stub(file_path)
+        success = mongo_upload(file_path)
     elif kind == "gcs":
         success = gcs_upload(file_path)
 
@@ -99,6 +147,22 @@ def scan_and_run():
     save_log(log)
     print("✅ Fusion rotor complete.")
 
-if __name__ == "__main__":
+def run_system_check():
+    print("\n🧠 Running system diagnostics...")
+    try:
+        result = subprocess.run(["python3", "status_check.py"], capture_output=True)
+        if result.returncode != 0:
+            print("⚠️ status_check.py returned error, skipping diagnostics.")
+    except FileNotFoundError:
+        print("⚠️ status_check.py not found, skipping system diagnostics.")
+
+def main():
     print("🧠 Rotor FUSION online — full-system sync mode")
+    dev_zone = "both"
+    run_system_check()
+    print(f"\n🧰 System readiness check complete for: {dev_zone.upper()} zone")
+    print("Logs written to ops_log.txt\n")
     scan_and_run()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 ~/Soap/spin_up.py

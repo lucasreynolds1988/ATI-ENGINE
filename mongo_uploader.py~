@@ -1,0 +1,36 @@
+# ~/Soap/mongo_uploader.py
+
+from pymongo import MongoClient
+from pathlib import Path
+import base64
+import os
+
+# CONFIGS
+MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
+DB_NAME = "fusion"
+COLLECTION_NAME = "files"
+TARGET_DIR = "/home/lucasreynolds1988/Soap_overlay"
+
+def encode_file_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+def upload_files_to_mongo():
+    client = MongoClient(MONGO_URI)
+    db = client[DB_NAME]
+    coll = db[COLLECTION_NAME]
+
+    for file_path in Path(TARGET_DIR).rglob("*"):
+        if file_path.is_file():
+            data = {
+                "filename": str(file_path.relative_to(TARGET_DIR)),
+                "content": encode_file_base64(file_path),
+                "size": file_path.stat().st_size
+            }
+            print(f"[MONGO] Uploading {data['filename']}")
+            coll.insert_one(data)
+
+    print("✅ MongoDB upload complete.")
+
+if __name__ == "__main__":
+    upload_files_to_mongo()

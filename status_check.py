@@ -1,32 +1,20 @@
-# status_check.py
+# ~/Soap/status_check.py
 
 import os
+import shutil
 
-def check_dir(path):
-    return os.path.exists(os.path.expanduser(path))
-
-def check_module(name):
-    try:
-        __import__(name)
-        return True
-    except ImportError:
-        return False
+def check_disk_usage(path='/home'):
+    total, used, free = shutil.disk_usage(path)
+    print(f"📁 Path         : {path}")
+    print(f"💾 Total        : {total // (2**30)} GB")
+    print(f"📊 Used         : {used // (2**30)} GB")
+    print(f"📉 Free         : {free // (2**30)} GB")
+    print(f"🔺 Percent Used : {used / total:.1%}")
 
 def main():
-    print("🔎 SYSTEM CHECK REPORT")
-    checks = {
-        "Soap Directory": check_dir("~/Soap"),
-        "ATI Web App": check_dir("~/ati-web-app"),
-        "Frontend Dir": check_dir("~/ati-web-app/frontend"),
-        "Backend Dir": check_dir("~/ati-web-app/backend"),
-        "Logs Dir": check_dir("~/Soap/data/logs"),
-        "MongoDB Module": check_module("pymongo"),
-        "Git Config": os.system("git status > /dev/null 2>&1") == 0
-    }
-
-    for item, result in checks.items():
-        status = "✅ OK" if result else "❌ MISSING"
-        print(f"{item:<20}: {status}")
+    print("🛑 +CODE-RED+ SYSTEM CHECK INITIATED")
+    check_disk_usage()
+    print("✅ Status check complete.")
 
 if __name__ == "__main__":
     main()
