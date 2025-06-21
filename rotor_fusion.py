@@ -6,16 +6,12 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
-import base64
-from pymongo import MongoClient
+from mongo_safe_upload_v2 import safe_upload_to_mongo  # ✅ Use external safe chunking uploader
 
 # === CONFIGURATION ===
 GITHUB_REPO_DIR = "/home/lucasreynolds1988/Soap"
 GCS_BUCKET = "gs://ati-rotor-bucket/fusion-backup"
 FUSION_LOG = os.path.expanduser("~/Soap/.fusion-log.json")
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
-MONGO_DB = "fusion"
-MONGO_COLL = "files"
 
 # === CORE FUNCTIONS ===
 
@@ -59,42 +55,10 @@ def git_push(file_path):
         print(f"❌ Git push failed for {file_path}: {e}")
         return False
 
-def mongo_upload(file_path):
-    try:
-        client = MongoClient(MONGO_URI)
-        db = client[MONGO_DB]
-        collection = db[MONGO_COLL]
-
-        CHUNK_SIZE = 13 * 1024 * 1024  # 13MB
-        with open(file_path, "rb") as f:
-            data = f.read()
-
-        file_id = hashlib.sha1(data).hexdigest()
-        chunks = [base64.b64encode(data[i:i + CHUNK_SIZE]).decode("utf-8")
-                  for i in range(0, len(data), CHUNK_SIZE)]
-
-        for index, chunk in enumerate(chunks):
-            doc = {
-                "file_id": file_id,
-                "filename": file_path.name,
-                "path": str(file_path),
-                "chunk_index": index,
-                "chunk_data": chunk,
-                "total_chunks": len(chunks)
-            }
-            collection.insert_one(doc)
-
-        print(f"[MongoDB] ✅ Uploaded in {len(chunks)} chunks: {file_path.name}")
-        return True
-
-    except Exception as e:
-        print(f"❌ MongoDB upload failed for {file_path}: {e}")
-        return False
-
-
 def gcs_upload(file_path):
     try:
         subprocess.run(["gsutil", "cp", str(file_path), GCS_BUCKET], check=True)
+        print(f"✅ GCS upload complete: {file_path}")
         return True
     except subprocess.CalledProcessError as e:
         print(f"❌ GCS upload failed: {file_path}\n{e}")
@@ -118,7 +82,7 @@ def process_file(file_path, log):
             print(f"⏪ Fallback to GCS: {file_path}")
             success = gcs_upload(file_path)
     elif kind == "mongo":
-        success = mongo_upload(file_path)
+        success = safe_upload_to_mongo(file_path)  # ✅ Calls chunk-safe Mongo uploader
     elif kind == "gcs":
         success = gcs_upload(file_path)
 
