@@ -1,0 +1,63 @@
+=== SOP: Annual Maintenance for Lippert 8000 lbs Axle Assembly ===
+
+📝 Purpose:
+Perform bearing repack, brake inspection, and seal replacement for 8000 lb Lippert axle with electric drum brakes.
+
+⚠️ Safety Precautions:
+- Engage wheel chocks and jack stands.
+- Perform Lockout/Tagout on breakaway battery and power feeds.
+- Ensure technician is not under axle during rotation.
+- Brake dust may contain asbestos—use respirator.
+
+🧤 Required PPE:
+- Safety glasses
+- Mechanic gloves
+- Respirator (if brake dust is present)
+- Steel-toe boots
+
+🛠️ Required Tools:
+- Torque wrench (ft-lb scale)
+- Bearing race/seal driver kit
+- Needle nose pliers
+- Grease gun
+- Hydraulic jack + stands
+- Drum puller
+
+🔩 Required Materials:
+- Timken high-temp bearing grease
+- Inner/outer bearing kits (Lippert 8000 lb)
+- Grease seal (matching inner diameter)
+- Cotter pin (x4)
+- Shop towels
+
+📚 Procedure:
+
+1. Secure vehicle on level ground with chocks and stands.
+2. Perform Lockout/Tagout of battery and power inputs.
+3. Remove hub cap and cotter pin.
+4. Back off spindle nut and remove drum assembly.
+5. Extract inner/outer bearings and seals.
+6. Clean spindle, inspect for scoring.
+7. Pack bearings with fresh grease using palm or press.
+8. Install new grease seal and reassemble in reverse.
+9. Torque spindle nut to 50 ft-lbs, then back off ¼ turn, then finger-tighten.
+10. Insert new cotter pin, replace hub cap.
+11. Repeat for remaining wheels.
+12. Spin wheels to verify rotation without noise.
+13. Perform brake drum clearance adjustment (star wheel).
+14. Test breakaway system re-engagement.
+
+📸 Visual Checkpoints:
+- Packed bearings should show fresh grease throughout rollers.
+- Seal must seat flush with hub face.
+- Drum must not show radial scoring.
+
+✅ Final Checklist:
+- [ ] Bearings packed and seated
+- [ ] Torque correct
+- [ ] Cotter pins replaced
+- [ ] Grease seals installed
+- [ ] System re-tested
+
+📎 Notes:
+This SOP assumes standard 12"x2" Lippert electric brake drums. If hydraulic drum brake is found, verify lines and fluid system condition before disassembly.
