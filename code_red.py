@@ -4,6 +4,7 @@ import os
 import subprocess
 import time
 import glob
+from relay_log_hook import run_viewer
 
 def copy_token_if_needed():
     try:
@@ -45,10 +46,12 @@ def trigger_rotor_fusion():
     print("🧠 Launching +CODE-RED+ Rotor FUSION")
     subprocess.run(["python3", os.path.expanduser("~/Soap/rotor_fusion.py")], check=True)
 
-
-
-
-if __name__ == "__main__":
+def main():
     copy_token_if_needed()
     ensure_gcs_bucket_and_mount()
     trigger_rotor_fusion()
+    print("📊 Reviewing last 5 relay log entries...")
+    run_viewer("last")
+
+if __name__ == "__main__":
+    main()
