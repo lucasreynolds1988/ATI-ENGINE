@@ -1,5 +1,3 @@
-# ~/Soap/rotor_fusion.py
-
 import time
 import subprocess
 

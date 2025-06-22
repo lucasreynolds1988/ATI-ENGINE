@@ -1,5 +1,3 @@
-# ~/Soap/rotor_overlay.py
-
 import time
 import os
 from pathlib import Path
