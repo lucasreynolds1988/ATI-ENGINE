@@ -1,126 +1,95 @@
 # ~/Soap/fusion_restore_v2.py
 
 import os
-import sys
-import json
-import base64
-import hashlib
+import time
 import subprocess
+import logging
+from pathlib import Path
 from pymongo import MongoClient
+import bson
 
-# === CONFIGURATION ===
-RESTORE_DIR = os.path.expanduser("~/Soap_overlay")
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
-DB_NAME = "fusion"
-COLLECTION_NAME = "files"
-GITHUB_REPO_DIR = "/home/lucasreynolds1988/Soap"
-GCS_BUCKET_PATH = "gs://ati-rotor-bucket/fusion-backup/*"
+# Constants
+GITHUB_REPO = "https://github.com/lucasr610/Soap.git"
+LOCAL_PATH = str(Path.home() / "Soap")
+LOG_PATH = Path(LOCAL_PATH) / "logs/restore.log"
+MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net"
+MAX_MONGO_CHUNK = 13 * 1024 * 1024  # 13MB
+MONGO_DB = "rotor"
+MONGO_COLLECTION = "fusion_chunks"
 
-# === UTILS ===
-def compute_sha256(data):
-    sha = hashlib.sha256()
-    sha.update(data)
-    return sha.hexdigest()
+# Setup logging
+LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(filename=LOG_PATH, level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 
-# === MONGODB RESTORE ===
-def restore_file_by_filename(filename):
-    try:
-        client = MongoClient(MONGO_URI)
-        db = client[DB_NAME]
-        collection = db[COLLECTION_NAME]
+def log(msg): 
+    print(msg)
+    logging.info(msg)
 
-        chunks = list(collection.find({"filename": filename}))
-        if not chunks:
-            print(f"❌ No chunks found for: {filename}")
-            return
-
-        chunks.sort(key=lambda x: x["chunk_index"])
-        data = b''.join(base64.b64decode(chunk["chunk_data"]) for chunk in chunks)
-
-        save_path = os.path.join(RESTORE_DIR, filename)
-        os.makedirs(os.path.dirname(save_path), exist_ok=True)
-
-        with open(save_path, "wb") as f:
-            f.write(data)
-
-        sha = compute_sha256(data)
-        print(f"✅ Restored: {filename} [{len(chunks)} chunks] [SHA256: {sha}]")
-
-    except Exception as e:
-        print(f"❌ Error restoring {filename}: {e}")
-
-def restore_all_unique_files():
-    print("🔁 Restoring all files from MongoDB...")
-    client = MongoClient(MONGO_URI)
-    db = client[DB_NAME]
-    collection = db[COLLECTION_NAME]
-
-    filenames = collection.distinct("filename")
-    for fname in filenames:
-        restore_file_by_filename(fname)
-
-# === GCS RESTORE ===
-def restore_from_gcs():
-    print("\n🔁 Restoring from GCS...")
-    try:
-        subprocess.run([
-            "gsutil", "-m", "cp", "-r",
-            GCS_BUCKET_PATH, RESTORE_DIR
-        ], check=True)
-        print("✅ GCS restore complete.")
-    except Exception as e:
-        print(f"❌ GCS restore failed: {e}")
-
-# === GITHUB RESTORE ===
-def restore_from_git():
-    print("\n🔁 Pulling latest from GitHub...")
-    try:
-        subprocess.run(["git", "-C", GITHUB_REPO_DIR, "pull"], check=True)
-        print("✅ GitHub pull complete.")
-    except Exception as e:
-        print(f"❌ GitHub pull failed: {e}")
-
-# === SPIN-UP TRIGGER ===
-def launch_spin_up():
-    print("\n🌀 Launching +SPIN-UP+ sequence...")
-    try:
-        subprocess.run(["python3", "/home/lucasreynolds1988/Soap/spin_up.py"], check=True)
-    except Exception as e:
-        print(f"❌ +SPIN-UP+ launch failed: {e}")
-
-# === MAIN ENTRY ===
-def main():
-    os.makedirs(RESTORE_DIR, exist_ok=True)
-
-    if len(sys.argv) == 1:
-        restore_all_unique_files()
-    elif len(sys.argv) == 2:
-        target = sys.argv[1]
-        if target.endswith(".json"):
-            try:
-                with open(target, "r") as f:
-                    manifest = json.load(f)
-                file_list = manifest.get("files", [])
-                if not file_list:
-                    print(f"❌ Manifest is empty: {target}")
-                    sys.exit(1)
-                for fname in file_list:
-                    restore_file_by_filename(fname)
-            except Exception as e:
-                print(f"❌ Failed to process manifest {target}: {e}")
-                sys.exit(1)
-        else:
-            restore_file_by_filename(target)
+def pull_latest_github():
+    if not Path(LOCAL_PATH, ".git").exists():
+        log("📥 Cloning GitHub repo fresh...")
+        subprocess.run(["git", "clone", GITHUB_REPO, LOCAL_PATH])
     else:
-        print("Usage: python3 fusion_restore_v2.py [<filename> | <manifest.json>]")
-        print("Leave blank to restore everything from MongoDB.")
-        sys.exit(1)
+        log("🔄 Pulling latest from GitHub...")
+        subprocess.run(["git", "-C", LOCAL_PATH, "pull"])
 
-    restore_from_gcs()
-    restore_from_git()
-    launch_spin_up()
+def restore_from_mongo():
+    client = MongoClient(MONGO_URI)
+    collection = client[MONGO_DB][MONGO_COLLECTION]
+    log("🔍 Fetching chunked files from MongoDB...")
 
-    print(f"\n🎉 FUSION RESTORE COMPLETE — All sources reintegrated into: {RESTORE_DIR}")
+    sha_index = {}
+    for doc in collection.find().sort("timestamp", 1):
+        sha = doc["sha"]
+        index = doc["index"]
+        total_parts = doc["total_parts"]
+        data = doc["data"]
+
+        if sha not in sha_index:
+            sha_index[sha] = [None] * total_parts
+        sha_index[sha][index] = data
+
+    for sha, parts in sha_index.items():
+        if None in parts:
+            log(f"⚠️ Incomplete file {sha}, skipping.")
+            continue
+
+        full_data = b''.join(parts)
+        output_path = Path(LOCAL_PATH) / f"rebuild_{sha}.bin"
+        with open(output_path, "wb") as f:
+            f.write(full_data)
+        log(f"✅ Reassembled file: {output_path.name} ({len(full_data)//1024} KB)")
+
+def sync_from_gcs_overlay():
+    overlay_path = Path.home() / "Soap_overlay"
+    if overlay_path.exists():
+        log("☁️ Syncing from GCS overlay...")
+        subprocess.run(["cp", "-r", f"{overlay_path}/.", LOCAL_PATH])
+    else:
+        log("⚠️ GCS overlay not mounted. Skipping GCS restore.")
+
+def rotor_timing_loop():
+    while True:
+        log("🧠 [Cycle Start] Restoring from all sources...")
+
+        # Phase 1: GitHub pull
+        pull_latest_github()
+        time.sleep(1.33)
+
+        # Phase 2: Mongo restore
+        restore_from_mongo()
+        time.sleep(1.33)
+
+        # Phase 3: GCS sync
+        sync_from_gcs_overlay()
+        time.sleep(1.33)
+
+        log("🔁 [Cycle Complete] Waiting before next rotation...")
+        time.sleep(4)
 
 if __name__ == "__main__":
-    main()
+    try:
+        log("🚀 Starting Fusion Restore Rotor in background loop...")
+        rotor_timing_loop()
+    except Exception as e:
+        log(f"❌ Exception in rotor: {e}")
