@@ -27,7 +27,6 @@ def main():
     for rotor in rotor_files:
         run_rotor(rotor)
         time.sleep(1.25)
-
     print("✅ All rotors launched. System is spinning.")
 
 if __name__ == "__main__":

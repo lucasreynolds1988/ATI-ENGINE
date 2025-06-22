@@ -1,5 +1,6 @@
-import time
-import os
+# ~/Soap/rotor_overlay.py
+
+import time, os
 from pathlib import Path
 
 OVERLAY_DIR = Path.home() / "Soap_overlay"
@@ -13,7 +14,7 @@ def sync_overlay():
         print("⚠️ Overlay directory not mounted.")
 
 if __name__ == "__main__":
-    print("🔁 [Rotor Overlay] Starting overlay loop...")
+    print("🔁 [Rotor Overlay] Starting...")
     while True:
         sync_overlay()
         time.sleep(8)
