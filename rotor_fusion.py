@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import shutil
 from mongo_safe_upload_v2 import safe_upload_to_mongo  # ✅ Use external safe chunking uploader
+from relay_log_writer import append_log
 
 # === CONFIGURATION ===
 GITHUB_REPO_DIR = "/home/lucasreynolds1988/Soap"
@@ -38,7 +39,7 @@ def classify_file(file_path):
     else:
         return "gcs"
 
-def git_push(file_path):
+def git_push(file_path, file_hash):
     try:
         file_path = Path(file_path).resolve()
         repo_root = Path(GITHUB_REPO_DIR).resolve()
@@ -50,15 +51,18 @@ def git_push(file_path):
         subprocess.run(["git", "-C", str(repo_root), "add", rel_path], check=True)
         subprocess.run(["git", "-C", str(repo_root), "commit", "-m", f"🧠 Fusion: {rel_path}"], check=True)
         subprocess.run(["git", "-C", str(repo_root), "push", "origin", "main"], check=True)
+
+        append_log(file_hash, "GitHub", size=file_path.stat().st_size)
         return True
     except Exception as e:
         print(f"❌ Git push failed for {file_path}: {e}")
         return False
 
-def gcs_upload(file_path):
+def gcs_upload(file_path, file_hash):
     try:
         subprocess.run(["gsutil", "cp", str(file_path), GCS_BUCKET], check=True)
         print(f"✅ GCS upload complete: {file_path}")
+        append_log(file_hash, "GCS", size=file_path.stat().st_size)
         return True
     except subprocess.CalledProcessError as e:
         print(f"❌ GCS upload failed: {file_path}\n{e}")
@@ -77,14 +81,16 @@ def process_file(file_path, log):
     print(f"🚚 Routing {file_path} → {kind.upper()}")
 
     if kind == "github":
-        success = git_push(file_path)
+        success = git_push(file_path, file_hash)
         if not success:
             print(f"⏪ Fallback to GCS: {file_path}")
-            success = gcs_upload(file_path)
+            success = gcs_upload(file_path, file_hash)
     elif kind == "mongo":
-        success = safe_upload_to_mongo(file_path)  # ✅ Calls chunk-safe Mongo uploader
+        success = safe_upload_to_mongo(file_path)
+        if success:
+            append_log(file_hash, "MongoDB", size=file_path.stat().st_size)
     elif kind == "gcs":
-        success = gcs_upload(file_path)
+        success = gcs_upload(file_path, file_hash)
 
     if success:
         try:
