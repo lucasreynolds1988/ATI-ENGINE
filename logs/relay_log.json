@@ -1,0 +1,6135 @@
+[
+  {
+    "sha": "73712e7c8c732d747647681074e3e93f5ab38848f6a3f5d5bbe662157d33d37c",
+    "timestamp": "2025-06-21T17:16:13.038852",
+    "cloud": "GitHub",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526173038.gz"
+  },
+  {
+    "sha": "03849c4436ba0f1d77ba15840d59542309ca0ef85fc2e8da526f9f57a2ab5a0b",
+    "timestamp": "2025-06-21T17:16:15.040118",
+    "cloud": "GitHub",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526175039.gz"
+  },
+  {
+    "sha": "61801fa68a736b1c918e1e1251a8fe579c856766a3933bb0407b9cdeb0f3af21",
+    "timestamp": "2025-06-21T17:16:17.041550",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526177041.gz"
+  },
+  {
+    "sha": "a3bff350468cb9c94933d1fb1daeec296d69d1235eee8d745d0fbb4265317526",
+    "timestamp": "2025-06-21T17:16:19.042846",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526179042.gz"
+  },
+  {
+    "sha": "1350fc1b2a2e8e2bd5d22877d4cbdd08b61c7fd6b3bf6a7d7de774980a498a68",
+    "timestamp": "2025-06-21T17:16:21.044036",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526181043.gz"
+  },
+  {
+    "sha": "4848829df1a315b36095bfe27ab15b3bda47317fd5fcc3f67b0f2f049600c088",
+    "timestamp": "2025-06-21T17:16:23.045632",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526183045.gz"
+  },
+  {
+    "sha": "538a057aec1c0438c8fe23ab7bbd30880f759cc3a3bc7c77b652ce1a98f4c1b4",
+    "timestamp": "2025-06-21T17:16:25.046996",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526185046.gz"
+  },
+  {
+    "sha": "dc8be9bba431d43d076ee5468776856f39ca475a729d2ed0f5c25b80e4fedfbe",
+    "timestamp": "2025-06-21T17:16:27.048376",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526187047.gz"
+  },
+  {
+    "sha": "b63ca77784c72ba138cc08e10130b910eb8eb65d5163060c894ba1173f429c11",
+    "timestamp": "2025-06-21T17:16:29.049579",
+    "cloud": "GitHub",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526189049.gz"
+  },
+  {
+    "sha": "0d388434721d4cf470bdb1b0c1838e347dfd090635d27b4076a954a5844b6bde",
+    "timestamp": "2025-06-21T17:16:31.050873",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526191050.gz"
+  },
+  {
+    "sha": "e3ca1b86a68b61cf24f8c5c259124367f033f384bac52010b9add66842949a90",
+    "timestamp": "2025-06-21T17:16:33.052330",
+    "cloud": "GitHub",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526193051.gz"
+  },
+  {
+    "sha": "573d0731433be9bf41d42edb4fbbcd51b7894390281af193694e969e28186620",
+    "timestamp": "2025-06-21T17:16:35.053557",
+    "cloud": "GitHub",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526195053.gz"
+  },
+  {
+    "sha": "46147724ad86b95dd6cfc6af0053f862a2410924465e9d70568f80a2b346901b",
+    "timestamp": "2025-06-21T17:16:37.055169",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526197054.gz"
+  },
+  {
+    "sha": "94fadd31ad5c012b44648cbceaea0ea0921c89d34f0b2b276e6cdbe1f057c62c",
+    "timestamp": "2025-06-21T17:16:39.057707",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526199057.gz"
+  },
+  {
+    "sha": "ed624f6cf1eea503b5093f34946658da6e0ba09a180b45b0a1c9ed41d84aa72f",
+    "timestamp": "2025-06-21T17:16:41.059428",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526201058.gz"
+  },
+  {
+    "sha": "a7c1b94415cd0395ce223c7b1e2403a67b420193df4294916590dd9f6a1b388a",
+    "timestamp": "2025-06-21T17:16:43.061142",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526203060.gz"
+  },
+  {
+    "sha": "9f9592a8d7a34201734a6356fee5fe0a38e6f9bd37be25b0d5e179a3473050bf",
+    "timestamp": "2025-06-21T17:16:45.063093",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526205062.gz"
+  },
+  {
+    "sha": "502231730cd82cd7d78fd27adbacc71e3e6219aff4cd0024def69ac5b1194acb",
+    "timestamp": "2025-06-21T17:16:47.064612",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526207064.gz"
+  },
+  {
+    "sha": "32d522835e5fd9282e6c8123755b5259adedb883a4a9bbce49a3e4c08cd430a0",
+    "timestamp": "2025-06-21T17:16:49.065940",
+    "cloud": "MongoDB",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526209065.gz"
+  },
+  {
+    "sha": "4acca4ab1a0d0e1d471bc60485b0f422fa76879f3b780427bba4f56270b9aeba",
+    "timestamp": "2025-06-21T17:16:51.067280",
+    "cloud": "GCS",
+    "path": "/home/lucasreynolds1988/Soap/data/relay_chunks/stream_1750526211066.gz"
+  },
+  {
+    "timestamp": "2025-06-21T23:53:31.170154",
+    "sha": "4692edb9784b89adbcdf14e906b196eb18553cb597c6ee08311f89d3dd6d88a2",
+    "cloud": "MongoDB",
+    "size": 913,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:38.518856",
+    "sha": "0bc292c396262af4ed02a692ceff305cd2301c17298fa36715ef6bf9442fa8dd",
+    "cloud": "MongoDB",
+    "size": 29974589,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:39.244287",
+    "sha": "4df55f5cb4faf315cbc3b40bbfe66d4b930fd84ac4e0536b1ac8509449481b54",
+    "cloud": "MongoDB",
+    "size": 19192722,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:40.448941",
+    "sha": "c0580596cc3eef57fccb76fca3116a9ea181e592947a83391938b23633b2f3b3",
+    "cloud": "MongoDB",
+    "size": 27830226,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:41.208243",
+    "sha": "24fcd9fef1a8a1063fe014b3d72aec097e98bd404c7982eb6dff5788dc265072",
+    "cloud": "MongoDB",
+    "size": 22619195,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:41.896676",
+    "sha": "0248cbb15258cc2020515fad32d11fe3eb4ec3c1ed18941efd22838587393570",
+    "cloud": "MongoDB",
+    "size": 16943304,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:42.548657",
+    "sha": "74332abd0fe71f87316416c60aa6d908e90f6880e509f269aa56b17e0be7c7b9",
+    "cloud": "MongoDB",
+    "size": 18943704,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-21T23:54:44.191039",
+    "sha": "eafa31997b850b8b8901855c2322b9e920b4a4e83705307a16a9083ceb5eacd9",
+    "cloud": "MongoDB",
+    "size": 41260221,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:02:50.887044",
+    "sha": "e487d50534de0bc8013f46be5fb4e5aaaa3d85a9b2ee01a30ce6614780e8bf59",
+    "cloud": "GCS",
+    "size": 4458,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:02:53.085781",
+    "sha": "e08388715190dff2e1591409e0099894b764eb40e5b27e1bece330b048807a58",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:02:55.251278",
+    "sha": "92378a0f5a0c4de92b3a37037a169040238b4d30962a7a73ed29fb771e1c3b93",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:02:57.283038",
+    "sha": "88257d83d7965a3430a151afd579a1b6b8b663fce69e14f86599be9ea73dec25",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:02:59.291944",
+    "sha": "ac8eb1bda16ded2e0e064b6863d6fe9799ee9887fe60730034f6b27ed33aed66",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:01.320912",
+    "sha": "40609674116ef4413c87ae7a55b0b828e1b61382f9dc79255b9f702b56d21299",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:03.407267",
+    "sha": "fcbf342ce6c748758107c74251dd4d9e03a1c218debb25c3413485a0a9c607aa",
+    "cloud": "GCS",
+    "size": 859,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:05.463654",
+    "sha": "aa281fa83abf7ce791a59aa02f672ca681dec81c39d0d99d507817ae9456a9d7",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:07.473325",
+    "sha": "3c3f48c9ade3513167ddd4c15fca04380622111b867ba9f8bb86f60c80977876",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:09.530904",
+    "sha": "8ab6fa28e9372e6656961582cbeeb24ee96d7062aaca4dc48018e25401dd67e1",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:11.558087",
+    "sha": "6e43929a50a77617cb3f9f90dae8befb6bb925382171144fbbc3230d3613d8ea",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:13.586879",
+    "sha": "5621502868aaa034f3a6c0e83fa9bdf42af728aaa52b0cf0a694117485746fa4",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:15.680556",
+    "sha": "df90bb3caaa408a29a3ddd3b32df6e18e22cba0ce2115487ecc657a794c9f0f9",
+    "cloud": "GCS",
+    "size": 845,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:17.723912",
+    "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cloud": "GCS",
+    "size": 0,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:19.730679",
+    "sha": "7a7f86457833750922c94f8ef30cff366e8eaf3361a9cab56d40fbb5b536fa75",
+    "cloud": "GCS",
+    "size": 9734,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:21.878519",
+    "sha": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+    "cloud": "GCS",
+    "size": 4,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:23.960384",
+    "sha": "c2d1a3ed9f2f8623eeca1751aaaa2029a8514c2a1a2f6ca9585abdb02c0213a4",
+    "cloud": "GCS",
+    "size": 63428,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:26.042346",
+    "sha": "bba86043407507662d1884316ea5b665f4cf986379b19728c0dfeec38d004ffa",
+    "cloud": "GCS",
+    "size": 20974,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:28.073658",
+    "sha": "1dca2972de83bf9bd8e670237d5b952cb9c00fa541c125eaf6a081874668e7aa",
+    "cloud": "GCS",
+    "size": 28274,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:30.121732",
+    "sha": "b20f94c942c8ea6cd691982dd14029f61686a7ff4c1a03aaf4d955370c99feb3",
+    "cloud": "GCS",
+    "size": 25315,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:32.150756",
+    "sha": "3136e319503112deb19fda7a2bfec87a5ad28f6831938d23a9101c587b8c79fe",
+    "cloud": "GCS",
+    "size": 816,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:34.172590",
+    "sha": "7ef79cbefb43cb25f0b44265312c7345237472adea2b1f8c30ad79a845bb57da",
+    "cloud": "GCS",
+    "size": 11003,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:38.813283",
+    "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cloud": "GCS",
+    "size": 0,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:40.827043",
+    "sha": "c1d91175825746250f2b1d742023acb8b897af3a611f08bc13e834b41f396d3f",
+    "cloud": "GCS",
+    "size": 4885,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:42.942566",
+    "sha": "5bfd69fd1a8e0ec0b6632795bb81b889f4726399b09e875f493c5c54ef517699",
+    "cloud": "GCS",
+    "size": 56378,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:45.017953",
+    "sha": "7de024e1355c41c829765f11c1f51bae05caf8e999ae33713bb4b017ccd3cc43",
+    "cloud": "GCS",
+    "size": 71146,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:47.045629",
+    "sha": "c699a813b37c9744c4694bbc3b39f33874f93b49775af609199f056180092f8e",
+    "cloud": "GCS",
+    "size": 390,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:49.095384",
+    "sha": "47fec6451a998bfa30dbe45a8b4ea410c9f8d20199c9a3b009559d26c20f74fb",
+    "cloud": "GCS",
+    "size": 47583,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:51.115186",
+    "sha": "ac1324773a07cfc73ca18c42f8d337fd6245e9f0ff0ff00500bde096ea4d1138",
+    "cloud": "GCS",
+    "size": 7694,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:53.132499",
+    "sha": "d3fc941296057c79936a29006bc307b42a720cf62f11d0653a78cd42363d8c38",
+    "cloud": "GCS",
+    "size": 757,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:55.172718",
+    "sha": "a8f2fa3f8532a52a204f1994f3010954c41b343db0a5e7cbff2eb87e084e9b44",
+    "cloud": "GCS",
+    "size": 32608,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:57.171878",
+    "sha": "ccd3024ddde9e4ddbfb49567b7dfe49220aab7222b3a47b023bff1399800ecbe",
+    "cloud": "GCS",
+    "size": 11666,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:03:59.204534",
+    "sha": "2c579bd2e77048c667891eaa7437ae001ab20d620a911a82e53a7dc07c3df9e4",
+    "cloud": "GCS",
+    "size": 8519,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:01.304524",
+    "sha": "9516d2b628cb3d79c0959312f5090607323cb8c0f82a61c110c4d696468f92a5",
+    "cloud": "GCS",
+    "size": 1358,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:03.373312",
+    "sha": "e1010e77aad9ca7c7ee9e5c325680cd273cab27579dd69b213238bfefc374981",
+    "cloud": "GCS",
+    "size": 20876,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:05.444152",
+    "sha": "ae64f5ae30d97973c31ed372199f5f0799bdbaf82ef9b17d9550f6734aafaa27",
+    "cloud": "GCS",
+    "size": 47360,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:07.466208",
+    "sha": "0fdec3ff7c5fbdd8f1162b7ad7b43c1ae22fa763ce3b13253ae3c9055c2d08eb",
+    "cloud": "GCS",
+    "size": 22950,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:09.575965",
+    "sha": "c81dbd394e0797fd69b6e32d8304636008751d8d2530ecba8f63c54a5722c9a7",
+    "cloud": "GCS",
+    "size": 43979,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:11.587340",
+    "sha": "413fe0ff15f1573f1e425f9b6280d8fffafac30ad91841df5f6d198ef67c2f1a",
+    "cloud": "GCS",
+    "size": 13598,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:13.591600",
+    "sha": "1c1c6dced411e0b2e7476b082f241e3e014c972d8751db27a62983fb7428e296",
+    "cloud": "GCS",
+    "size": 22739,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:15.682143",
+    "sha": "dc0326eddab9bd6eb9ba18ca38a60e4166a6c13389c58516dc86feddb175111a",
+    "cloud": "GCS",
+    "size": 20286,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:17.690389",
+    "sha": "77f3e36da48c9c96e2e6a3cdcc803f5608c2e9b7b20fd7d5355a1833c9c9185a",
+    "cloud": "GCS",
+    "size": 780,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:19.696465",
+    "sha": "6d12f690d1b2627fab79d4fecc28059f9d2e75b84bd9f11442ec1571e615d271",
+    "cloud": "GCS",
+    "size": 9178,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:21.732472",
+    "sha": "ad3c95a3bad60ea21cd96b82c04be1cf807412a5dc4d4fa9f1b14d5de6dbd356",
+    "cloud": "GCS",
+    "size": 9985,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:23.760614",
+    "sha": "5b1aa56f22e1db3a7dd79c18f185c09b9c2e6274717ef7bdcbd2285f9e3361fe",
+    "cloud": "GCS",
+    "size": 32065,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:25.825623",
+    "sha": "2659d7ab768bf20131cc3d769bc5f88695aa358b9dea4efe9415ed5f454f3ab4",
+    "cloud": "GCS",
+    "size": 47002,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:27.874384",
+    "sha": "b15a19ea3dd3c163f07d8b6e7446ceb21d47b53a192b5d44d3d0705a289fb614",
+    "cloud": "GCS",
+    "size": 372,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:29.942058",
+    "sha": "f01c8e4333d9020007f184179af630c4412dbf2bd035c3412f682524f903f06b",
+    "cloud": "GCS",
+    "size": 15071,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:31.976337",
+    "sha": "afcc0a7870f88756fb2d0c67ff1f99ec55fb67d8ec80f1f8b051fcaaafb32579",
+    "cloud": "GCS",
+    "size": 8907,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:34.018504",
+    "sha": "34015e4f56d46c59606e4cf971c51f666883df85b2c386cdbfe414b1a8c9ef95",
+    "cloud": "GCS",
+    "size": 33828,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:36.071692",
+    "sha": "bce5387c750ba3d3baf6fb70b19e433501a77445776438b35f7b32b6fd22c598",
+    "cloud": "GCS",
+    "size": 2441,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:38.140100",
+    "sha": "c629a09f698e0d6b3d856232e3073d10fbf24307e2369e015bc68642dfa0b0fb",
+    "cloud": "GCS",
+    "size": 19972,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:40.201574",
+    "sha": "19a67e1a27ac95d1cbb34513de894ce07989a1a313c8f0fc3caadcbb393945b4",
+    "cloud": "GCS",
+    "size": 2549,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:42.266486",
+    "sha": "57fbf4c4438b81f603b593d4d14e8684418ecdf285d431f6dd6e46851ceb5235",
+    "cloud": "GCS",
+    "size": 6367,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:44.357992",
+    "sha": "4880ed20f3190d3129a8c851b5ce1216bfb9dd6baebcef442b3135bd11a6ff0f",
+    "cloud": "GCS",
+    "size": 5053,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:46.425985",
+    "sha": "af144a5b868ef7ae2718892d6bbc69e1e835c8ba02ac576695692165bac279c2",
+    "cloud": "GCS",
+    "size": 14058,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:48.487060",
+    "sha": "ed0ec10cf12e415eab331184ff8f7d00fc5f3450052b32162f88424e23dde9d6",
+    "cloud": "GCS",
+    "size": 2738,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:50.553603",
+    "sha": "5185b2448d3e95f860e651a88b2f912bc0bdf656a94c27c87934254b525c792f",
+    "cloud": "GCS",
+    "size": 15915,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:52.574454",
+    "sha": "24b12ebb06a59f40045d6ad12846b515486a698d90bb6e6f8b7deaef2143ea9b",
+    "cloud": "GCS",
+    "size": 12102,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:54.598228",
+    "sha": "1b53ecf98d7c119b1f3dca77ae68c5fcaae9b356c639f6e67018a3effdfa525c",
+    "cloud": "GCS",
+    "size": 1090,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:56.636356",
+    "sha": "b5e499184a0b5c5d2d9a40c119af8d99967f9e27bad328a6fff6bb240f88f7bb",
+    "cloud": "GCS",
+    "size": 4122,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:04:58.628996",
+    "sha": "289cbb0c0badc94b95b2071d8f7033f2d16cb4a337def1add80b81b187de604f",
+    "cloud": "GCS",
+    "size": 10795,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:00.718992",
+    "sha": "2a779287c59330845618612089eda77087caeeb0b436388b5a22ac4e8b81b56a",
+    "cloud": "GCS",
+    "size": 41,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:02.779298",
+    "sha": "2457c4c7e4102830d1acf3c53dc36e87cd4db2a1d58d5c0dfcb2578735f0b303",
+    "cloud": "GCS",
+    "size": 656,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:04.960591",
+    "sha": "0de051229789cbed53153262c815688c2f7fde3836edf295587b9ce6fda806b5",
+    "cloud": "GCS",
+    "size": 3960,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:07.000123",
+    "sha": "93d99bdef196a6edddb0f64090c5758903790354f6ddbbcfd6437708cb75d969",
+    "cloud": "GCS",
+    "size": 1153,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:09.011150",
+    "sha": "2c33f44bc57562396a5f11c86e2b8755d68667482f220f95fa80709b7a5d56a3",
+    "cloud": "GCS",
+    "size": 12760,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:11.031219",
+    "sha": "52256964cd00498911e8b8a0e2781e581ad097dd662bbca04c140375a0c7def7",
+    "cloud": "GCS",
+    "size": 2115,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:13.051163",
+    "sha": "0409fc3fc9aaa74596677a1216a66fbe9c23f0edb240e64e977cc2d781f1607c",
+    "cloud": "GCS",
+    "size": 2840,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:15.085311",
+    "sha": "250a0612b569d7312355aaa2f1bbc87a3a7f1d48529d010df85d264feb47d7c4",
+    "cloud": "GCS",
+    "size": 2398,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:17.119673",
+    "sha": "8b7d15bd57d80dcdf040e3b1381c219b6b87f0a8a8e0f37d949d035b675d51ae",
+    "cloud": "GCS",
+    "size": 982,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:19.103267",
+    "sha": "c268e8a3227d6b7dc3d48e767d7535770e39c53962de993aa7922b2dd5ff37a7",
+    "cloud": "GCS",
+    "size": 10393,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:21.138820",
+    "sha": "af910eff7943c1a4951b19cf15cae66e1319a29e05fa6f0210af16bc95fc477b",
+    "cloud": "GCS",
+    "size": 16549,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:23.170310",
+    "sha": "48f2655a9c9e66ef9a92997d66978bc2bcbbef3b970291d7f1bd21ecc953f3ef",
+    "cloud": "GCS",
+    "size": 1229,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:25.231731",
+    "sha": "1ee9a09945d723a1118913b286521303bd74f938f6006bc47f53116d4bd04a9f",
+    "cloud": "GCS",
+    "size": 26055,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:27.282338",
+    "sha": "278fd41044b5830ae531d0549ef05e1ac221af542d9ac36d2b78dc72d50698fb",
+    "cloud": "GCS",
+    "size": 61271,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:29.299152",
+    "sha": "6e5f476d6f13365e1b4a87c44840db423bc4d72cdce5c5eb1be69970aea9e4d6",
+    "cloud": "GCS",
+    "size": 10942,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:31.300890",
+    "sha": "9ae75e1ec9b0204e0d570834df33beedb8c1e2c0f4df20267445e9e3fda11ff6",
+    "cloud": "GCS",
+    "size": 32180,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:33.380394",
+    "sha": "0e27c54177605af5cf233617067e7828a2ad6a305f2c10d279ecccc1b3a60d4b",
+    "cloud": "GCS",
+    "size": 19249,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:35.414578",
+    "sha": "10a7f028becae70cc7e95949d1b8553f35b2199e0a3e1636d56f98e06bc7cf1e",
+    "cloud": "GCS",
+    "size": 976,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:37.469118",
+    "sha": "baf1dbe2e103f74b19871c7f1b423c9ab7d4d4cb9c2c7701750e9d5406990a62",
+    "cloud": "GCS",
+    "size": 31467,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:39.587940",
+    "sha": "d2280bb47e0a5445ccf1dd4798831d137a334f797d8a5218bafcaf5d5d403f3f",
+    "cloud": "GCS",
+    "size": 2473,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:41.623042",
+    "sha": "b95ef2542f5be92cfde518671175c1dcf34435fb8f3e33ebf25a34c4de50a91a",
+    "cloud": "GCS",
+    "size": 3158,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:43.654513",
+    "sha": "bf07e2f0691342eac251ee2eef6b0ba4f0a7909cbee2e719562cbadfe68d630c",
+    "cloud": "GCS",
+    "size": 64138,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:45.773775",
+    "sha": "009dbc9928c3f14df954ae5c50d36ffc2ae37db0e7fa1b5a62134d0c34b1813f",
+    "cloud": "GCS",
+    "size": 39033,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:47.846015",
+    "sha": "e22b883f16098cdb22b014c1c4cad5b32e69c4900bbed8bb9400b5113c073337",
+    "cloud": "GCS",
+    "size": 2356,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:49.891698",
+    "sha": "03e01b659dcedaed6aa0802547345eec23f8b02f4c8d13a07c5ea5d5664e7b0f",
+    "cloud": "GCS",
+    "size": 1327,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:51.937648",
+    "sha": "dd2bd9e0eac2165d09f06e7d16c848dc364542b07b0cba607cd6d3ec7ec9e68e",
+    "cloud": "GCS",
+    "size": 16717,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:53.963112",
+    "sha": "f509a93902b0f6e4da3d9456efab49958603c549ee0bb038f590247e56cf4d16",
+    "cloud": "GCS",
+    "size": 6508,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:56.007497",
+    "sha": "274d1abe030659aa4dd1a446d15dbfd04a845db939adc872f9ca6122c3e0e29b",
+    "cloud": "GCS",
+    "size": 775,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:05:58.057069",
+    "sha": "5b2b3ea993aa34812b7eccab701ff7f1011abeda731caf0e72b893777e0478b1",
+    "cloud": "GCS",
+    "size": 13374,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:00.109988",
+    "sha": "fabaae8f1656e8ee4e7da925f52aeadfe054802936caa1888934e17572f19718",
+    "cloud": "GCS",
+    "size": 13194,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:02.196178",
+    "sha": "3047389025f4600e44bd612dc3481d068ed37394cb29e18614ff9dc8b3baf4b3",
+    "cloud": "GCS",
+    "size": 17278,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:04.334576",
+    "sha": "b200da0c74c3a25a9d94adf653c5ef296625071fd6b414f8c4b3b9987b21b923",
+    "cloud": "GCS",
+    "size": 7711,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:06.368132",
+    "sha": "16657038636cca49c29720726beb0f3bd24affc90be6aa4c199faff7882efd0f",
+    "cloud": "GCS",
+    "size": 20405,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:08.363309",
+    "sha": "b7c6fe32fad0b2f93de02983c8a83a267e56e2e32121f486db0259c8426ef139",
+    "cloud": "GCS",
+    "size": 2756,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:10.420219",
+    "sha": "4ca6e936703c56e366dfac6e4187ca647f1ef09a248c05f71aa9ab6e3d160f1e",
+    "cloud": "GCS",
+    "size": 5468,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:12.437582",
+    "sha": "09566bc08d41ea1715a069155e4e4cd543cf17b9a91fb3df4808e3c809d55b8a",
+    "cloud": "GCS",
+    "size": 1169,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:14.470685",
+    "sha": "6e05837554bb6d21dfd7f3c1f7d805f4f0f611f7fde5d8a8a675452df03a0e32",
+    "cloud": "GCS",
+    "size": 1058,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:16.541076",
+    "sha": "7baa22acb35cd9ede57f6459805e0fa83cf780a0eabc44948cc0eb22d38fe3b6",
+    "cloud": "GCS",
+    "size": 2977,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:18.581847",
+    "sha": "500085b3d6e3f837ba71e0c03edbc8af2361f52c5293dbeab593665686ee99b6",
+    "cloud": "GCS",
+    "size": 2073,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:20.568707",
+    "sha": "844b509bb903fe02139fc9ed48d0be34f6fd4a407b0cec7203b2a2d2d7ac49e6",
+    "cloud": "GCS",
+    "size": 4616,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:22.592677",
+    "sha": "2cb1ab1980ac1bc3c58f50d0d4dbb634ade2856c55789f8295520cea6ad15f7c",
+    "cloud": "GCS",
+    "size": 2365,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:24.584636",
+    "sha": "ad7b15cf395f024ed9ef0e42546c5f5ec4d0f2a6791f86cd5cf12504ca4cfbe1",
+    "cloud": "GCS",
+    "size": 3964,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:26.612087",
+    "sha": "70c2df2480b122cb26b17a76de92d5ffcc674a76d60e639f3700888f39432ed5",
+    "cloud": "GCS",
+    "size": 1919,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:28.654660",
+    "sha": "5ef3c5b9a045ed23ac281b9fb705bb0dad150ce3d26dc8ca22aabf0431a548a7",
+    "cloud": "GCS",
+    "size": 1686,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:30.737563",
+    "sha": "da11e8f1d7973ffd89246a136de44925f2385658e50b4ca63d3293a376e5c79c",
+    "cloud": "GCS",
+    "size": 2640,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:32.765206",
+    "sha": "72861b291c0f8c4a0925e3c0fb52c4ae70654d589b41dbd3e8ff400bcec8d01c",
+    "cloud": "GCS",
+    "size": 3071,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:34.789081",
+    "sha": "aced00a42efe7518c624aedd57ca1defcfc24614a5887450605b2b5c8d1cabca",
+    "cloud": "GCS",
+    "size": 2819,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:36.837367",
+    "sha": "070a4731248e46e65fc82a95789f6aebde1d3e999f2f68c9acb8676e15aa007c",
+    "cloud": "GCS",
+    "size": 1535,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:38.871264",
+    "sha": "fd2df2bfd0eb2e2702b290650580b826e482213e2f583a9fd4fbd0ffc3bb3cf2",
+    "cloud": "GCS",
+    "size": 2566,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:40.959556",
+    "sha": "d555b4535c9a221bd843d5067f37c1a1ecbab5d85c4827732e60b1972ff6da8b",
+    "cloud": "GCS",
+    "size": 1555,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:43.009933",
+    "sha": "7571f4d9f2647249b6e139169e725ca6ab6c7984717a4181312f9052317705fb",
+    "cloud": "GCS",
+    "size": 3084,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:45.059357",
+    "sha": "6ccbacc9238a212a88866776ff8f69f35d37369d65c1d86c869e98b888cb3d16",
+    "cloud": "GCS",
+    "size": 991,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:47.076346",
+    "sha": "6a4991cca6839befda4c67bc732edaeb3625269a3b09fda7319d05b4f7ff0701",
+    "cloud": "GCS",
+    "size": 3961,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:49.116308",
+    "sha": "b4271f08f1cae4d2b00f577ba918c64560fc2f12e57727fc45539fd2354a9f58",
+    "cloud": "GCS",
+    "size": 2744,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:51.131411",
+    "sha": "418fb553347bca2612e4811f53abe7d2cf9fa0b444557ce7bdad80d9f038916f",
+    "cloud": "GCS",
+    "size": 2085,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:53.171939",
+    "sha": "f5fd5cc731ad29ecebd010f3ad8d6b02392b0adfeb4d8ce9f86673ca3d5b1c41",
+    "cloud": "GCS",
+    "size": 6271,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:55.206913",
+    "sha": "48b6bdf4c1fecc62099fd5b7529a564fb68c1f9412bbc3ae8235f48c855e25e7",
+    "cloud": "GCS",
+    "size": 5803,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:57.247742",
+    "sha": "d2b75807c80d2c2dea0e0bf65338aa6ea46656b885581ed8204e25b3716ba9c6",
+    "cloud": "GCS",
+    "size": 1197,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:06:59.262443",
+    "sha": "e4696a06ebca01b04d519b9e2934184132dccfb36482c8dba8993f16eb5a30fb",
+    "cloud": "GCS",
+    "size": 3495,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:01.284164",
+    "sha": "bfde258e94aa0d45bb79ff8a80942f102bd7d543875764c470abb0c1d3dbfb05",
+    "cloud": "GCS",
+    "size": 2507,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:03.330526",
+    "sha": "402e25f079f6faa1e6bbc286cbbebb49ee4aa6873b875161200a162b335c79cb",
+    "cloud": "GCS",
+    "size": 2475,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:05.419163",
+    "sha": "e9d08a21cb3df7d73a7717fbe8c6de9b5f50d5e5ab9cc5466b7384f2df23641d",
+    "cloud": "GCS",
+    "size": 6999,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:07.426473",
+    "sha": "d8ca716e0607c43816cdc0a75859649b529300c493eeab51c07322a95dc157ba",
+    "cloud": "GCS",
+    "size": 2553,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:09.460995",
+    "sha": "e778184b8dd6daeca5f200dc63f25619036159f6ffd8905085996d69859da62a",
+    "cloud": "GCS",
+    "size": 21517,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:11.525872",
+    "sha": "81216a340a041825fab8d305ecda7600aa3e75e6abc1fd8eda5517ab703c5e96",
+    "cloud": "GCS",
+    "size": 1030,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:13.537373",
+    "sha": "71d37d8090c4c276ec2fbe671c984544dfcbeda484ec508ee03ea883bfd36d8f",
+    "cloud": "GCS",
+    "size": 5100,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:15.581660",
+    "sha": "9efe4d750d9154f92a3d3342788cde4aa987874228e1e4a62494f527e636a3e0",
+    "cloud": "GCS",
+    "size": 3078,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:17.643932",
+    "sha": "b277e205c525f1939a4725fa197163532d3e1e6e22fc8620ec76af3c46573a10",
+    "cloud": "GCS",
+    "size": 5219,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:19.626398",
+    "sha": "71a2f7f6f4ea755e076df5faf8306f8d368ad2c993ed22d38b2f0a1f9ccfb1cd",
+    "cloud": "GCS",
+    "size": 5161,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:21.659339",
+    "sha": "15630231271140b776ded53ae4e834da080f896fe8682ce1375e01d1b93a7e5c",
+    "cloud": "GCS",
+    "size": 3292,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:23.704798",
+    "sha": "92a16148c40f755746d14a4d83b5568ac35e1dc354d862d37e84bcbc17339a12",
+    "cloud": "GCS",
+    "size": 1208,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:25.811311",
+    "sha": "1317aae4f3743d47422573abe7cf160b470296060279c6b2ab0fc7f14c2d5442",
+    "cloud": "GCS",
+    "size": 2692,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:07:27.832828",
+    "sha": "55d5be3f7fd6edc6955cec95eea193ca7d80afa2fe80efaf7b830b234257ebf9",
+    "cloud": "GCS",
+    "size": 2680,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:13.203490",
+    "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cloud": "GCS",
+    "size": 0,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:15.240335",
+    "sha": "d6bcc219e1507cefdf1758f1d1e66ec33fdf7e72bc80b7dd396770623314c277",
+    "cloud": "GCS",
+    "size": 4885,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:17.320038",
+    "sha": "aca28841a31185aad4d97d6d709a35822cb3ca6db2c1a5c3ea32422689af4420",
+    "cloud": "GCS",
+    "size": 1642,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:19.352358",
+    "sha": "4ad97cceaa17469c8cd9a049e0769e9ab579a829d66a2c26af4c26f1f7ab756d",
+    "cloud": "GCS",
+    "size": 7692,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:21.430511",
+    "sha": "25d05ef1c393b57f193b0121feb34bac1102c3afd12cb44bba975e70594a6e1e",
+    "cloud": "GCS",
+    "size": 2128,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:23.507648",
+    "sha": "ce749e77f58c441348d2fef43b007506d1d3190fa9a3c2cae92f16b021ba9e6e",
+    "cloud": "GCS",
+    "size": 20030,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:25.550773",
+    "sha": "79e344101edef0c509d74403ed879a5be84193f483b1353578c34b853f1f7078",
+    "cloud": "GCS",
+    "size": 5241,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:27.580371",
+    "sha": "2bdf61b203df74317c4a226db70e3f2f782b6891207e6969c0733803ac0ab08f",
+    "cloud": "GCS",
+    "size": 9681,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:29.587070",
+    "sha": "81153b27b8da23cd84111bef93153521a78e268ae5eedb3ba1941727d7316cf1",
+    "cloud": "GCS",
+    "size": 1778,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:31.640654",
+    "sha": "c2ee4067fe98ed888c7daa14f6ea3f73702fd9828247960a6f583139d4f9f311",
+    "cloud": "GCS",
+    "size": 836,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:33.688825",
+    "sha": "b045581df52af6475689c1e578b3f73cd9917ad8945c09655c6d682beb4b0124",
+    "cloud": "GCS",
+    "size": 4482,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:35.760166",
+    "sha": "69422b2265eba4e154a3c39fa4fbb49447482bf29a5a99b5256adbac02f2acab",
+    "cloud": "GCS",
+    "size": 2837,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:37.818890",
+    "sha": "5fdc5733daad30c4b545ef4a2f30f1658c7064003fa7c22f68a5c3b7d5f60151",
+    "cloud": "GCS",
+    "size": 2441,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:39.930093",
+    "sha": "ca8d6bb9c344584b6b276af16c06b91c22ebf5717ddac1f06fb101f0d5d83fa6",
+    "cloud": "GCS",
+    "size": 1487,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:41.973753",
+    "sha": "e8f5e33498bb31ed8f974ff143e0cd6a121de9391da620612d9e0bb27d98ec66",
+    "cloud": "GCS",
+    "size": 5917,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:44.003316",
+    "sha": "ee55562639f47aace186ec7bd17897a24aac428ed16ce55492e18dea17a9277f",
+    "cloud": "GCS",
+    "size": 1264,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:46.081143",
+    "sha": "5d925ba7f530164206dd6c61106181c438ddbf6a4291917f9f8afc6912616ebc",
+    "cloud": "GCS",
+    "size": 598,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:48.121227",
+    "sha": "5f8fd326206cac4efbbe5ac2af540162d6df9cf94f20c0620190453f4326b825",
+    "cloud": "GCS",
+    "size": 2470,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:50.172972",
+    "sha": "4a3c094433f7dd6102493cf82a8231c7723b9e617dbd4d479cfff2617352bb9d",
+    "cloud": "GCS",
+    "size": 8532,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:52.247638",
+    "sha": "cb1ad4cc754c76cbeb89745df71f55bf6259e108dfbe16de31ff4c1375dcd57a",
+    "cloud": "GCS",
+    "size": 2443,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:54.269060",
+    "sha": "3ac960d20d51753b28c18f317b5a89efb6206bd86c425e1686af14eb0a04d1ff",
+    "cloud": "GCS",
+    "size": 18317,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:56.345038",
+    "sha": "6cb8f11739a7e0a3fbf2274a5a9a9425024216f1b9cd611e5995f3185c8a4931",
+    "cloud": "GCS",
+    "size": 2969,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:09:58.361515",
+    "sha": "8b7641ce61b6613d6a01b29a141d7baf800c6cdf7941294fdb5a63a4f65a7a59",
+    "cloud": "GCS",
+    "size": 8570,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:00.399336",
+    "sha": "2e581d531898e85c2852437101fc0531d92ac41bebe00e1ba3461188fe703850",
+    "cloud": "GCS",
+    "size": 2055,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:02.566540",
+    "sha": "185d0d9fdb0aa2b7e21d75abb7a588e9fc230639792bae924b7571f5d09be461",
+    "cloud": "GCS",
+    "size": 1101,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:04.657254",
+    "sha": "cef18df2620c7251f1aa1a1f3a2a26455e4d2c4df60853c07b76f5aefca787e2",
+    "cloud": "GCS",
+    "size": 10423,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:06.728734",
+    "sha": "32d19bd6b50acba4796d555e28e6b80bae2281e66b7c0972524a7845f723b072",
+    "cloud": "GCS",
+    "size": 2824,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:08.748485",
+    "sha": "ef236d78d8e2b3a5743af06d164618f7cda9ba20bc8e6cf3224681d23947dfc5",
+    "cloud": "GCS",
+    "size": 18753,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:10.768811",
+    "sha": "e648d351552b16e818857e1c50e87a80e407c09ccb7c98c3491f784015a669e6",
+    "cloud": "GCS",
+    "size": 7829,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:12.799622",
+    "sha": "b3d610128d34cbbc96df5a966166fd916bfd47cc676db01621636789acbf645c",
+    "cloud": "GCS",
+    "size": 2681,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:14.916477",
+    "sha": "4d04049eea0902c1349bebf20e90badee7fc53a3daf10c5eff441269bfe925d8",
+    "cloud": "GCS",
+    "size": 1341,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:16.922723",
+    "sha": "0305ff884ceb55f44bdd3e93f330d97e12576107ba05e30d1ce7cf0c6a255727",
+    "cloud": "GCS",
+    "size": 2579,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:18.912633",
+    "sha": "bfdc17286ad19706819f9a25cb464b1156a1bf216d2f92ba2a4471b4dbb67016",
+    "cloud": "GCS",
+    "size": 1355,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:20.945585",
+    "sha": "e74d690fee3697909c089ac9b952d020075269e1cf1804914c066c288c0a4bf1",
+    "cloud": "GCS",
+    "size": 201,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:22.930759",
+    "sha": "f7be0952f71711948bb6af844c1017be59cabee40725668dce73a36518511473",
+    "cloud": "GCS",
+    "size": 9643,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:25.053886",
+    "sha": "1dd96bf521c808dca4800af3688048b1a1f0d79a4b4df775718349f93fcd32c3",
+    "cloud": "GCS",
+    "size": 6393,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:27.071745",
+    "sha": "fbafd8f3df22701626bd13def73f1d7e772513baeb2e255c5a372493f0a7e274",
+    "cloud": "GCS",
+    "size": 3357,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:29.093110",
+    "sha": "ce0e034031aceb342ba7f5220ecdb0885108e72dc1d91ce2dcaabd6c2731953d",
+    "cloud": "GCS",
+    "size": 12693,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:31.129115",
+    "sha": "e9bb8bfa8d404677ecac5dd9034ec41901e8f7a0560312907795759650b219f0",
+    "cloud": "GCS",
+    "size": 16954,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:33.196553",
+    "sha": "6413663469bc000893cfd0492123a931556670f675031a3b26a682b51bed947c",
+    "cloud": "GCS",
+    "size": 34814,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:35.240892",
+    "sha": "c0e393ac900cd959fafc47df690d4c49e13fe113a5bfdfb520a83b2a35ce8626",
+    "cloud": "GCS",
+    "size": 4536,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:37.232741",
+    "sha": "d57a7a05fdbebbad32eab69f4009894498855190d55d08ee9289fcc845721805",
+    "cloud": "GCS",
+    "size": 267,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:39.288280",
+    "sha": "18443b2f4d35f8a496f8b579e6bcd2dabeb34ce1d7e7e78a7ad1d90c12893145",
+    "cloud": "GCS",
+    "size": 9448,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:41.411278",
+    "sha": "48380ddc3fe9b0a89eeb91657ec6831b9abe70cb765168aaac1864daffdf53df",
+    "cloud": "GCS",
+    "size": 839,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:43.486538",
+    "sha": "9874320308fc065bfe865cc1d5bbadd5b9a2b12582f3b0edfac6cfc88c238073",
+    "cloud": "GCS",
+    "size": 6153,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:45.584640",
+    "sha": "578a20cc3cb908291579165d14d0b8dc652eae34331ffa6b0f540dac2ed6f879",
+    "cloud": "GCS",
+    "size": 2320,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:47.632964",
+    "sha": "7185e525369ff48fb71375d34a634b3c90fba99c55deea62d432135582e5066b",
+    "cloud": "GCS",
+    "size": 12116,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:49.689537",
+    "sha": "ce73b4111e8c228b294ca61583553090b2b72290a2bc61cb2f353a12505eada0",
+    "cloud": "GCS",
+    "size": 17171,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:51.720518",
+    "sha": "ae09037915f3669c16878b6c51454959b7697dd2f0a4a1cdd75f31a28cb59f33",
+    "cloud": "GCS",
+    "size": 25538,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:53.760024",
+    "sha": "62c4e6b3d51598514cdae0e0305d4c291037fc835452a6e7201426892855a7d6",
+    "cloud": "GCS",
+    "size": 2023,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:55.817144",
+    "sha": "19ab93685f0f73ccfecd20a1bfd5415f4be970523fbcb3e779899f4148d5d3b0",
+    "cloud": "GCS",
+    "size": 14195,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:57.855248",
+    "sha": "7b4593a352876c27260424bc76f282d5877eff1c2ec45c111ec7e6fa273895b9",
+    "cloud": "GCS",
+    "size": 102,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:10:59.944769",
+    "sha": "ebbe9fd1227785d1053f5be709fe0883482125b3a497da902de8d9285cf08895",
+    "cloud": "GCS",
+    "size": 553,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:01.973956",
+    "sha": "74d1d664c47bb1f0d9b25cdb3c8e4a786912744cc32d27217a39daa0c2c6d0e8",
+    "cloud": "GCS",
+    "size": 201,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:04.059951",
+    "sha": "bff2b3447b1fc64c03c379b4abb476fb58d390205bbc45533b25c68012a15140",
+    "cloud": "GCS",
+    "size": 16326,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:06.147650",
+    "sha": "0a091dd26e776a80b70298362d196c401e78090c7eec268830d520311103163a",
+    "cloud": "GCS",
+    "size": 79371,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:08.208101",
+    "sha": "f54061e1f7170a2eb89fe5d5c1ac093b1e31ce7c6ea0419070634d28cd126b4e",
+    "cloud": "GCS",
+    "size": 20199,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:10.286043",
+    "sha": "1f9d6b98216c84d9372081597d8c70797789086ee76243e634d5a2c71042996a",
+    "cloud": "GCS",
+    "size": 14077,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:12.301167",
+    "sha": "d7a4dc639f7c84d485d419652e2e2f9fc8184cd77c4e751bb0aff47019e29772",
+    "cloud": "GCS",
+    "size": 1459,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:14.307967",
+    "sha": "44ddc1b0cb0411a9e69576e9cd99eb8808f75defbdfc7cf9ecae62a5838f5c2e",
+    "cloud": "GCS",
+    "size": 26144,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:16.375288",
+    "sha": "e5cf4a3357aa6fde1c0888ee33423e202ee02587ca83eb90bb43c13103fc9b7b",
+    "cloud": "GCS",
+    "size": 32892,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:18.398882",
+    "sha": "cce1851d41b899841370bac73069a24d01d97033a370d8753605fc5772fdcb6c",
+    "cloud": "GCS",
+    "size": 2802,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:20.422880",
+    "sha": "19b84b2d3549b8b591d1f22c2c90d27b6b6752a0fa6c2f72c3e7bdeaf3ab7701",
+    "cloud": "GCS",
+    "size": 56255,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:22.528494",
+    "sha": "52847bd1cf5dffe4c077c4833f3db749ea8eb1a1796ac01d9e0e03c1b3d1013d",
+    "cloud": "GCS",
+    "size": 3813,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:24.569114",
+    "sha": "04e60c976ce2e7c8e13c4010892874463453ab563d46d308a05d0d6797bfaa03",
+    "cloud": "GCS",
+    "size": 6928,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:26.610193",
+    "sha": "f69cbd566a88cce5dfe58faf6c632c1c0d0725b463f7ba77c8751d99db5ab4fa",
+    "cloud": "GCS",
+    "size": 4308,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:28.625831",
+    "sha": "98fdc2627604521fb31f1383183866b85c09ce8ed63247ad1a545dd0808f0102",
+    "cloud": "GCS",
+    "size": 2754,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:30.645338",
+    "sha": "b5c034763d8a8771c7694495a28c0b1ef1892a865e6e655b680c5730bbbd1116",
+    "cloud": "GCS",
+    "size": 4347,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:32.690673",
+    "sha": "286096ebfdfd7d7e585f15d34a0ee3b17a8529a148350cb55402bb62584c9f3d",
+    "cloud": "GCS",
+    "size": 10265,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:34.796449",
+    "sha": "9079fbef9e14d27b35f7ce708f85904c388fb078c633656c1cd9525c2e25a739",
+    "cloud": "GCS",
+    "size": 160154,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:36.893266",
+    "sha": "3fc7170df69fc1786ba6875944d2abc219b461c3e8bed37534a247041dcc7d9e",
+    "cloud": "GCS",
+    "size": 199294,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:38.996930",
+    "sha": "39e6ce464892303a6119444ec116173e432186d0b19370f0a45a98fcbc5035cd",
+    "cloud": "GCS",
+    "size": 23147,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:41.107285",
+    "sha": "ab8566428e8834bda19e8851d22b38886564889b7d5e6ddab5894297b318e4f0",
+    "cloud": "GCS",
+    "size": 597,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:43.198390",
+    "sha": "28f1e86d15a97beb66323b80588aa2a9ed86e1ab58d44861f6f67cb3930bffe3",
+    "cloud": "GCS",
+    "size": 22707,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:11:59.030870",
+    "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cloud": "GCS",
+    "size": 0,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:01.252273",
+    "sha": "1855f95082a208a769b46b4cc86306fa3e40b2b9ca4025734db93c248cfee3be",
+    "cloud": "GCS",
+    "size": 4885,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:03.376965",
+    "sha": "30d299938a8a2ed5debbfb8cb57d5ab3bbeb648d87acf83bcc0ce8a8806ac909",
+    "cloud": "GCS",
+    "size": 1003,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:05.427742",
+    "sha": "7f5138b17bf4c52f8c16e390c8477209d0f4771a51711f696ecd7f17d70775c0",
+    "cloud": "GCS",
+    "size": 837,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:07.417031",
+    "sha": "5c1678be4cf41ac3ed7f133a1d524af79bc6989f8e20da6d21a68107fbb7eb4a",
+    "cloud": "GCS",
+    "size": 85,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:09.478099",
+    "sha": "694a90ab150d78eb8e4cad7d3ce4d244bc21706aa22549ad40b9051f9be13034",
+    "cloud": "GCS",
+    "size": 62301,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:11.517013",
+    "sha": "92a8158a85adc15b888455c75ddf5f6dd28b85f939f486f8977a9450a3f52dcf",
+    "cloud": "GCS",
+    "size": 12993,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:13.581067",
+    "sha": "0797c9c779fc091d82a02ccd8a7933a6af18493768400a5e6e30dee82a4b8129",
+    "cloud": "GCS",
+    "size": 3350,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:15.671699",
+    "sha": "bd9e764a39434678a45ea268ad71a9fc138af066c15783bd08e5ab5014e00c34",
+    "cloud": "GCS",
+    "size": 29662,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:17.785186",
+    "sha": "2f6ae9de6cd627fc55292bf71591ed2eb6b0f1be819addf5e60d9e5bbb030e70",
+    "cloud": "GCS",
+    "size": 21860,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:19.812026",
+    "sha": "72e78fd484483e93135f849be377c9c60b0a3b489b6bbbb82fd70997f1a1bb02",
+    "cloud": "GCS",
+    "size": 32242,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:21.909898",
+    "sha": "9a75676a49405981b8df623ba3ab09a0f26929247d918ea52b2e9aec8dec06a3",
+    "cloud": "GCS",
+    "size": 3375,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:23.921308",
+    "sha": "f8b6be06df297405570dd921637f2982f5729b1c8f243961d85aa0d200502e5c",
+    "cloud": "GCS",
+    "size": 27062,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:25.984829",
+    "sha": "dc46a37dc3cef3be872e4dc01a9285264f26eb526504fc72d6e55d0f3ae1b0c7",
+    "cloud": "GCS",
+    "size": 21162,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:27.963064",
+    "sha": "57e93ce92c3916db04ca945c869975a34a2392a842cf4f74ade4731c8cd15242",
+    "cloud": "GCS",
+    "size": 30443,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:29.986778",
+    "sha": "82c8883fccf994b607c300c152a9719c37663b8a41f9adb7eafb8ce91ca3fc45",
+    "cloud": "GCS",
+    "size": 13416,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:32.045062",
+    "sha": "b0f405a43564ff1e1df8192930fa5ad2435090788079e86d672058509edb8a8c",
+    "cloud": "GCS",
+    "size": 23984,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:34.085930",
+    "sha": "5260076d2959160b8285ca007db6fb07a80ea178a89847f7a03637ee0f772af7",
+    "cloud": "GCS",
+    "size": 388,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:36.165089",
+    "sha": "bbfd279235562b4fc9628381704d88258eb5ae3315bd5df060dc147993552c0e",
+    "cloud": "GCS",
+    "size": 646,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:38.231777",
+    "sha": "7d5708e50f11cd68b1bce8aa6ad6d492c4c06d4c423e5e72b865d3c50ef40efb",
+    "cloud": "GCS",
+    "size": 67578,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:40.292613",
+    "sha": "545dec2c90db2962af8795f5ce393060254b93d6d0c30791b74049a790a141ba",
+    "cloud": "GCS",
+    "size": 23680,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:42.339730",
+    "sha": "542f72d6e8af78677d6c972f87cf57609f4141b4d22b50968cce8e80fb19b048",
+    "cloud": "GCS",
+    "size": 6715,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:44.383632",
+    "sha": "0ef96c769d3bdd52175e0df24cc76e38c337ab5bba51a453a25758ad41d79322",
+    "cloud": "GCS",
+    "size": 3895,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:46.438507",
+    "sha": "168b1c421caf6fce49900b43edfc82453adea0c2830ff57e397fff12817f20cb",
+    "cloud": "GCS",
+    "size": 11685,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:48.459115",
+    "sha": "e12dadc4b33fd481b858a4419dfc060416c8bd6ee28b3d5d2ae40d74710e96a2",
+    "cloud": "GCS",
+    "size": 27197,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:50.506722",
+    "sha": "33e41531135d22c5291862bd63fed0367c326410931d914fd497f916395097c8",
+    "cloud": "GCS",
+    "size": 1628,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:52.533845",
+    "sha": "4dfb5e77b036d94df630ed103b856dd3edb407393e5acb5a3305d36d0adb4033",
+    "cloud": "GCS",
+    "size": 181254,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:54.555562",
+    "sha": "7380b62c62329f2b333ea057950abec41833c80e085e005fae9693381a5456bf",
+    "cloud": "GCS",
+    "size": 1953,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:56.599361",
+    "sha": "b7ede496da94649483df6cd8425550f427bf6d1171c6157458ca991eb14682e1",
+    "cloud": "GCS",
+    "size": 159401,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:12:58.601178",
+    "sha": "bc2bb8f499bebf828b149ee58003dfc07da7b733cba30af01b4d41af5d71f609",
+    "cloud": "GCS",
+    "size": 216,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:00.595940",
+    "sha": "bfe95fd7e95b317ef2bd7322ca7a218d9e65f744cea8afa216a30a7580a02a6d",
+    "cloud": "GCS",
+    "size": 1427,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:02.628565",
+    "sha": "bbf45b4c0817c63925c6a225205dde45454abb714a203800fa14740da8be7c60",
+    "cloud": "GCS",
+    "size": 16874,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:04.674582",
+    "sha": "fb65b36e3272d4fa1208a40f610e3dc73afab1864b81ae5471bd7e692fb26f5a",
+    "cloud": "GCS",
+    "size": 33467,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:06.742458",
+    "sha": "f1050894a0055e895c4adaa4143cd6c5018351750f6164067017cb8b2c3d1435",
+    "cloud": "GCS",
+    "size": 18357,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:08.732529",
+    "sha": "97ab0e7821c408841f0c0a50418fdcdb92dd1117778e38d2f000d7fd388c50f0",
+    "cloud": "GCS",
+    "size": 5241,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:10.771557",
+    "sha": "c975e06fbff28d2c431a77967365c8473b119226174bbc389617c2d4cf7adb8e",
+    "cloud": "GCS",
+    "size": 71542,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:12.852353",
+    "sha": "6f716a64d04ac1a27a0d0edaf9f70bd10ad618cb223dccea11634ec587401bc7",
+    "cloud": "GCS",
+    "size": 1138,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:14.897786",
+    "sha": "3c1c5259f6ea8ead3a7d17ebb44ff9792812ad15e37330b3fb04b58d87d566a1",
+    "cloud": "GCS",
+    "size": 22666,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:16.911606",
+    "sha": "5682c7008b45fadc6c5aafce18702201a75474ec3e06380d507632d2b6538e1f",
+    "cloud": "GCS",
+    "size": 55049,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:18.970338",
+    "sha": "8ffc2590498e63f48fcbd094624e33aa1b18432fb1a58b72e08f2e6b3895d20f",
+    "cloud": "GCS",
+    "size": 461,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:21.128914",
+    "sha": "4e72ca23d6bad3e263113f4a8fda7b1a5e0ca00be96847031bd64fef2c2fa130",
+    "cloud": "GCS",
+    "size": 85,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:23.147057",
+    "sha": "8ab84abc4a59ff83cdfbe4c95ccdaf6eb4ac438415bdee3747d0b2d8a65e2713",
+    "cloud": "GCS",
+    "size": 85,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:25.229189",
+    "sha": "4ed6f0e7f553a69fb0e21f057ce277d50260ae1cf8f1987205b202ad912fd23c",
+    "cloud": "GCS",
+    "size": 205,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:27.278619",
+    "sha": "5d2a12ac233807484f8efbc4cb862f3dbbd6a7b80eb81902de43a9986bc605a7",
+    "cloud": "GCS",
+    "size": 603,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:29.299036",
+    "sha": "00e5f243bdeb1b3747104d050c29dd4341bd51ae1614cff1ed66cd7dfe8b7805",
+    "cloud": "GCS",
+    "size": 205,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:31.366345",
+    "sha": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8",
+    "cloud": "GCS",
+    "size": 2871,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:31.537685",
+    "sha": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+    "cloud": "MongoDB",
+    "size": 58,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:33.528321",
+    "sha": "1bb3b46d00f55f63d24c3a34a7f955ef6692d4691217a53b15261769607f9f7c",
+    "cloud": "GCS",
+    "size": 3619,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:35.560442",
+    "sha": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+    "cloud": "GCS",
+    "size": 4,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:37.580043",
+    "sha": "ff6a3334508b59cf776cae1628708ef9e0d410d0e5a3e76073d714deaa2460ee",
+    "cloud": "GCS",
+    "size": 82,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:37.590567",
+    "sha": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+    "cloud": "MongoDB",
+    "size": 1475,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:39.699316",
+    "sha": "7ad99b6fb4f99457dbca857fb7ad4ef5be600d7f848e938b0640fdb3a61206dc",
+    "cloud": "GCS",
+    "size": 5708,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:41.743304",
+    "sha": "3bdeb5ac0c4a8bbb4773f435c3b06470ed70341b978e4adc7878d0870b9c943a",
+    "cloud": "GCS",
+    "size": 80128,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:41.750618",
+    "sha": "ff542f48922114019fc5befd0fa0e107b494c365fa4f8af09f3fcb2eb6dc0f77",
+    "cloud": "MongoDB",
+    "size": 7,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:43.756358",
+    "sha": "3fd8f0fa01237bc07207bfe15e82029c7b550ab13031087eeb7d2d2af4167a17",
+    "cloud": "GCS",
+    "size": 91,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:45.824576",
+    "sha": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "cloud": "GCS",
+    "size": 11358,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:47.876626",
+    "sha": "ea17d56b5d90fa75f25045ebe92c8aa6a3c40c95babe5447c8fc65036ecf7d3b",
+    "cloud": "GCS",
+    "size": 22,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:49.913136",
+    "sha": "d54511f9a373fa07fb6d065b0a33eededf34a786b2797c027a63b6f6d0ae6327",
+    "cloud": "GCS",
+    "size": 3955,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:51.926666",
+    "sha": "70e011709add1917e297258fe2588ea11587ce544d7f3a136b865865aa6dbbc8",
+    "cloud": "GCS",
+    "size": 364,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:53.964813",
+    "sha": "3dd80be1a9b77b18ae3502e60c76af2c506b9d28afbd38a9af4a71c143a91701",
+    "cloud": "GCS",
+    "size": 3122,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:55.974845",
+    "sha": "f0f8f2675695a10a5156fb7bd66bafbaae6a13e8d315990af862c792175e6e67",
+    "cloud": "GCS",
+    "size": 26,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:57.961924",
+    "sha": "ad64b85220873f84d7e0a6ceee6c908751a7733476219a42d2f223d667aea4ad",
+    "cloud": "GCS",
+    "size": 5766,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:13:59.978578",
+    "sha": "054922ae6c15044ee8342e0bec20dafe87aaaef2797d9a9c635ce7dcecbaa2a9",
+    "cloud": "GCS",
+    "size": 195,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:02.061389",
+    "sha": "dfd6ffac9e757ca270bb6592f3441f578d226aabea2d94241417478ca0278f06",
+    "cloud": "GCS",
+    "size": 7146,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:04.104620",
+    "sha": "920e90579b3be45d10162f868363db0f76efa67a56a470fe2e69cc198698013c",
+    "cloud": "GCS",
+    "size": 67,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:06.135186",
+    "sha": "11a1de644c2ff59cfdb7ffb4580f809788ec1293ef4627960a398e93789e4c87",
+    "cloud": "GCS",
+    "size": 14582,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:08.163727",
+    "sha": "5d7b632f05bc93d28e03a36db41dd4e5c177ef8435b0a0cbdf1c4ffdee66dd58",
+    "cloud": "GCS",
+    "size": 120,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:10.213901",
+    "sha": "81d61236a5f25294b2dad0c866d4ad6a40b865148b28df9a71f49ba771a6c54b",
+    "cloud": "GCS",
+    "size": 1078,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:12.192293",
+    "sha": "49c414311d0e8bfaa7235a9d0c9f456c7df92e325ef28f68466239be28d84709",
+    "cloud": "GCS",
+    "size": 17874,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:14.164212",
+    "sha": "8aecd2cf840335d55481549f8ab4813c52710d7b0cabe05d92a9c5a231e6e335",
+    "cloud": "GCS",
+    "size": 259,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:16.319569",
+    "sha": "f7bdb90497883a6844e74e56cd461585160e364c40f3a19e683a160920241245",
+    "cloud": "GCS",
+    "size": 69,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:18.300645",
+    "sha": "a2c05d1564ec30e6e91254830aef77f992bbb9d162eb15629b48c9a9780d3ef2",
+    "cloud": "GCS",
+    "size": 5770,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:20.307932",
+    "sha": "547e35e8ede4a52dc41325c25dd6cf981e5e91fb4b7efb7cfd666bcc032db5a7",
+    "cloud": "GCS",
+    "size": 132,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:22.296529",
+    "sha": "a7744ba99d43dbd71ddd840795027d2fec01a94f25604df80f123ad72d61278b",
+    "cloud": "GCS",
+    "size": 2533,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:24.325035",
+    "sha": "c91339910d300f163edcaddbfb3909f1cffae19a496b7fe3935a9a4073dc305a",
+    "cloud": "GCS",
+    "size": 1073,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:26.376814",
+    "sha": "4a6560718d11c664a73e5e0437266df4d053f6698d9b0851730ec218936f7d0f",
+    "cloud": "GCS",
+    "size": 6130,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:28.402126",
+    "sha": "1b50cd352f379602e60bec7169419ce6aeef2523b5f21b431e87443d48fbfcf6",
+    "cloud": "GCS",
+    "size": 261,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:30.474265",
+    "sha": "fb6f13e1d5db254a7ded61aaeba7c225edbc57cbadfc2b8d75d437ecc93443ed",
+    "cloud": "GCS",
+    "size": 71,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:32.471650",
+    "sha": "5419c31d6f7d31f99d08fa9f6804ac08bf11566301d596d6d73eaca5f4a1f690",
+    "cloud": "GCS",
+    "size": 12483,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:34.479836",
+    "sha": "21ad63a9ca13beefc1a3d4f73f9616ed649b62cbcdf4dfc234e52afb5f925145",
+    "cloud": "GCS",
+    "size": 13677,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:36.501710",
+    "sha": "848c3d5bbc6c8fea2d9e4d05d556f3e7556eb84c2e17456972be6da688b08949",
+    "cloud": "GCS",
+    "size": 263,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:38.472707",
+    "sha": "340450d0f2e6b026da2ddbcc569e2c5f8c651f39f80b1be53ac2f1703bee0f80",
+    "cloud": "GCS",
+    "size": 1791,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:40.490570",
+    "sha": "99ade284a620d902185e889b293f8126ab0ebb6825438ee45df0f41dfb956e97",
+    "cloud": "GCS",
+    "size": 2970,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:42.531705",
+    "sha": "4a2a63938acdfea215f06982329d6462f33e5de74511c269ff2aa0b25a617c69",
+    "cloud": "GCS",
+    "size": 5246,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:44.540377",
+    "sha": "59b67f4ee092cd6c7b60fe295951232b213fb2e9808f0edf66f6f4560bf0d2a8",
+    "cloud": "GCS",
+    "size": 4559,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:46.580652",
+    "sha": "451e261058774adb31a98f48171240ebef6c8fe36c87321c3d968ba0f394ee66",
+    "cloud": "GCS",
+    "size": 71,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:48.596908",
+    "sha": "e82ba867d1d1eeeb906aab22adbad7068540a61b0c2626ab3da0b7ea30ec41b8",
+    "cloud": "GCS",
+    "size": 4568,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:50.667816",
+    "sha": "cf9bd51f8f6e99585c3586ded3cd85310b742be5c811e8555ebd9897d7100151",
+    "cloud": "GCS",
+    "size": 6231,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:52.681714",
+    "sha": "f770bdbbce75071cb2e5cd96160edd983a417ccd4a717b52973b59cfae8200eb",
+    "cloud": "GCS",
+    "size": 264,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:54.811696",
+    "sha": "ce51b071b4976cff63ddef4c43193b1fb13a4c251a1f8356a30a80dc096da0f0",
+    "cloud": "GCS",
+    "size": 102,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:56.866616",
+    "sha": "d731e94ee977759ce6f8297b66f332b00995d74a1ebde47802b57810d8d59670",
+    "cloud": "GCS",
+    "size": 8929,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:14:58.904915",
+    "sha": "b6e6373b60aa170d0a7b77513c929b661cf3fd3663a6ab0820b9d48ac92a5d75",
+    "cloud": "GCS",
+    "size": 7755,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:00.966951",
+    "sha": "fa3c98fb3de61f118c42a79a3d88dc58aedd929e72f4e70511f550d43c347e2f",
+    "cloud": "GCS",
+    "size": 11036,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:03.022596",
+    "sha": "bce48219b2d681cf1f7e72aeb7c8be234eedbfbc836c35dfdc04b32e90686065",
+    "cloud": "GCS",
+    "size": 282,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:05.192349",
+    "sha": "4f1b437cf725a457aa1be9a8311b0e7dd25e7cf7ed673388198a91b89ad30a5f",
+    "cloud": "GCS",
+    "size": 11453,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:07.287534",
+    "sha": "86cf37a9863845dfc9dc0522035eaf00c83e77d3ab0c4143dff520636b1a7a49",
+    "cloud": "GCS",
+    "size": 61,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:09.370763",
+    "sha": "ee3337655ec1b8c1526bab9875a894edb5272c4d11cadd21938034c9d475892a",
+    "cloud": "GCS",
+    "size": 6838,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:11.425845",
+    "sha": "cb3e32219ce4109b8195a9248380d1d47f9443c46ea62dac15f52012845dec7b",
+    "cloud": "GCS",
+    "size": 117,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:13.477128",
+    "sha": "699355a44cb248631a4cde542029b593b7e6663823b0518338e85fd65360bac3",
+    "cloud": "GCS",
+    "size": 1129,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:15.549041",
+    "sha": "9aba06f1cfba5844624d6dabf8b4925285061d1c110cc4dfba18732ebc4a61bc",
+    "cloud": "GCS",
+    "size": 8217,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:17.596748",
+    "sha": "cdd5d4af536245ff3638e4786c8cb380ec58ce22b6dcd4f98c77ae28fbb10f26",
+    "cloud": "GCS",
+    "size": 253,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:19.677800",
+    "sha": "2718752285c154f0aad6c272e58d87554ef9489617d673c72d075f7e0cbbb67e",
+    "cloud": "GCS",
+    "size": 65,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:21.755095",
+    "sha": "9a43ac63eaedbc3aac3fb437804eaf3edeb634bc5b2307efcf59c88d2494e4a1",
+    "cloud": "GCS",
+    "size": 4114,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:23.874989",
+    "sha": "97256dc609963891b5a76e245ec5033b28d00856796274ea4d1649a6ecf02168",
+    "cloud": "GCS",
+    "size": 5259,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:25.996735",
+    "sha": "10253b4f96a2bff428a939d5ebbf4675b43200008bed291c08f25841ef3a8e94",
+    "cloud": "GCS",
+    "size": 257,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:28.064272",
+    "sha": "bbe43f5dd85daf428e968fd274c09966ef7198d7ada38118e6269ae448356676",
+    "cloud": "GCS",
+    "size": 65,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:30.127810",
+    "sha": "a46ff832686b435f3173dc760078bc4193f0204018a1cd545174eec1202525f7",
+    "cloud": "GCS",
+    "size": 7439,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:32.184107",
+    "sha": "bd46ddf35c801c61d65799ade0396c28417bb6961e6c206687b29735bed3f51f",
+    "cloud": "GCS",
+    "size": 132,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:34.203198",
+    "sha": "18626b788958dae421a7ba6eecfe8d053adeecea0e6c9ce9596afccb22fc85d9",
+    "cloud": "GCS",
+    "size": 1273,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:36.364267",
+    "sha": "5c404cdff9c908436ab96d53fd99b5a41a70bbda63e859ad5bc422b5c8d0525d",
+    "cloud": "GCS",
+    "size": 6955,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:38.391326",
+    "sha": "29bec51684dc6e90c21a8eeb1c909eb45d59ceb6cd4605c172f5474676c103ae",
+    "cloud": "GCS",
+    "size": 257,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:40.490448",
+    "sha": "7c1bd9dedd9c61e02d2994d5b0ed5cc3222c94b3f9e18510c77a274de6fa5c7f",
+    "cloud": "GCS",
+    "size": 75,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:42.489734",
+    "sha": "2125cdd070293128fddca5b9b9984fac7bbb59d867f5ff63aa51e16db6e7f47e",
+    "cloud": "GCS",
+    "size": 3360,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:44.495270",
+    "sha": "ec071db3b4a4eed4e8d4dec2ba5b3e033c3e9a1478919225cf7913afe05b251c",
+    "cloud": "GCS",
+    "size": 124,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:46.583772",
+    "sha": "9e1bc1fafae020b5c33cc9cb745c707a5addf109cd814f0dac2d41424b83554a",
+    "cloud": "GCS",
+    "size": 1056,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:48.645221",
+    "sha": "3f0ffe5efeae5e20bac291f2471b3c6a51870e2e6f8c4794c2e44562b5ea779a",
+    "cloud": "GCS",
+    "size": 3372,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:50.695282",
+    "sha": "13ca4d50a14154993b74841f46906d96fa524ad6bf71b9986622318a2265a7c2",
+    "cloud": "GCS",
+    "size": 267,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:52.711746",
+    "sha": "92ddf4bd682117c31f17f5de0f4f2c76b619a8e7540fa41dd58b72ae6ae1cdb5",
+    "cloud": "GCS",
+    "size": 65,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:54.783590",
+    "sha": "bdcd0258a1d3da27531e9aac687addc60de57a3b95ac37ba7042d7cd9ee36a00",
+    "cloud": "GCS",
+    "size": 10820,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:56.816209",
+    "sha": "43f58a2d8e6aa362248144df36bd1b79c4908019867ff00d403d56e3519154f0",
+    "cloud": "GCS",
+    "size": 245,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:15:58.850105",
+    "sha": "82de8b49d756843182950bc4096e4bc1c76d81af0df1c24912be270b3d7d1326",
+    "cloud": "GCS",
+    "size": 5191,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:00.907814",
+    "sha": "012a56cf9e23a2917336178cca417ab4c88fc64ad7086d621d6a8b956593629f",
+    "cloud": "GCS",
+    "size": 1075,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:03.023699",
+    "sha": "19638dcc27195bbb6ca6e29008605202ce699de477e03c49cac5c27909e70b1d",
+    "cloud": "GCS",
+    "size": 10233,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:05.084159",
+    "sha": "2d650cf11f54b28e6e88f6a6d3aea04baf65538c572b6c951d2b24477dfe6e91",
+    "cloud": "GCS",
+    "size": 257,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:07.130209",
+    "sha": "27469ca5211a72c62d39c55466d1c194cc94e4191415040819fe50776023c9a9",
+    "cloud": "GCS",
+    "size": 747,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:09.120349",
+    "sha": "528264aaf1e2d1a051f2dd6fa351be5792031eefc7ea8388df692e908dadfda8",
+    "cloud": "GCS",
+    "size": 4095,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:11.131722",
+    "sha": "adcb8ad2033b0ae895e25e3ac4430a545e3653cc9e444bc9579c4cd71246c497",
+    "cloud": "GCS",
+    "size": 4347,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:13.143661",
+    "sha": "37d1578fabfc71cfe77a4c0fd4adc7e821cd958fa53cd421f6439b92feac6676",
+    "cloud": "GCS",
+    "size": 210,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:15.203027",
+    "sha": "5c4aab3980dd0c240668c9d9fc26e3aab8269c015ec36eed64c4312c70e614c5",
+    "cloud": "GCS",
+    "size": 69,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:17.209350",
+    "sha": "dbdde926995ecd05b6b783faf4e824e4fe0260a0eda151ac200daff5972a532a",
+    "cloud": "GCS",
+    "size": 2035,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:19.245754",
+    "sha": "234a6e1645b8e922a2b028bdff3a9ff4ac143d9e2fd5a5a71df3564e0eeb845e",
+    "cloud": "GCS",
+    "size": 3216,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:21.316674",
+    "sha": "a4d6519413f4bea6a411d307334032392029fcdf13954c8b823f1a928ebeb904",
+    "cloud": "GCS",
+    "size": 261,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:23.353055",
+    "sha": "bef86442481c88bce2ee1edccb1ebbacb628e273f87257b0dbe831c498f824ec",
+    "cloud": "GCS",
+    "size": 8283,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:25.421541",
+    "sha": "eb3174772352f0ab7ecfbcbc04103cc5f4373b8070e3e81329635da21d0032a0",
+    "cloud": "GCS",
+    "size": 7429,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:27.502236",
+    "sha": "3c6203852b56fde7d18e969adf31c8a68fa1b52b49391e35229dce2563d8070a",
+    "cloud": "GCS",
+    "size": 6080,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:29.528107",
+    "sha": "f2c33758c4ee6e2d5c05bd9cfe53e45a937427c74c02aae029160b2e2d5d0952",
+    "cloud": "GCS",
+    "size": 2377,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:31.584723",
+    "sha": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "cloud": "GCS",
+    "size": 30,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:33.581572",
+    "sha": "57b94c530c3b0aa809d93854067d4f89ab59b506a73b2b7b399a6ed86648fb7e",
+    "cloud": "GCS",
+    "size": 750,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:35.593654",
+    "sha": "987bc937d4b0b65d510ed8c2a82218c889e22bf499fe5fe1a94ca73b382927da",
+    "cloud": "GCS",
+    "size": 2701,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:37.642895",
+    "sha": "d937172d3f3902c7e59b65bd58e485c4a0a6627e5ee3dc3f26483df8d69a256a",
+    "cloud": "GCS",
+    "size": 7537,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:39.681022",
+    "sha": "a79404da5635f0622d6ddaff44a46967c0e8d7b8343ef4062206644940e15f69",
+    "cloud": "GCS",
+    "size": 4541,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:41.706062",
+    "sha": "5c6aa0151b0b8018732280761d27eda0c4c83378630e21faadd57b73783720a7",
+    "cloud": "GCS",
+    "size": 61744,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:43.762658",
+    "sha": "103fce577265d5e9accbb667b5beda156c72a329edf8fccd634785507f92ca8d",
+    "cloud": "GCS",
+    "size": 15495,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:45.818075",
+    "sha": "5dd419992b4198f22cf2df77b63c7aa4eec19b78286c068e3569057141da19ab",
+    "cloud": "GCS",
+    "size": 1713,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:47.860039",
+    "sha": "3e2a85d033da9ba1d6d051f8087d61a574c17b7d0d4b38cf10ec2bcf56fa92dd",
+    "cloud": "GCS",
+    "size": 13219,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:49.929216",
+    "sha": "e1ab4384927f72957554cab8aac7d4e04ffad4cd6837dde3952d87f608eb979f",
+    "cloud": "GCS",
+    "size": 15120,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:51.936264",
+    "sha": "2fe2f9b768ca812d1a3a65618a843fca5a9c8225459c0eb2c4ef912cd86af865",
+    "cloud": "GCS",
+    "size": 3293,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:53.964841",
+    "sha": "ee78e6ce4149beb3d242e76c80e36c810cda1ab1a9a5e04835ebca8167ac70f9",
+    "cloud": "GCS",
+    "size": 23521,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:56.089870",
+    "sha": "c73271ea826a18495386d12085937b65018cc394c3172b91c5491e73046e0280",
+    "cloud": "GCS",
+    "size": 6962,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:16:58.067700",
+    "sha": "253f5f8bffbfaac0172290b535259ca7556b3be4125e099dabde5ec6d7c2c04c",
+    "cloud": "GCS",
+    "size": 10136,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:00.112442",
+    "sha": "8d492fe2655e93622ae21c3177846faab20c6faf41bf43c49438162e6779391a",
+    "cloud": "GCS",
+    "size": 9406,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:02.151085",
+    "sha": "3df87bdbe07196fa07d101c20ce7351ef5c6ecaab95deb5fdf3ccdcf690d4879",
+    "cloud": "GCS",
+    "size": 37184,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:04.216104",
+    "sha": "abac0ce18e1a60c18637f2e2b6c8f73d82a9052dd9beeb74c610e6a4110715da",
+    "cloud": "GCS",
+    "size": 30387,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:06.274575",
+    "sha": "4ea7beec4919fad6d67219bc883a027c3f38f1fd3fde72efe8d3637883ef1f03",
+    "cloud": "GCS",
+    "size": 24637,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:08.280540",
+    "sha": "5a3f4d546b624758ef919f6048577dd6eb1494cf07d20d3a68f573dac321e1bc",
+    "cloud": "GCS",
+    "size": 38116,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:10.350480",
+    "sha": "fb45f5b440a78a59b3d5ca20c7e621370e5dee0b8aec62ababf0c45763b3954d",
+    "cloud": "GCS",
+    "size": 228,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:12.364730",
+    "sha": "8a7b3eeca0e153a2a1de64977348a7a9499e773950989a881adbce351f3db015",
+    "cloud": "GCS",
+    "size": 30213,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:14.431558",
+    "sha": "ce90ca6dbe5914ec1155aeb49f355529e9cc4a39229a3602224de24c31015545",
+    "cloud": "GCS",
+    "size": 33700,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:16.495853",
+    "sha": "9b25479047fa319d4068db916246aa45f41204bbad50e84cea8e1a1283e6eb94",
+    "cloud": "GCS",
+    "size": 31200,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:18.525638",
+    "sha": "4ca0523607de81b40a3cf3846a70add344152aff3396b3193e4153098ba895ad",
+    "cloud": "GCS",
+    "size": 19825,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:20.552871",
+    "sha": "44bb0e882e9c5500299eddbff8c41ff82d89575c4f3a47788b7f975171f388eb",
+    "cloud": "GCS",
+    "size": 17169,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:22.615891",
+    "sha": "2d3ef9131d9d89450fba8a4b4340b0f2b53d676ff4f69d0f2c3aa0865f977d2d",
+    "cloud": "GCS",
+    "size": 16239,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:24.667594",
+    "sha": "27bc0e01c7b9019ce609f815ed09ae843145042a0b8850e0af71cdcb8835fda1",
+    "cloud": "GCS",
+    "size": 13614,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:26.778955",
+    "sha": "ed999f2eb81ca6e7c07cc8ad6ee3dea969bb0fbac245118e09235e6e6b8c6291",
+    "cloud": "GCS",
+    "size": 10040,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:28.815263",
+    "sha": "6ba77781b5ab82a5b6c922734084703462d8f76df71564c2dfa1dc4391d37213",
+    "cloud": "GCS",
+    "size": 4117,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:30.867295",
+    "sha": "e4baf9f5125ac437a05ef96b999a4b3e05229c57abbd0ff2a53972894384e02a",
+    "cloud": "GCS",
+    "size": 25432,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:32.902677",
+    "sha": "bd61f58def91d77bc806d1068e6eff382192479b8ff272c20c3127acc6feca1b",
+    "cloud": "GCS",
+    "size": 9919,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:34.983266",
+    "sha": "f2f6213113868aed206fe7cd296b42c6e89fdd594c9bd70952e05aa0330b8218",
+    "cloud": "GCS",
+    "size": 1209,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:37.022258",
+    "sha": "a33b905ae6925378336193ab33dc64fa3303265ef81877d217116ec81031ed06",
+    "cloud": "GCS",
+    "size": 228,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:39.040784",
+    "sha": "e44cf11376c37d31192c842575c2bf608a88e18886ad56f5c21d00e5c2cab864",
+    "cloud": "GCS",
+    "size": 9137,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:41.050179",
+    "sha": "51ac15928bcefc7982485e89a08edb23626dcdf32a92d76e0b89719b4674337c",
+    "cloud": "GCS",
+    "size": 62475,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:43.088885",
+    "sha": "9b430f46a3169d04a9ec2c7589d4c8501ac973239c3afbaf1176870785a07690",
+    "cloud": "GCS",
+    "size": 2520,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:45.137237",
+    "sha": "5b6874ad159e921a523aade1771ed58cd3c054690a8bd0da6c476741c02594f1",
+    "cloud": "GCS",
+    "size": 43531,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:47.139329",
+    "sha": "aa9c3eee1c5d4801dae9d847737eeff3e6bf5bc95177cfa394b5a3b273e7be79",
+    "cloud": "GCS",
+    "size": 1852,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:49.158918",
+    "sha": "c708baadd55fcc50ec37eeb918c49e02dcfbe9c2a5517a149d17e1ea737a9bd8",
+    "cloud": "GCS",
+    "size": 7008,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:51.239653",
+    "sha": "2105fcc190e49a645a4e23135cf14fcf1261886bfc46a49a3054b416e9e7d556",
+    "cloud": "GCS",
+    "size": 4987,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:53.273669",
+    "sha": "4baae848371507c6bb5bc8280286dbda048a392721b2a3f79bbf840cd4aab1d9",
+    "cloud": "GCS",
+    "size": 3254,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:55.401164",
+    "sha": "84b351f3df296aaa1e7dd78086b69ae70c89cbe6e6441da4d9d578120572d99f",
+    "cloud": "GCS",
+    "size": 5602,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:57.433515",
+    "sha": "e62984cd8e478d5d87a1456b41b24ba970b330da595df0f46355ea74b5765c10",
+    "cloud": "GCS",
+    "size": 7672,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:17:59.435114",
+    "sha": "0e168dc2e20e85db7647be28382f58e19f19a6bc4562245be5d50fe5bcb220dc",
+    "cloud": "GCS",
+    "size": 9281,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:01.600077",
+    "sha": "bbab79bdb852328e687c927c6f653265384e57b463f113db44d16fd58edaca04",
+    "cloud": "GCS",
+    "size": 9247,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:03.644095",
+    "sha": "460b5760c2eba5039e9aa3c93471c61e922d9cd216bcd439beecc00308e3f0e3",
+    "cloud": "GCS",
+    "size": 6680,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:05.715873",
+    "sha": "357cb55615fff7791f7bee69907a6625cfc19576b576f07961b6d7017ccbef88",
+    "cloud": "GCS",
+    "size": 13942,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:07.791074",
+    "sha": "2a5df9471ff35bcfcdd66361b38387ff2e19477b6af4fd9e1c2054592bba91c0",
+    "cloud": "GCS",
+    "size": 71640,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:09.849197",
+    "sha": "3b41c0e7c58c40c7ccc3a4ab8f20a7d90de83771a94330bae812bdf36eb0d37f",
+    "cloud": "GCS",
+    "size": 15877,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:11.868178",
+    "sha": "dbdb17ee0c3ab4b5f0a7c7922d9fcd715a9ae368259199461a89dc9165a54eb7",
+    "cloud": "GCS",
+    "size": 86028,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:13.883067",
+    "sha": "b4f4a4154a17f441adbca883cd17123188546c79487456c2c39edae32b0dccb1",
+    "cloud": "GCS",
+    "size": 86668,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:15.961179",
+    "sha": "907c08549d09dda2efb4d26b72ce21d0e14c45514a46d56618c52f0616706915",
+    "cloud": "GCS",
+    "size": 7142,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:17.956389",
+    "sha": "d15ea993fe9daa4688301d9f6dd971111595d2322df26d722f130f0aab15cc0a",
+    "cloud": "GCS",
+    "size": 28642,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:19.961158",
+    "sha": "d767d4c4eed7c701ced3e2150ac59f95cd825db5e0f0dcdfbe01e9b604ebe272",
+    "cloud": "GCS",
+    "size": 35949,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:21.952561",
+    "sha": "de97636b3f5054f8f639e0914125d75c67fcf62b3d1628eddf6f1d3488bc2678",
+    "cloud": "GCS",
+    "size": 31756,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:23.970077",
+    "sha": "6c2ebac21139007410080811a015c249ed6fb2f207b1a64e018e47ae19174081",
+    "cloud": "GCS",
+    "size": 115336,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:26.010360",
+    "sha": "fcdd2dd2f28fbf8865fab6d59113a27805a058ffe93d406c34edbd99eef181ce",
+    "cloud": "GCS",
+    "size": 24920,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:28.041877",
+    "sha": "e6168ae48b2aa201fbc2cfae8a46e1ecb272c2ab104cbe22855f8a4f7089f9ff",
+    "cloud": "GCS",
+    "size": 18252,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:30.071354",
+    "sha": "3d37a513ee5f75c98bff8f64cf8ebdeba24d97c541dfe3e8c309a4c1c232a1d7",
+    "cloud": "GCS",
+    "size": 29672,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:32.079461",
+    "sha": "570d61c329f69865d0d4361292c056cdf0410329da8b25a15ca44c585ffedd28",
+    "cloud": "GCS",
+    "size": 88895,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:34.084850",
+    "sha": "1984fe865327583b726e427be83a907235cfaf48e72de6434ded255557836fba",
+    "cloud": "GCS",
+    "size": 309,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:36.118341",
+    "sha": "9da537838938c55081a9765e97d9c724432826440a96dc5b2b27e30c4fba1f03",
+    "cloud": "GCS",
+    "size": 64104,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:38.170840",
+    "sha": "cac6f7752c097f3a34ec49671494e1a092a6c2abaa42852c68a78bd6ccfccdff",
+    "cloud": "GCS",
+    "size": 6315,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:40.209616",
+    "sha": "9cbf3aef9301a0f2e859cdf9ba347b42f306456b598e1eaedc29a7c0b4e6b6cf",
+    "cloud": "GCS",
+    "size": 21157,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:42.241300",
+    "sha": "efc9d4abfe08d802e27562e238646380fef29058869bc78657724d022228395b",
+    "cloud": "GCS",
+    "size": 1190,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:44.352346",
+    "sha": "ee0d2f2ebe597488ffb04cd691d488a5d0654657314c623652d5036ba2ae7d41",
+    "cloud": "GCS",
+    "size": 59881,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:46.414331",
+    "sha": "3b922a300537ab0d4d5ef23e9e135bf6fd4b6cd1dbd6ade21517b93a4aa0a682",
+    "cloud": "GCS",
+    "size": 4408,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:48.422280",
+    "sha": "3844a61c136c602c1fa5ca9e96816692f45f03325ffa757be5ad1bd33b4f51c1",
+    "cloud": "GCS",
+    "size": 33214,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:50.467793",
+    "sha": "6cd4057c8ae02d83521716dea7d42ca9e8f8e841bbcb31faf7fb656e9cf7a1d6",
+    "cloud": "GCS",
+    "size": 17187,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:52.528752",
+    "sha": "c002edd8a06cbfc2e6b926c00c69d7c7787700bedd4e178298f041f7f8b0137f",
+    "cloud": "GCS",
+    "size": 20191,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:54.565664",
+    "sha": "d9e9c7895f2631aa70acbc1a7488f4e15dd9e0cd4eb321f8f47860e5b7f75715",
+    "cloud": "GCS",
+    "size": 18338,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:56.682865",
+    "sha": "91b7ba1ead14346b870b1d13f632e893c3be13b443422e512c1672094ff07b94",
+    "cloud": "GCS",
+    "size": 18347,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:18:58.734911",
+    "sha": "521983c34a6c4dd98081f366952d7be87bfb84ec1497b175e3cbdceea1f5f461",
+    "cloud": "GCS",
+    "size": 36107,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:00.786299",
+    "sha": "0afda9a7da92e62409f1130f291a30f7ef90a07b0fd50f6783a68abdb267496b",
+    "cloud": "GCS",
+    "size": 10392,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:02.818018",
+    "sha": "842d116babf767084c98bb89a024de2d4089ba1e706b4111f14bc7552553b22a",
+    "cloud": "GCS",
+    "size": 15121,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:04.909979",
+    "sha": "2befb1419adc36fe0006d6b1efa003054fc38d62b5edc71e4cf83e8c5a06a5b2",
+    "cloud": "GCS",
+    "size": 7725,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:06.911191",
+    "sha": "7df3cd399d672b8c55ee0298c49b359ce8ce46433458bf8f492c4f42fabca672",
+    "cloud": "GCS",
+    "size": 12001,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:08.960601",
+    "sha": "40a1a53ed999111a497ea45dc843207b8b89f4d300da1fbb1592b2a4f12e1296",
+    "cloud": "GCS",
+    "size": 16100,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:10.975002",
+    "sha": "a1a7e5289c7e07352cb615fda40ebe9b2823bee126a5fd924dd371a8fdca04d5",
+    "cloud": "GCS",
+    "size": 14305,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:13.001387",
+    "sha": "f152df70234bb04868f5e76ff55b59302103d9f317f46d1caa2160a259874444",
+    "cloud": "GCS",
+    "size": 54557,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:15.034217",
+    "sha": "e233ed07e85f8b96a5f632aea288354b30a442fc9e021d0dbb882e2e3897cb98",
+    "cloud": "GCS",
+    "size": 26530,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:17.134268",
+    "sha": "37006dd1135e79fb902338876ddf640b6c76f5766647d49165b768b75c50c884",
+    "cloud": "GCS",
+    "size": 134964,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:19.171381",
+    "sha": "005a3d1ff03eef08d9ad4580b89549978c42744eb58fded4d851a909cd629963",
+    "cloud": "GCS",
+    "size": 44851,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:21.270443",
+    "sha": "b05416cfe72bfbb926efaea8369c3caf03dbece940e9f1b6998b90b7ea585110",
+    "cloud": "GCS",
+    "size": 24783,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:23.323576",
+    "sha": "6f21a8c1ede8ec761370ae8f10029e3b6c46c06a6fbf45f7d1c811167133b153",
+    "cloud": "GCS",
+    "size": 27159,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:25.362383",
+    "sha": "b47ac8b4bbc20cdfd9f04df812c7b742f6f24408ccf1f11c5796fa25912cfd34",
+    "cloud": "GCS",
+    "size": 55456,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:27.350667",
+    "sha": "28c2deb6fd10c14dace810d490a7eab7507527a101b32f50277e32329f301d27",
+    "cloud": "GCS",
+    "size": 2148,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:29.401014",
+    "sha": "e6d24149acabe10efc5b3545916317a22399687e538705e1e402cfeb54b3d650",
+    "cloud": "GCS",
+    "size": 396,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:31.408675",
+    "sha": "af2c52591519d36bf7fd0a2c534106a99ad70df00a5775bfa0ef31a17b4b912d",
+    "cloud": "GCS",
+    "size": 5161,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:33.389873",
+    "sha": "240d97ccea3e32bdd5c60d214ac80d677394b39f2a9090563cfbae4d389b7d86",
+    "cloud": "GCS",
+    "size": 11416,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:35.421297",
+    "sha": "28bbab72d9e3ac66129a20a6ed2cd58dd551fb2b0f1a6b079e646fe9ef7944ed",
+    "cloud": "GCS",
+    "size": 91552,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:37.435617",
+    "sha": "e6d9faba778507b41c23275c36ef1bc90f6701652a93d0e895452023f728f015",
+    "cloud": "GCS",
+    "size": 22263,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:39.538543",
+    "sha": "cf922b548342a6b44778a1c55d7c9a491014088724ed4fcff10a6a801ee3aab3",
+    "cloud": "GCS",
+    "size": 38397,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:41.571562",
+    "sha": "8fe760394e00811582bb70cc9b9cec9dc45272167b75dca65bc72b9e701ad2df",
+    "cloud": "GCS",
+    "size": 99112,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:43.570108",
+    "sha": "6077ed39a7845081a320c039b7dfb2a91dfb036c7092148ee1109f18c9901434",
+    "cloud": "GCS",
+    "size": 35937,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:45.616792",
+    "sha": "d5905a1f0f1a1b39012b81cdd47f4f0f921b0bdbb2df33b89d07099325ce6606",
+    "cloud": "GCS",
+    "size": 35853,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:47.659600",
+    "sha": "94d99e70e30e3abb3073c41ceb298fd069ceb79c03bd7b0db4a43596af30f256",
+    "cloud": "GCS",
+    "size": 34604,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:49.694222",
+    "sha": "9fcff1b90184c34a198802c7f721b67eda53c44a4362bc3dffcd55da3c46fdf8",
+    "cloud": "GCS",
+    "size": 21573,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:51.716436",
+    "sha": "6fcea594af9dbb9f245bf55146af0bcef2c4944e63264e619204cbe60cc2874e",
+    "cloud": "GCS",
+    "size": 43090,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:53.743121",
+    "sha": "362afb6ff3c6f3fb73a37c21ae4f4fbce553d049bb13e41d7dba47bb3a497cfe",
+    "cloud": "GCS",
+    "size": 30415,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:55.811705",
+    "sha": "39b089e8c01298ab6c00228a8eebc848e1cf14886c8b005d9ea1cb9f358b4331",
+    "cloud": "GCS",
+    "size": 5744,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:57.847401",
+    "sha": "b911da3b1a62ca96984db80712b013252eaeb1604b389cf73e9133cb4f753a41",
+    "cloud": "GCS",
+    "size": 88181,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:19:59.859629",
+    "sha": "8246d3c4fdf9ad4d6d20fae1c93fe74f5a1dc1b7a330c9499b36e98c53998e77",
+    "cloud": "GCS",
+    "size": 33584,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:02.094693",
+    "sha": "7e3813de48cd064261b18baa5004d1d3338a491eb1ca2114849518c9718af4e6",
+    "cloud": "GCS",
+    "size": 90319,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:04.193793",
+    "sha": "dd7b8bdf64171f4f01670a09c8477738fe82f4abfbc7e8369f9cece94869a29a",
+    "cloud": "GCS",
+    "size": 24688,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:06.276171",
+    "sha": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3",
+    "cloud": "GCS",
+    "size": 19132,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:08.340344",
+    "sha": "23611d66aa72e0bca35f5ec79f5cb32465828de2da55a3f3b0c80790b7e3fdc4",
+    "cloud": "GCS",
+    "size": 317,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:10.387334",
+    "sha": "d09ede7975d3531d08bdff1ab1fa71d32715929d04a9faa78f5d7bc769985fd1",
+    "cloud": "GCS",
+    "size": 1675,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:12.418834",
+    "sha": "27575fd1373c651b2bf808a8cdae965efe415980cc6de9b16d12fe6553f8c526",
+    "cloud": "GCS",
+    "size": 488,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:14.457238",
+    "sha": "cacbb15012674e35571bba6a4dab769b07040002b59ad13f1ea39995b127d859",
+    "cloud": "GCS",
+    "size": 2715,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:16.527851",
+    "sha": "7a00963cab3bd80f6787b9b7de385eea129d5dd5d020fa121ffefb9e29483f0b",
+    "cloud": "GCS",
+    "size": 21992,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:18.572036",
+    "sha": "748d4c6e11d32e8283dad3420869f1f6b2b6828936dc70cdca515e2ca74b4a29",
+    "cloud": "GCS",
+    "size": 2471,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:20.660898",
+    "sha": "fa755642d7252c482e109432ede9846a423654e81205155a05b201b387079c98",
+    "cloud": "GCS",
+    "size": 2415,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:22.768448",
+    "sha": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db",
+    "cloud": "GCS",
+    "size": 82,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:22.816615",
+    "sha": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+    "cloud": "MongoDB",
+    "size": 1475,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:24.913472",
+    "sha": "4d1da6e8e94c209cf6513aeee4e88fd386d58a98de75cddf550f6fae2a170c5a",
+    "cloud": "GCS",
+    "size": 13365,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:26.914090",
+    "sha": "1980892ded9f5c0cd1b2f29e6593430654ae9a5615815ceb06de779179526087",
+    "cloud": "GCS",
+    "size": 5209,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:28.905526",
+    "sha": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+    "cloud": "GCS",
+    "size": 91,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:31.005262",
+    "sha": "cdb7f857d2c8a4dfbdff54f9ea2dddc884270062e1b3ed324104af520e1fc1ce",
+    "cloud": "GCS",
+    "size": 8977,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:33.017573",
+    "sha": "21e9cf2c760cc3d7eaeeea7d664ecd87367ba041d956d6c7c8b515f9d3bcdd9a",
+    "cloud": "GCS",
+    "size": 34307,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:35.045130",
+    "sha": "b0ff78e83ee31421de373e48ab87cbe0bbbe3eb5ab16c81f2d76db91c8886708",
+    "cloud": "GCS",
+    "size": 88,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:37.038242",
+    "sha": "94f290a762376dfdb7768e42070618b0abfd2a2799eab1b1c097816c3a39eb57",
+    "cloud": "GCS",
+    "size": 1069,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:39.074343",
+    "sha": "b2bf94ebfdbb0df692ae3e639c763158dfa9be1336eec8e50e994c0cf64a9bb9",
+    "cloud": "GCS",
+    "size": 13214,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:41.260600",
+    "sha": "10d7756d87bb81b0547f6cb0c9858e194a675ce1cd27e7204cda9eb655bc8799",
+    "cloud": "GCS",
+    "size": 41,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:43.285194",
+    "sha": "3bb5ee9664e8f9ea48ea7d85b4c54eac95e5f0401a2300f688d626048e521284",
+    "cloud": "GCS",
+    "size": 4149,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:45.297902",
+    "sha": "8522ecf099b3e5aa9acae7a780927791d4f93f0369056a4aae6412762a67742f",
+    "cloud": "GCS",
+    "size": 210,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:47.339586",
+    "sha": "b750c1665a6c8c5037d0138ebd77d77d3d70bceff8712d7a55b1f3d7ee3dab95",
+    "cloud": "GCS",
+    "size": 43432,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:49.401637",
+    "sha": "b5e1177ce8b27a641fda93fb66791a3e9c8ade7fb923592ad45fdc2471e22b1a",
+    "cloud": "GCS",
+    "size": 606,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:51.397432",
+    "sha": "0f3800cbad431beb75bca09b841577bc0cefb4e92fdb8424214ddf6fe2825c39",
+    "cloud": "GCS",
+    "size": 20919,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:53.427437",
+    "sha": "bdd33f1d6393b568042e817a04830850de11f951f40029bccca231ab215fb949",
+    "cloud": "GCS",
+    "size": 5303,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:55.468546",
+    "sha": "76554a35f586a6ad135fa6560803c9fda0a424de6f09f0fb1e16e3445ad6ecfa",
+    "cloud": "GCS",
+    "size": 1143,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:55.478689",
+    "sha": "696c9eff440d64fa7f42d3c5e1996e2c7aa7c952d3f423c9b1f886870aa45aea",
+    "cloud": "MongoDB",
+    "size": 11,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:57.499526",
+    "sha": "e122bbe6c09edbdc5b460404d5942d3079ca52e65801fddb4a964eadf7f52006",
+    "cloud": "GCS",
+    "size": 1427,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:20:59.515617",
+    "sha": "60ed0257b341bc703a8f9e3d4441c91548d4a23c36a47ab0714a509d4ef23584",
+    "cloud": "GCS",
+    "size": 9647,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:01.559698",
+    "sha": "3e67700032ea912c902d9d2338a0200ec016e24fc7d13940ef5122df3d02e5a2",
+    "cloud": "GCS",
+    "size": 15601,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:03.578336",
+    "sha": "6b3e1ee5f5e2fefb3e61b5a3f186709f8c2254a7de0fef8610a453e547aee0fe",
+    "cloud": "GCS",
+    "size": 2505,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:05.708017",
+    "sha": "c304f3e6aff7ccb71a01dba793afef4a84adc06a9859edf4ed997f53ceda4453",
+    "cloud": "GCS",
+    "size": 1409,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:07.682822",
+    "sha": "46bddec68d0c44511c3d996dc1e7322b5e955756c4d8af7f175f9dfa58dc527e",
+    "cloud": "GCS",
+    "size": 3201,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:09.692520",
+    "sha": "c0f4069a07b6c99f77dbc107285ea069d19ec866022502b1b54fa22ca13a5270",
+    "cloud": "GCS",
+    "size": 473,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:11.691288",
+    "sha": "e91bc332a36e9863317f4f8796969974df4f51042646fad01a994a871ba2bd4b",
+    "cloud": "GCS",
+    "size": 8083,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:13.759698",
+    "sha": "72410cf3cfddfe2a529f36d3c423fc6219d4664feefd349fb5284499bebcfba5",
+    "cloud": "GCS",
+    "size": 3933,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:15.808848",
+    "sha": "5f46cc04a9cf20835fc5abad7ed9c286054e3bfaecac21bc480cbfec62b89475",
+    "cloud": "GCS",
+    "size": 11279,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:17.816289",
+    "sha": "8de3db9808f9ecef90302caa7ec688318461a1948e665a8694f60d0a1a9970c2",
+    "cloud": "GCS",
+    "size": 8727,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:19.818298",
+    "sha": "726046638276e83bc1562c7d2eba5b1a708d036dda081a025a5ed114bcc694d1",
+    "cloud": "GCS",
+    "size": 3523,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:21.918028",
+    "sha": "6fff16752b03ccbbf775a0f40accd886cad737f79bf66a3710004dbdb6d1db80",
+    "cloud": "GCS",
+    "size": 15414,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:23.973233",
+    "sha": "d300467c6b1f856bea8e8f61ca012edd464c2cf4c53adae2fc8a76e878c37b53",
+    "cloud": "GCS",
+    "size": 2673,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:26.048644",
+    "sha": "b0e34096faa1434b9838d331ca816e700e7ed74ddec40778a21ef2dd15a8bde2",
+    "cloud": "GCS",
+    "size": 1619,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:28.115019",
+    "sha": "9feed8d940b6c1b533a118d977a52ccc0ff8177ce94f15c95387df2f1754923f",
+    "cloud": "GCS",
+    "size": 1173,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:30.184913",
+    "sha": "9b51c3dfb5f472ac2790ec6cdc17cdf599de55702cc39b4e6493ade20d3c7b6e",
+    "cloud": "GCS",
+    "size": 8463,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:32.179986",
+    "sha": "0bb8b057003dea8bb71bb2dcfb879618eaa7ef142f57c2db29d8e7dfa73a5c5b",
+    "cloud": "GCS",
+    "size": 1016,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:32.190157",
+    "sha": "197d9c7f163e481092769eabbc6d584a7238490ad3c53f2dcd414716f7e2336b",
+    "cloud": "MongoDB",
+    "size": 11,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:34.198218",
+    "sha": "a2241587fe4f9d033413780f762cf4f5608d9b08870cc6867abfde96a0777283",
+    "cloud": "GCS",
+    "size": 92,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:36.212927",
+    "sha": "db5d71f61f0f781f5078df4b6a00d5d3c799fb0bb82bcf448a688e9762618a2e",
+    "cloud": "GCS",
+    "size": 2234,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:38.298063",
+    "sha": "330d9a8ad958d88f256bb15885c5f6606f41b5461c2e70f41a1ddddbd7035ab6",
+    "cloud": "GCS",
+    "size": 15009,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:40.315802",
+    "sha": "c717a93bd8bb0c7b2a910ae004476e2ed7e8cf6402b93ebf81b2f85d237585b5",
+    "cloud": "GCS",
+    "size": 1928,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:42.314274",
+    "sha": "2d88988a8e9bafe4dea7d9cf72ea565ec3c4b6396ec37a75994fa534155151f9",
+    "cloud": "GCS",
+    "size": 29786,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:44.314070",
+    "sha": "94b385cb7b0498773921a1074621f5b1056721dda6a14433872789653b5d637d",
+    "cloud": "GCS",
+    "size": 40383,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:46.352532",
+    "sha": "821d2ab3daee9675e8d0f857e634c9cb6507cc8f3016743ade8fefc3b9e1cd18",
+    "cloud": "GCS",
+    "size": 14061,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:48.377883",
+    "sha": "ec620600b54981dc8bf34a1925d4146947f04ade6ada549265b5edd1d35ffcce",
+    "cloud": "GCS",
+    "size": 4210,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:50.461754",
+    "sha": "fa5979948a7bde930bdc4ad46222098fbb5d996c5c1ff2250efdf203f862658a",
+    "cloud": "GCS",
+    "size": 10555,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:52.507000",
+    "sha": "0a71ea0831ddf81546bed8bff19b13a259d7361037102b18fba9ffda9c14f07c",
+    "cloud": "GCS",
+    "size": 6297,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:54.535507",
+    "sha": "9b50eecdcafaaa1648f0943a57226050d8a78c07f96d0ce28d29839ccb2f531f",
+    "cloud": "GCS",
+    "size": 34579,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:56.589181",
+    "sha": "bcaf8f76cba8ace3275929c4913de25094489139d880ed93e8c9c6c43807239a",
+    "cloud": "GCS",
+    "size": 2834,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:21:58.691661",
+    "sha": "f51a42425e57f3c0479652623ec1cf876f791e1d2e029bf0149350baeb542de3",
+    "cloud": "GCS",
+    "size": 74131,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:00.737973",
+    "sha": "ad1a77a3d7bb64a4b87f2ad645b10bc8b729b8655315c9e8a1a39ad6ac7f1489",
+    "cloud": "GCS",
+    "size": 24129,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:02.847989",
+    "sha": "6e805c4b0efc87e969db461b697489b2a900236b8dfe60ff4ed0b27697aae705",
+    "cloud": "GCS",
+    "size": 1267,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:04.956203",
+    "sha": "3930cf91a16f5361e0bf1fba6a4cfbd79e05f012166919af25c045bf0a291f0c",
+    "cloud": "GCS",
+    "size": 4397,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:06.983099",
+    "sha": "8a81de1eb5b009635a5d7d629c798755b96f73885a3bb017b230a9dc67d6bf1d",
+    "cloud": "GCS",
+    "size": 5071,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:09.002394",
+    "sha": "c08ae7c63bdc6ea8795705b6f0d4a47e8b620eaf2a342c4839215b1948922c1e",
+    "cloud": "GCS",
+    "size": 24055,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:11.049472",
+    "sha": "18ca05c9d045fe476969128fa0ce5c97932f8aab9544b57266d7e9e7ed7a8e0d",
+    "cloud": "GCS",
+    "size": 1433,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:13.088753",
+    "sha": "f6786b3fb0a1f8d6c65f4d30bf2af8cb2fae84d1ead8e09ceb48201ab9e2fdf9",
+    "cloud": "GCS",
+    "size": 61513,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:15.167895",
+    "sha": "ac99c246543ba59b04126321b100e00bfa4ac831f13f94cf4bacd53c6b2072ef",
+    "cloud": "GCS",
+    "size": 1651,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:17.164269",
+    "sha": "3d0fc481df67f634a0b671906321782b98f69d8c21508ba584f9f28a691dafe9",
+    "cloud": "GCS",
+    "size": 55212,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:19.149598",
+    "sha": "ff361cb4d2b346a964fe6bab4cd973ae3bb514524bed56bf223aaa77b8a2da55",
+    "cloud": "GCS",
+    "size": 1958,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:21.181841",
+    "sha": "80393e1af76b8895ea82c19b1e0adc2933f4629eb33d7ce1ceb2290851f78c05",
+    "cloud": "GCS",
+    "size": 34249,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:23.184222",
+    "sha": "e4f1797877e1f265c02315c71d1076c576d7a218bca44de71d23b16baeae4bb1",
+    "cloud": "GCS",
+    "size": 31875,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:25.256990",
+    "sha": "11c9cbd4f2307ffe1154238cc6c44db91f005c76d2d6a7c074c384da780a273e",
+    "cloud": "GCS",
+    "size": 3557,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:27.301452",
+    "sha": "54bb018551675a0f8fc52073d4c8519cd5a03f5a2f5e4de778ed452d031e0bd4",
+    "cloud": "GCS",
+    "size": 5926,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:29.427307",
+    "sha": "665aabf2bb28fc1518c87c82775a1b9ab83458c0f0c0d1b91df2b3aae8f75c86",
+    "cloud": "GCS",
+    "size": 19336,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:31.477558",
+    "sha": "8a9ec3a314d01ed5078f25f6cc6d876705adcfcf9f4adf31b292c1524a0bfcd3",
+    "cloud": "GCS",
+    "size": 1597,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:33.525244",
+    "sha": "a3054b5bec21c9e852833a2b7dbbc1cd68751caf103ed3195472e4f540f882f8",
+    "cloud": "GCS",
+    "size": 41904,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:35.599044",
+    "sha": "9ff41138f57e9eaf53173a34c984cae7b9974fee2ec554edeeade9d1afd46cb8",
+    "cloud": "GCS",
+    "size": 72321,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:37.636009",
+    "sha": "23e84a89e03173e0f6c797ec3ea78d614228292f776225d42d2cecba6ae1f285",
+    "cloud": "GCS",
+    "size": 4965,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:39.695521",
+    "sha": "23a8e8dd9332bbf45d585456c22ede424b8c382d667592544f56c2a777800cfa",
+    "cloud": "GCS",
+    "size": 6572,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:41.696272",
+    "sha": "835be75fffdf00121aa0144b02d908400f18803bf6c4af2042513099096e2c19",
+    "cloud": "GCS",
+    "size": 5356,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:43.713142",
+    "sha": "832008eeff1c3c9f4ef7039fb36f3e88cba15b4e20a15c0c52858e768d358ea0",
+    "cloud": "GCS",
+    "size": 2125,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:45.751197",
+    "sha": "b2ae5344c12ac2a86c397d5673c2ed07fb443d713cfccdac38e64910d18d6db2",
+    "cloud": "GCS",
+    "size": 18098,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:47.757903",
+    "sha": "edbb7026b379d0d36ae71eb448c4b573ea23cab975b596eb90d69bbc0b7f77da",
+    "cloud": "GCS",
+    "size": 7711,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:49.786287",
+    "sha": "7acf5341b91ecf66d07b948c0a91ac2469a3dc88b518da86190d76eafa47c4bb",
+    "cloud": "GCS",
+    "size": 32346,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:51.812939",
+    "sha": "e31336ce9845f7a62779297681fdd9cf31bb8f0c490f420fcc7baa6cfc4d5f04",
+    "cloud": "GCS",
+    "size": 58264,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:53.838806",
+    "sha": "50decda1a0c177be558c2e0f728256dc745a69a2827662018b2fe44b4246f270",
+    "cloud": "GCS",
+    "size": 9041,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:55.889983",
+    "sha": "3486b0394264b204cc992bedf1f925b1c537e270299d68301c31b7a4e0cafa33",
+    "cloud": "GCS",
+    "size": 7002,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:57.901342",
+    "sha": "25dbdfd5db894b353ff827adbb7beb0241b1be8ac5b110d8b1dd5a8dcd99b792",
+    "cloud": "GCS",
+    "size": 34854,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:22:59.902933",
+    "sha": "dd35fe00846ca4eb1d4724c3223d04cd49a07edd0e5d692b9a3721614641d2f8",
+    "cloud": "GCS",
+    "size": 1547,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:01.928622",
+    "sha": "a2557d49834f95771c83ba9df1524effbd1cace05cad03919a16ae19ca79bcff",
+    "cloud": "GCS",
+    "size": 61194,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:03.977329",
+    "sha": "bd83b28509250f52227bf4d53d51b2c9b5000c539af0e8b6894bb6de3385b286",
+    "cloud": "GCS",
+    "size": 2680,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:06.046846",
+    "sha": "81cdfd8d1f34d9ca42a47e8efcc353927947dcbdb8a47933dd24342bd752a442",
+    "cloud": "GCS",
+    "size": 76673,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:08.083262",
+    "sha": "2330a9fab26386391fa3d40276bca4b7681b623fb871084800f60a9545d2ca7f",
+    "cloud": "GCS",
+    "size": 48882,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:10.144999",
+    "sha": "c7cac78b2291672e8aa2c581fe7fac306c33e11444256dab780af670fe72dc0f",
+    "cloud": "GCS",
+    "size": 19186,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:12.141877",
+    "sha": "84107bc9222de5f757619ce61cfff51ff12ed8c70760e41cb7b04cfaf5659840",
+    "cloud": "GCS",
+    "size": 1644,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:14.171183",
+    "sha": "021664bdd629d35ba5c70aa788bbf4ec3409afdbb9adeeec15c4589e2038b552",
+    "cloud": "GCS",
+    "size": 32067,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:16.229668",
+    "sha": "f7cd4b23ea7fdf7ba51e79759eca09803de1669e3db6825e3abea80a2f041c67",
+    "cloud": "GCS",
+    "size": 5481,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:18.209573",
+    "sha": "4173abcc111155daea625a46f7883087a7459777f199a3545deb5c958144445d",
+    "cloud": "GCS",
+    "size": 104051,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:20.237374",
+    "sha": "680c1b6614a65dd7c5b8c33eac41e97a21d1901386112c952c922ec331cffa7c",
+    "cloud": "GCS",
+    "size": 3975,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:20.266972",
+    "sha": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+    "cloud": "MongoDB",
+    "size": 1475,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:22.297032",
+    "sha": "8acfe49e4a6f6a0bc4683b7c24231a583168eaf5488f9c37a7fe40cc320dc239",
+    "cloud": "GCS",
+    "size": 1107,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:22.312695",
+    "sha": "ab2d0f9637b9209bafb020637a32728430a310075c0cb2bfd9a81571ec7c67a5",
+    "cloud": "MongoDB",
+    "size": 11,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:24.343652",
+    "sha": "39582da99cdfcc85d7b729573fdd20c4267a08a042c0a6321ccf0fa4c1233753",
+    "cloud": "GCS",
+    "size": 151,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:26.451377",
+    "sha": "6672925004d41fc640cbf9535ab12048ae1483bbb0e3a6a8c926168a9766e388",
+    "cloud": "GCS",
+    "size": 111,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:28.448647",
+    "sha": "a8c8871a5ad71ce43ca3f3cb228f753dd96fa8493551146aeef069cb69beade4",
+    "cloud": "GCS",
+    "size": 20791,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:30.456695",
+    "sha": "5247bb26b9aec28ff2587271d3ea76a946bffb2bdd42e83dcbda9630e2bbf2fd",
+    "cloud": "GCS",
+    "size": 7103,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:32.466544",
+    "sha": "533d739d958dc986004593190a8d96a299069b86e10861a69407d0f3fabd85f4",
+    "cloud": "GCS",
+    "size": 21327,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:34.566256",
+    "sha": "62b52e62f2bd5ea5098c07be0ed10f2522c5989c345cd6ae616636fd6b1ab081",
+    "cloud": "GCS",
+    "size": 26776,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:36.665238",
+    "sha": "259cbde4ac4c96a81de4b6eafae51fe608366cdac2997f458526da2ab2b3c7de",
+    "cloud": "GCS",
+    "size": 6131,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:38.755734",
+    "sha": "3e3aa6fde7e3932bf9e1e6fff15a0682fcdba0b56b8017f2ea2a365d67332ad2",
+    "cloud": "GCS",
+    "size": 11944,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:40.858462",
+    "sha": "7799af1cbbc1d205bc57a6fcc5b47c2f56fcb27ee675eb326f0db8829053a5dd",
+    "cloud": "GCS",
+    "size": 284,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:42.925347",
+    "sha": "4c67a230ed36ddc439436363c50a271284e2c0aa4680ed91aa72787bc890e73d",
+    "cloud": "GCS",
+    "size": 1967,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:45.062982",
+    "sha": "a86de7243e8df35405f84ea8d0ce108588cd4b5b420b4b319f2355209ea0ff24",
+    "cloud": "GCS",
+    "size": 2421,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:45.079597",
+    "sha": "91fae468fb452ab9f3029555423e9d9218bf20044b436de9e43030e69a014cdc",
+    "cloud": "MongoDB",
+    "size": 9,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:47.082906",
+    "sha": "270c94e1a22aca5eb28f4e67490062530b319b2f61d2f5d55390828d59760a95",
+    "cloud": "GCS",
+    "size": 2253,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:49.123069",
+    "sha": "0453e4553a618524d8001e2f64a83b1c24419826cab87bf6b734e6723d383c89",
+    "cloud": "GCS",
+    "size": 22315,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:51.110237",
+    "sha": "3d8565a63dfd28f4f06cf73f1e393a22c05e2ab852498450ea15c5959b7aa3ec",
+    "cloud": "GCS",
+    "size": 4537,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:51.138822",
+    "sha": "8023619f9ef0ce4b038d20084a680c2746a25f342e964d062616f6f81032620c",
+    "cloud": "MongoDB",
+    "size": 7,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:53.237834",
+    "sha": "ae0a550668e3bdb20d7862829161067777f8d151cc4ec0e4423d4b82297cdb31",
+    "cloud": "GCS",
+    "size": 221,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:55.272598",
+    "sha": "b89c063b3786e28e0c0a38f1931db61fed35e69dd2a2966fbecffee0f46c8d10",
+    "cloud": "GCS",
+    "size": 1548,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:57.384771",
+    "sha": "e98c92d5a7b29276742d8c1e5a8ccd672d00f6767fd75c2660886fddc6d0ad8a",
+    "cloud": "GCS",
+    "size": 4473,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:23:59.421308",
+    "sha": "2814d1c4ddbc711d5567999bf62257f7c3104b0fe9f521b3963a9f108f33e53c",
+    "cloud": "GCS",
+    "size": 38389,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:01.504384",
+    "sha": "e4feda6e126d010629fca1e08d4be132fe3ae044703b3aefd9e9cd9279701f24",
+    "cloud": "GCS",
+    "size": 18461,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:03.573197",
+    "sha": "814869352f5c14119d1175dd8ac1951be791bc67f8f514f215a831ba5ab0745c",
+    "cloud": "GCS",
+    "size": 117343,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:05.630352",
+    "sha": "9d4d40876a75d6adbdba5d6f35d53db303e8fcf52e2abc54e985d3a22ef5ab57",
+    "cloud": "GCS",
+    "size": 18979,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:07.641109",
+    "sha": "061ab1e105dd290f56e162a49c8c23e4a3ca166b5db863ae1aad72c3f4c72d9f",
+    "cloud": "GCS",
+    "size": 9726,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:09.683934",
+    "sha": "09048676382e9f83916ce66b5cfd0256112d3f1e249ecb9f3a446c0e22bae1c3",
+    "cloud": "GCS",
+    "size": 19857,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:11.681603",
+    "sha": "80cf8d87a0383341c1fd2824685e4ce2770618c0c773f7e51d7bbdfe88781845",
+    "cloud": "GCS",
+    "size": 1923,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:13.724729",
+    "sha": "6f5326faeb040c11ed13070f96d3c89f7cd22b89f0d8a4e9e460bbfe849394ba",
+    "cloud": "GCS",
+    "size": 20245,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:15.772358",
+    "sha": "0125e12e2f4840873426cf4a4124bedfe48b65c3deb7756acac05ff5681b6e92",
+    "cloud": "GCS",
+    "size": 26712,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:17.765830",
+    "sha": "04e69ed1143abe0dc590d8122723a81b31b599e18cc49fee9165592b1feffb4a",
+    "cloud": "GCS",
+    "size": 1400,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:19.807012",
+    "sha": "d6b76d5e01c9d5bdce8c690df94a5707db7f1c2062849be1fc3b6998b9b09fdb",
+    "cloud": "GCS",
+    "size": 9891,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:21.780834",
+    "sha": "fefc54b946b1c01868474bd458236e1d8f1551e7e231d088c94d925cfaa817e0",
+    "cloud": "GCS",
+    "size": 8465,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:23.790994",
+    "sha": "d9e2dd01a0890864e83f94f0f9737c263ac36f7c1b2487c047183777472b5b93",
+    "cloud": "GCS",
+    "size": 18702,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:25.804300",
+    "sha": "bc062b282d9aedffcd7c42210138445587dafff89be5741b4d2086b499400510",
+    "cloud": "GCS",
+    "size": 30847,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:27.814742",
+    "sha": "bf7c4166415bbc0d415cf46415f04973afa92303c8ef7e399be910127a5502ce",
+    "cloud": "GCS",
+    "size": 18693,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:29.896613",
+    "sha": "da785a0fe5f50992ec6b7a9b535e1666aa1fbc6a1970fd2e60e6414a83539c72",
+    "cloud": "GCS",
+    "size": 22125,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:31.949513",
+    "sha": "7ff078b5f6b171c814e3213c5e8eddab8cfb031a1e2128012700297615b1aac4",
+    "cloud": "GCS",
+    "size": 26887,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:33.973148",
+    "sha": "c97e21445bf1dacfd80b47011dee590c16a6bf622f5d259e9a6dc91b70791ace",
+    "cloud": "GCS",
+    "size": 13660,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:36.005068",
+    "sha": "55139da84f9d1ddd603679e50cd7c99d58bd811b7ac8e6f90daa1fd0eddde405",
+    "cloud": "GCS",
+    "size": 14764,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:38.014564",
+    "sha": "4aca2093394bda431f9cc4ed409d89873791bfaba5a947ea8f0ce77e9eab994b",
+    "cloud": "GCS",
+    "size": 31521,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:40.024354",
+    "sha": "f384cde1ada3d2f468b66f201ae508ac024597ae7b3dd8946d8a90bd67e175f5",
+    "cloud": "GCS",
+    "size": 24867,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:42.042450",
+    "sha": "be73435d94c4c01ee7610342f3ea03a06fe2057b335980f23825c6970b8b6c39",
+    "cloud": "GCS",
+    "size": 34511,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:44.055683",
+    "sha": "1afa5d5da909d9a505c9786d7c6174560b0d010b3db5a7b5763c7681315aaafe",
+    "cloud": "GCS",
+    "size": 20193,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:46.133107",
+    "sha": "036978590beb311285a307c7fc96c030dad90343c624fe738219fc889e902901",
+    "cloud": "GCS",
+    "size": 2413,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:48.150142",
+    "sha": "757ad3fd6e21dcf29d0cd4994e10600f6e93a90be5f1304766b1ad76fc083e30",
+    "cloud": "GCS",
+    "size": 48947,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:50.191499",
+    "sha": "20c933b4fb310a02215d3b2077839940bdd30d648b6d51a0bc2a7bee25ca9c14",
+    "cloud": "GCS",
+    "size": 11758,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:52.203086",
+    "sha": "e26a77c71d57b583555900c063bdd5dc1a88ab39da57b5a88e6dc7b6f9dcda62",
+    "cloud": "GCS",
+    "size": 4060,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:54.251663",
+    "sha": "79699faef3b7edae1ed31b442bcc14185f45d702a188bbf16cf57588509ed8fd",
+    "cloud": "GCS",
+    "size": 127658,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:56.285371",
+    "sha": "53d80dcdac0a3eda8cecc1c61b9e9022cfad5d96101ecb90176274c34a4c9502",
+    "cloud": "GCS",
+    "size": 2953,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:24:58.290371",
+    "sha": "73aedaaca228e7d885b67c618ade0fa761c66049406faa748ca06dcbe942f1d8",
+    "cloud": "GCS",
+    "size": 23160,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:00.300355",
+    "sha": "98941ed3cfa2fc9c1961789f15c79d4d5df0c20384168cbcfe24bf01db11c6df",
+    "cloud": "GCS",
+    "size": 24182,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:02.354192",
+    "sha": "12c9cec957c15e3c350641a7fbd96b23999cbf5370632078fc27dd5b61520d94",
+    "cloud": "GCS",
+    "size": 3014,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:02.379395",
+    "sha": "6c13fb853392e5fcfdccbb42eec3e87c164094c904bc1c6eecaa92ea5e65bdce",
+    "cloud": "MongoDB",
+    "size": 40,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:04.415478",
+    "sha": "d512a6bf7d9415aa259324a32965f2546271ea6d34048769402558cba6a5404b",
+    "cloud": "GCS",
+    "size": 3635,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:06.550165",
+    "sha": "1089a1b124fbfbce0534acab4b61833192a7e7b0a0710b389be4d16702053792",
+    "cloud": "GCS",
+    "size": 2790,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:08.599519",
+    "sha": "7740ed9a5989e8cb5c94dc908d305601f0718ffd97d0a596962cd65145fe9729",
+    "cloud": "GCS",
+    "size": 6739,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:10.660329",
+    "sha": "1196c6921ec87b83e865f450f08d19b8ff5592537f4ef719e83484e546abe33e",
+    "cloud": "GCS",
+    "size": 81,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:12.685464",
+    "sha": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+    "cloud": "GCS",
+    "size": 1078,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:14.732442",
+    "sha": "61ff0e6dfe3dc2a48011819e3f04d27ba0be84e26d1175a0381577eddc13c607",
+    "cloud": "GCS",
+    "size": 3417,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:14.749181",
+    "sha": "f4d707fc25641d5b8b3711354d86dfc17c0295590c70cf3dd133132770b97c30",
+    "cloud": "MongoDB",
+    "size": 51,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:16.748664",
+    "sha": "4c04a67026e567233569a55886b7dec5ee4d628025da8ee465b19966255749c9",
+    "cloud": "GCS",
+    "size": 2163,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:18.770974",
+    "sha": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+    "cloud": "GCS",
+    "size": 64,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:20.836363",
+    "sha": "ca05d840b7d53eddd1f1e705cc0e5d17def4144bf34565dbda9822c3b74f16f7",
+    "cloud": "GCS",
+    "size": 12037,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:22.896162",
+    "sha": "903279ca617ea14c46383b17ec6aeba253fa0e4d72db0c43bd97684dcd6b9de9",
+    "cloud": "GCS",
+    "size": 96,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:25.010811",
+    "sha": "dc33252e829015e3b150086fb9b3a40f6ad6fb32c2f4610ce812fa677d35986a",
+    "cloud": "GCS",
+    "size": 1985,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:27.126528",
+    "sha": "688a1632df525a198fec52dcfefb1246d31eacee9c035aacac2d7eaf8d8ff669",
+    "cloud": "GCS",
+    "size": 57675,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:27.143482",
+    "sha": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+    "cloud": "MongoDB",
+    "size": 39,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:29.184889",
+    "sha": "3d0d96b19dc39bf4b41d1ec594d8ad26c735a6ef2576b2141ec27aa27d6f5594",
+    "cloud": "GCS",
+    "size": 4652,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:29.196729",
+    "sha": "34b89424d7e673d02dd79b3b254462c2fa8c123522f46e4f30646b98c6333523",
+    "cloud": "MongoDB",
+    "size": 5,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:31.288635",
+    "sha": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+    "cloud": "GCS",
+    "size": 91,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:33.375784",
+    "sha": "f5df2e3ba27e724f261f2163c4552ce67095cb988ddd775361c25fcf6401af42",
+    "cloud": "GCS",
+    "size": 3682,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:35.462245",
+    "sha": "a9f89bb20d9b39bb7d4416ab7c32a33bf82907e8594f16fa0c556a980b08a95a",
+    "cloud": "GCS",
+    "size": 8309,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:37.509652",
+    "sha": "0a950253178741b44de54191407611268acee407fe432fdf1cc72d710f034862",
+    "cloud": "GCS",
+    "size": 82,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:39.623739",
+    "sha": "de7cf338917754c166cbfed3bcc1b0cf824e4153e106c3dbc60f84da89e1386a",
+    "cloud": "GCS",
+    "size": 1201,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:41.777824",
+    "sha": "45ab517d29824d3e67f746d372255c35733a44e634b10591c82f08bcd0662419",
+    "cloud": "GCS",
+    "size": 1855,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:43.807310",
+    "sha": "04b328ed9c510856b6d82074d2c98abb414762a5b358228d5d2817f3c8061849",
+    "cloud": "GCS",
+    "size": 14166,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:45.889158",
+    "sha": "54b78bf3716d19a65be4fceccc0d1d7b89e608834989dfae50ea87564639213e",
+    "cloud": "GCS",
+    "size": 224498,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:47.948748",
+    "sha": "fa76fd1414a9d9efdccb041d386c03096653abf8a6b306c378a07af778ccf432",
+    "cloud": "GCS",
+    "size": 1157,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:50.013854",
+    "sha": "4be470a3df9e92d595c9c52bb499f70e99bc1a834c3c9f03b8a5efa7bcbb0314",
+    "cloud": "GCS",
+    "size": 1196,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:52.046935",
+    "sha": "61a3265b914e850b85317d0b3109c7f8cd35a670f963866005d6ef1d5175a12b",
+    "cloud": "GCS",
+    "size": 102215,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:54.032840",
+    "sha": "655f810125d2911ce88ae483c86b0f5ac7e6b5c3e744169dc32c4a0b5f375da3",
+    "cloud": "GCS",
+    "size": 1155,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:56.137843",
+    "sha": "0c673c3f889399a33b95e88d2f0d111b4447bdfea7f237dab2d488f459835636",
+    "cloud": "GCS",
+    "size": 55316,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:25:58.169176",
+    "sha": "fbb04e8f31f868844f396ea1e003ea5742dd5964db8f5f1fdcd6dd1da9f73e46",
+    "cloud": "GCS",
+    "size": 1161,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:00.229368",
+    "sha": "0406a12c2d5925bfd88245c81cfe0fb26c9d0086ea841bbc43513a19f1a664c2",
+    "cloud": "GCS",
+    "size": 147832,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:02.299768",
+    "sha": "46b07ad00ae058ca5782da40c780025e455b169e56cee52c7a64519099ad140f",
+    "cloud": "GCS",
+    "size": 1856,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:04.439710",
+    "sha": "8060543ba72fbe5bef5dc022b3502d5c6bdb2bea10e6f019496736741df5a486",
+    "cloud": "GCS",
+    "size": 1201,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:06.476823",
+    "sha": "b8846233cc238db1e40ad6c2c93bdcb54dfb200664d2411ee64c4095dd5dbf30",
+    "cloud": "GCS",
+    "size": 1633,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:08.470442",
+    "sha": "f1a2636e336c9513e35abd8bcc1490d5d5d5c44346abd281e63f7fea73b29ab5",
+    "cloud": "GCS",
+    "size": 1206,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:10.481093",
+    "sha": "46389137412a0dcd19b1cbea7e10ede83b319dfda2904809e3391f793aab9c86",
+    "cloud": "GCS",
+    "size": 1154,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:12.618866",
+    "sha": "5b3fd07772d3897d30b257825de3df011b83742863aa9d9abcb10e76e61e6ee4",
+    "cloud": "GCS",
+    "size": 688499,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:14.739626",
+    "sha": "25f0fac02494dedbdeaf10afa1cb4b30335400b6f0a378b8a918b1270d38cadc",
+    "cloud": "GCS",
+    "size": 3862,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:16.764739",
+    "sha": "fb7b7907a48034f22ab5a1fbe0d470a33a0dddb00246f02187cb4ecf4f365796",
+    "cloud": "GCS",
+    "size": 1854,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:18.789642",
+    "sha": "8da2ee3b3a87e19293698ef8f8b8c73cc15b51065fe8bbd8d46fa069f88af89a",
+    "cloud": "GCS",
+    "size": 1129,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:20.801634",
+    "sha": "c7b2cbfb1a31aa0d2e5341eea03a6805349f7a61647daee1a15c46bbe981494c",
+    "cloud": "GCS",
+    "size": 13244,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:22.848769",
+    "sha": "cd7293b5fb50fc073cad09d322c152fcc79791236e0206211b13baf9f9e7e357",
+    "cloud": "GCS",
+    "size": 120,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:24.885353",
+    "sha": "e4f73bfcbb471d38596926a833247cf19f689e403beed87c91b8e7fbd808b761",
+    "cloud": "GCS",
+    "size": 1853,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:26.957620",
+    "sha": "8c97a4870ff760226a52f2a7652f0e61f38fcada15f0364315b0618c79c29983",
+    "cloud": "GCS",
+    "size": 1201,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:28.970227",
+    "sha": "07aae2bb5eaf77993ef57e357491839f5fd9f4dc281593a81a9e4d79a24f295c",
+    "cloud": "GCS",
+    "size": 103305,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:30.986282",
+    "sha": "c014edddee603c258dbc15904920c99541688bdf9ef4ddcc502f7de2c624c9c6",
+    "cloud": "GCS",
+    "size": 1154,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:33.049154",
+    "sha": "d8d729be5991f04eebb2ec60208ef91fec1abdb6bdd1d4eed95646fc8488b349",
+    "cloud": "GCS",
+    "size": 1198,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:35.147493",
+    "sha": "93105d34ecc28c72fdf7bfbdf5cc5c95b55019306d2cf6e91ddaf009498a66a4",
+    "cloud": "GCS",
+    "size": 1168,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:37.290937",
+    "sha": "53916f3bd50a8d1d1cbc48b0f23d73aacee4478f2d2b7443944269ee765e9fa5",
+    "cloud": "GCS",
+    "size": 314035,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:39.341637",
+    "sha": "97d8118869593ac394bf3020dbbf56d67a9071ff4ed3e68440ef7e996520d34b",
+    "cloud": "GCS",
+    "size": 1858,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:41.444087",
+    "sha": "946c7948a2ef38a55c47a003550c1f3f605d4a56de3199c6fe7fc3f776352eca",
+    "cloud": "GCS",
+    "size": 1176,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:43.458800",
+    "sha": "a5be7b15ec01c64b19177a8fd82fb7087f9d9abe48ef04e27b120a385a4f079e",
+    "cloud": "GCS",
+    "size": 2714,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:45.535583",
+    "sha": "66da841291fa532ff6ab1449853d2e60ccdf85d3905bedddbfef61a7a103734f",
+    "cloud": "GCS",
+    "size": 1854,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:47.584674",
+    "sha": "3503a4874866a4e1f4deb9fb35cbac706e6d440e91fa3fe74fb7da878c7df65a",
+    "cloud": "GCS",
+    "size": 1855,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:49.609238",
+    "sha": "22867d925f8e2c66550a4bda6630cfb8024b35fcc1a5d88ab2dacb2f7497ed4f",
+    "cloud": "GCS",
+    "size": 53997,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:51.661256",
+    "sha": "0483b82e1dd960ea44ecde18fd6cb86dfea6d457145879c20aa688737160b33f",
+    "cloud": "GCS",
+    "size": 1166,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:53.715845",
+    "sha": "9f346c455f6eb1991baf3180c4eba24b04abf9c454bcd3aa959055c6985089f6",
+    "cloud": "GCS",
+    "size": 14993,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:55.806212",
+    "sha": "358a4c5b52a9557df43fcf8147cf1db132d8c299ec2075f7111762573dc694ed",
+    "cloud": "GCS",
+    "size": 1855,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:57.873768",
+    "sha": "b855b17508be005af48703422ef4ce0ccd9fb96d1d85dc74a982a63369ef8714",
+    "cloud": "GCS",
+    "size": 1853,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:26:59.913684",
+    "sha": "078f0f976faedb54fbb89e3997be03603e5865190890fe34700281b6a1c67c4d",
+    "cloud": "GCS",
+    "size": 4942,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:02.025215",
+    "sha": "eefc0cfe00dfd727f33238c91997f42e7d6d3ce96bab67c4fa2aa9e33b61cfb8",
+    "cloud": "GCS",
+    "size": 5383,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:04.052388",
+    "sha": "83f4c3291ee6c953ad2b0db898a1205269f0e4fbe1a9c0b88bac54f28601fac9",
+    "cloud": "GCS",
+    "size": 1854,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:06.129353",
+    "sha": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+    "cloud": "GCS",
+    "size": 134899,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:08.175570",
+    "sha": "c1cbab50bd2ba384ced29c841b2ad8af0c06d743f6a10c71363f71f664b91609",
+    "cloud": "GCS",
+    "size": 1155,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:10.207197",
+    "sha": "8fd2d77d65389508d12dbe641427b30bc96d82a68cf10e98e850494e8eda576f",
+    "cloud": "GCS",
+    "size": 1657,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:12.217390",
+    "sha": "44e9c40747a0cf8a2814d17166c21b9a3aec3239ac2af09025507030a8f5864f",
+    "cloud": "GCS",
+    "size": 1858,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:14.301801",
+    "sha": "7661c9709f553232395308707233e0d830cb95a751e3fe58daaef352b7f2c0f3",
+    "cloud": "GCS",
+    "size": 1206,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:16.439000",
+    "sha": "e17c96c14e19278594aa4841ec148115f9c7615a47382ecb6b82bd8fea3ab0c8",
+    "cloud": "GCS",
+    "size": 23118,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:18.464322",
+    "sha": "71f56d16f0ae241b1b5d872def6a7a31af49981aa840c8f480c55f65d48f4473",
+    "cloud": "GCS",
+    "size": 1161,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:20.658641",
+    "sha": "1337576feb4704c35be91e8876db96bd098cb8a2806cc4909576145d5f9da093",
+    "cloud": "GCS",
+    "size": 1203,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:22.781699",
+    "sha": "5f8bbf03192aea7fd1b7f01ad305d0d04e412f75efc0b7c750c7048b994dce10",
+    "cloud": "GCS",
+    "size": 1120,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:24.839136",
+    "sha": "6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79",
+    "cloud": "GCS",
+    "size": 19820,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:26.947510",
+    "sha": "c2675ac7f0c024922e112c1964e02fcc92c4c81b7ecc14973ed4da1f9ed16166",
+    "cloud": "GCS",
+    "size": 1133,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:29.749021",
+    "sha": "a65c411eb1cbb79e40c307e10fbad23658f19e9d7334ac4de21d24b58009a7b9",
+    "cloud": "GCS",
+    "size": 24056183,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:31.825931",
+    "sha": "7fbfaa356bffb5868cc4bf7f69933f6642d5da48b756bd7bd5a63a1255ad5aa8",
+    "cloud": "GCS",
+    "size": 1854,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:33.844824",
+    "sha": "d9acba3d90448ca25eefbbf5948c8ed971459db4de4380d933938622fcd1e8af",
+    "cloud": "GCS",
+    "size": 23851,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:35.906992",
+    "sha": "89cfaee273b39ef6e286d59aecd55c1befb0417029a974e462d22f99857a0696",
+    "cloud": "GCS",
+    "size": 1855,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:37.951835",
+    "sha": "016f96b3336ecc94426f7ba7c5dc6ba6a87ea5da20c9e3c5588b3460c709ff05",
+    "cloud": "GCS",
+    "size": 83937,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:40.067306",
+    "sha": "7605498e0d5ebc74632407fc76c6a0526b5de562dc70ff19fbaf566ca9e77988",
+    "cloud": "GCS",
+    "size": 1170,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:42.124888",
+    "sha": "553601f6f1114a157a9b7c774f68784aef41fac8db8b4f56bd228d3997a35b4a",
+    "cloud": "GCS",
+    "size": 1155,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:44.185954",
+    "sha": "4b1388a4f6875d7e2aff5c4ca1cc16c545ed41dd8bb596cefea80111db353a34",
+    "cloud": "GCS",
+    "size": 277986,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:46.286853",
+    "sha": "3529ed3287be5541c0d8d0d195bae623b8bffd90d64cc81ab22992da884a3302",
+    "cloud": "GCS",
+    "size": 1782,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:48.322262",
+    "sha": "c35a05cc0f373495cf68cd1f4de104d1be249e4a475d7020fa327be307115c9d",
+    "cloud": "GCS",
+    "size": 13833,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:50.376843",
+    "sha": "f7791648c4da762397ee2d5190d684e8611cad462a897a5de97be31e60943846",
+    "cloud": "GCS",
+    "size": 12557,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:52.400517",
+    "sha": "ed2bda289264c1500385a475c30a0eabc241e153c9a93327534adeca50e93872",
+    "cloud": "GCS",
+    "size": 1856,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:54.563781",
+    "sha": "db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5",
+    "cloud": "GCS",
+    "size": 6229,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:56.616847",
+    "sha": "f28c11ccc5c9d2c86fdf336fb0e74c0247b56ffc8d6720b21d9d99b701949a36",
+    "cloud": "GCS",
+    "size": 1130,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:27:58.619932",
+    "sha": "c4935b9bd7bebc472d9ca87e0e1382bd1a7b3a2801574817e6344091236e3da0",
+    "cloud": "GCS",
+    "size": 1200,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:00.751540",
+    "sha": "067d548fdfd0252723ce413c006a696fc63c497f72e1c9998e39dd2a506f5524",
+    "cloud": "GCS",
+    "size": 1154,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:02.826146",
+    "sha": "ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc",
+    "cloud": "GCS",
+    "size": 8458,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:04.920204",
+    "sha": "7a15aa7c79386e92cfcda42ef7eb5f034a3d9a5f4005747aa8cc390b0b3b043c",
+    "cloud": "GCS",
+    "size": 1161,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:06.937265",
+    "sha": "c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef",
+    "cloud": "GCS",
+    "size": 16234,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:08.990773",
+    "sha": "f88ef4040d05a4126a5799c6911b6c615e82df9d6b6e3009b4db0e1871fbbd63",
+    "cloud": "GCS",
+    "size": 1206,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:11.003535",
+    "sha": "d2b934fb56708a1b94e439f0255c0f5a8108e3258ec827b18a1dc9c991db9611",
+    "cloud": "GCS",
+    "size": 1924,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:13.093237",
+    "sha": "e8649cba191f14298333aceec47c643488617f9fc0a5761e042acc486a2ee227",
+    "cloud": "GCS",
+    "size": 23,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:15.227653",
+    "sha": "21dc8743c750b972d51996af9fae3f0e566c229d5af09e2d9411d7cbab1e0b79",
+    "cloud": "GCS",
+    "size": 36,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:17.329935",
+    "sha": "1697d57238e21afbbd1304ce379ed99613e99cba303b2e9d20606a429d6eddda",
+    "cloud": "GCS",
+    "size": 1487,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:19.324114",
+    "sha": "838399d047ae8f3d48a0955cfff5b0fa13ca7ddc694fc643484187cb74a4ab55",
+    "cloud": "GCS",
+    "size": 1476,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:21.322870",
+    "sha": "4ae632424f45427aa5bdd7c5b0fb2cb109c368059639b183a5d471b1388790d6",
+    "cloud": "GCS",
+    "size": 292,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:23.363311",
+    "sha": "c594dc41d480880a701474736b4b0e03fee2d12050520eb9ea3792e4fc2cc2f8",
+    "cloud": "GCS",
+    "size": 537,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:25.519545",
+    "sha": "78edafe571dd328ebad34e3f7a3945f072e6220fa2adb65868eb51c76a823e38",
+    "cloud": "GCS",
+    "size": 525,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:27.554903",
+    "sha": "93c9d921612d568e8beacc937f64e420261774c21f5d63b924753de96e4db52f",
+    "cloud": "GCS",
+    "size": 152,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:29.627806",
+    "sha": "7db05a7c39ca87f99f6be91706e6c2ed4511adf0993fa6206cc06dc814681422",
+    "cloud": "GCS",
+    "size": 254,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:31.652763",
+    "sha": "578e88dc0e7a740d9ad999bc6f54d3c0d3af6bfe0306cdccbd82fb3201ea99e4",
+    "cloud": "GCS",
+    "size": 214,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:33.718902",
+    "sha": "f398c6f2c6d31a022010ed274c541a71bb49fcd3164828e647c571e17de73d70",
+    "cloud": "GCS",
+    "size": 2581,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:35.841290",
+    "sha": "e723cb35583e11d822fb51bc2421a12ade2d9b7db2ee78709dd9e1738c3a3954",
+    "cloud": "GCS",
+    "size": 20342,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:37.875057",
+    "sha": "96e9c9abd344ad260b1b5c256c5c5fb00e8d467e4e37777c4bce26baab3d5c84",
+    "cloud": "GCS",
+    "size": 5192,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:39.893640",
+    "sha": "3ced9f675e9568ffe731085a6ce0140e66a0ba454879beb85c4e6b7e9c1d8751",
+    "cloud": "GCS",
+    "size": 62,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:41.909929",
+    "sha": "b309189ef7d49149581f0b59cc01df95c473f99473da50bc3712819a19b35413",
+    "cloud": "GCS",
+    "size": 164,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:43.930776",
+    "sha": "dcc9a18771a88f48e8886a4de43d871b5c1206ae60c532ca4b360c3ba3ee238d",
+    "cloud": "GCS",
+    "size": 361,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:45.983612",
+    "sha": "d260af75e17c16784b8dc0a7c010f797fb77ef45341fbefe1c6c0fa7e1195ba5",
+    "cloud": "GCS",
+    "size": 47,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:48.087820",
+    "sha": "5f48927eca89cf3c1d1851776c56128cce16c91d8173b6aa9790dc2867df7125",
+    "cloud": "GCS",
+    "size": 17889,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:50.103767",
+    "sha": "c646f931edc0d49feac021f3c0a92466b3a9b03fee8d9faefd69ea25e257ef85",
+    "cloud": "GCS",
+    "size": 6149,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:52.107195",
+    "sha": "7ef2aaea7be24dcb065df736dc9416f74f49f9e9bd95faae52aa83877e5936c3",
+    "cloud": "GCS",
+    "size": 164,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:54.169730",
+    "sha": "db7536e0a0528dfb5740f01fd337c483eb503586b72b84c5b28c28a60c81b292",
+    "cloud": "GCS",
+    "size": 2917,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:56.233487",
+    "sha": "f1ad4a469c63317f6062c30afd46b1a1becc024feae4deec2851d60f77475d67",
+    "cloud": "GCS",
+    "size": 47,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:28:58.253768",
+    "sha": "44207f256ab39b74771dc9b150458371e83ad68523141d088ec43c527b728988",
+    "cloud": "GCS",
+    "size": 110,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:00.286859",
+    "sha": "726cf92e50cba482bf6c171ea0e567b218a1e99fb0053a817ae25660a3d36af4",
+    "cloud": "GCS",
+    "size": 66189,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:02.325573",
+    "sha": "c7ce495c3460e1fcc90b8b1b0e4cb6df039a02e7b29dab5cbdedcae1296ab045",
+    "cloud": "GCS",
+    "size": 5359,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:04.351896",
+    "sha": "890fbeba36e99070e8c07ac4c1c2da372fefe48b389d0126407bd1ad48d471aa",
+    "cloud": "GCS",
+    "size": 164,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:06.441907",
+    "sha": "e4d418f540da4cc36bcb335698f1c91aeac3a74718f3d7b6a187a863a14a4070",
+    "cloud": "GCS",
+    "size": 277,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:08.429885",
+    "sha": "ae48d4923f7f0bfe92c5222e089bc7f3b2e1b8a892e34c67ea3e9160ce6a908e",
+    "cloud": "GCS",
+    "size": 47,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:10.507200",
+    "sha": "3fe1463c49fc45be8db648c9556d0d223c476daacdc1a88ee93c038cf0a353bc",
+    "cloud": "GCS",
+    "size": 17265,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:12.538519",
+    "sha": "74a22ffdff4af57b125dab9de3d88ea0c9c04e2c9b3c877c1fbae336ee699315",
+    "cloud": "GCS",
+    "size": 5359,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:14.570233",
+    "sha": "f8ba75d75af52997105ec9048d6b60b086c68915bce070cb1ac58781e0b61e0d",
+    "cloud": "GCS",
+    "size": 164,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:16.607679",
+    "sha": "1c8d5e12a917780a0c436453ba356cb36182208f83edda5eb40a6f1916648089",
+    "cloud": "GCS",
+    "size": 361,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:18.607799",
+    "sha": "40b2176eeb65bdefe7f79c86ff06e56df707eeeef9938caf2c235c21c399e8e2",
+    "cloud": "GCS",
+    "size": 47,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:20.728087",
+    "sha": "63f2b56466fe8b9854ef819129507718df0c0741e65cc823be66d7fb2f0b4ac0",
+    "cloud": "GCS",
+    "size": 2465,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:22.765840",
+    "sha": "3da15e1aa521c8ee4990257f9523a1dc1f3b0ed27996a8edf3656bb590e7da1c",
+    "cloud": "GCS",
+    "size": 98,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:24.864655",
+    "sha": "ec474bfee3af6e8ae69639a7c4fc49a082351f5cc6eb781e50566b4e1aac9fc9",
+    "cloud": "GCS",
+    "size": 3308,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:27.850834",
+    "sha": "946766e4d2871c6826c267e027041b03da3bfe9fdd65b9e523e6551bc7974595",
+    "cloud": "GCS",
+    "size": 31412233,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:30.421717",
+    "sha": "cd3924ce0360e77af09bf783dbbd67c4fe4d0471e7beec99b37f1705fb2c461e",
+    "cloud": "GCS",
+    "size": 21879879,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:32.485508",
+    "sha": "052b6f0cd85849421b09489bd6f97a6105215a1fe51e70d02e55c66503ae2ae0",
+    "cloud": "GCS",
+    "size": 1189,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:34.549784",
+    "sha": "85970d46a2ca392ff878138b7183afa3b923aebeff910034fcb7a2020754e237",
+    "cloud": "GCS",
+    "size": 3819,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:36.630786",
+    "sha": "2b32dce00b6d1104fee8fffc5d3149db164df52d842914d2bd8f96165924ef20",
+    "cloud": "GCS",
+    "size": 164,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:38.727507",
+    "sha": "f81f3cbf9ef543baf63ee5ec0decd8eed5f9407a2fefe2b197524d19c56791cc",
+    "cloud": "GCS",
+    "size": 112,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:40.811651",
+    "sha": "405815aa17020507d9f5359f641971d2d848f24bfc9faf8a1cdc32de986ea52d",
+    "cloud": "GCS",
+    "size": 3790,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:42.889323",
+    "sha": "0f7b9bf6598949e67d2eed253a55e5a98e301adcee05c588bded6ba1a3132a81",
+    "cloud": "GCS",
+    "size": 47,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:45.027190",
+    "sha": "ec4c5f4ce52e7c81c09ea890f29e2a2e96b55d9ff65a3700a13fc0532977d15d",
+    "cloud": "GCS",
+    "size": 3036,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:47.133950",
+    "sha": "a24572cb3de03d2ed13823ec9d4a09c3930059ab0e271e9e18f41708613ac400",
+    "cloud": "GCS",
+    "size": 41006,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:49.241709",
+    "sha": "1164b789ccd6f24b0e4e98c5ffc9efd6769581524fb5aed58b89110de2910ad9",
+    "cloud": "GCS",
+    "size": 363,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:51.315044",
+    "sha": "838646fdf953cf23e55cfb95872d0eeac58ea5471eaab109c66058d1a1a38e41",
+    "cloud": "GCS",
+    "size": 164,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:53.346030",
+    "sha": "a56dda2f2850cde3a1a1a7450c352c3b16776b2adce53fd4a640dc9b8b3d592a",
+    "cloud": "GCS",
+    "size": 548,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:55.387076",
+    "sha": "4dbf1e062765605a4f3fc7015e992a47ffe8561fe03f280702de8368d809067f",
+    "cloud": "GCS",
+    "size": 239,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:57.397047",
+    "sha": "3bb065fee45a3090036b4877c14813ba75069ad4b4d7b009dff6402fbae7fd02",
+    "cloud": "GCS",
+    "size": 236,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:29:59.883010",
+    "sha": "15b34e197fba5678932dc9456d269c3ffd3440c5b543711693782f7bb33ddee7",
+    "cloud": "GCS",
+    "size": 16132069,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:02.218153",
+    "sha": "20792d6fc2028948a73dc87dee3283d8122745ca77bba7a7579a8be6e8ab8b6e",
+    "cloud": "GCS",
+    "size": 1285790,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:04.394934",
+    "sha": "5215d97fcf37d9e32d5fd34f01df151f3d8c4f7515553433fd04e456e2e190b4",
+    "cloud": "GCS",
+    "size": 577,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:06.499575",
+    "sha": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "cloud": "GCS",
+    "size": 2,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:08.586678",
+    "sha": "4a90a5bdb96e92a6e13340af6699933a6d19d8a897fb82c571fc6b2bf1e09411",
+    "cloud": "GCS",
+    "size": 48,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:10.491714",
+    "sha": "d4bd332520e1eeabb0ab9b9f466255da944aa90d9c32e84e565ce1e847eaefdf",
+    "cloud": "GitHub",
+    "size": 1450,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:12.572180",
+    "sha": "3c4c0df2f3b8ffd6fc7445dacba9ae4e1977ba22db1faa7935814a53df93f07e",
+    "cloud": "GCS",
+    "size": 1075,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:14.683285",
+    "sha": "8842e84cf5344815bac3dcd1ad607e5092a3921b5bbad895421e5e75761c2fc1",
+    "cloud": "GCS",
+    "size": 648,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:16.773609",
+    "sha": "b054596882b474a01fb38b41e5f71bb0d7c24d106ef7a5fb507be6a8b3f0f675",
+    "cloud": "GCS",
+    "size": 1492,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:17.514831",
+    "sha": "3f071a0a41d3f65bc0a100fb3dd9ef0fe1df6bc6d47139c4634d74a28308c763",
+    "cloud": "GitHub",
+    "size": 221,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:19.519459",
+    "sha": "80385d8fc58c9d003868d4ef9fc822d854ed518f4d7da6c59784fa1a4e754dd6",
+    "cloud": "GCS",
+    "size": 3914,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:21.598701",
+    "sha": "7df90e2fbc12a6043306e2f1b4f7988e06915a8c247f97c1934a3e22a09eb2b3",
+    "cloud": "GCS",
+    "size": 4524,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:23.683276",
+    "sha": "dac97c7c16f24487dea82f200d01183584630f0eb0a26f9e901d121a965a0e4b",
+    "cloud": "GCS",
+    "size": 2073,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:25.773628",
+    "sha": "a72cc40cbd8c55228833c3c1a06295dd696231f72c225d9453a9b728ce426e15",
+    "cloud": "GCS",
+    "size": 1889,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:27.823090",
+    "sha": "4a5c5411778717b1660a9fe6ceadb3aa9f310546f2763a5b7568cde38b04ef63",
+    "cloud": "GCS",
+    "size": 2126,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:29.882227",
+    "sha": "31f54667d801e0f3ec0406e7f392d168649abe1ef7325698d9b9bfb21fd402d6",
+    "cloud": "GCS",
+    "size": 38,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:30.614713",
+    "sha": "fb140bbeea855399f6832c561edae0eec575f4826e7118e08a6356ee0e80c34d",
+    "cloud": "GitHub",
+    "size": 2082,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:32.705297",
+    "sha": "8119db53d2390cc7bdbc98827bc27a23d7509db8a22d52eac51585c14a7aabaf",
+    "cloud": "GCS",
+    "size": 5170,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:34.781936",
+    "sha": "1876ce726b406b93715574e88bda84bd0f0409db8466bbf6e7dae3dd6c183c2e",
+    "cloud": "GCS",
+    "size": 821,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:36.862932",
+    "sha": "394a89d497d48bdd1b788d5bd5651734540d23475fdc0decdec1b79497d25335",
+    "cloud": "GCS",
+    "size": 3567,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:37.560748",
+    "sha": "08207311ed4920d8dbdf8c10327f4437808dcc357394ae60f4ecf5c8d768bca0",
+    "cloud": "GitHub",
+    "size": 1370,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:39.579904",
+    "sha": "0f6427ecdd865b74a38a8e7927ae4b498bd432a3844de2dc080b91c6f590c306",
+    "cloud": "GCS",
+    "size": 2486,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:41.645158",
+    "sha": "51f73847f15cd6e59db163c6fb538cf57ba79651e29658c6d0441014b71e4943",
+    "cloud": "GCS",
+    "size": 5787,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:42.383095",
+    "sha": "24bb7d5286d95946f6a56c8945849f3dd6ed8452909e6bd6836530fc625d214c",
+    "cloud": "GitHub",
+    "size": 1379,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:44.462440",
+    "sha": "037c95d1c9bf5ce1cf81eb0bac37f1e56ad33204aab6977803506664660b7162",
+    "cloud": "GCS",
+    "size": 1324,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:46.557606",
+    "sha": "bd01d483f8abdb1a3dbe3b8922797cfe7277e64cb5d43d17dcafe1dc97d0813e",
+    "cloud": "GCS",
+    "size": 830,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:47.263054",
+    "sha": "3e8765c1c6f2ad3bbbf4f30b9c51ba0e8f1184fa4e6d8d543cad81b49b504d97",
+    "cloud": "GitHub",
+    "size": 1999,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:49.299691",
+    "sha": "4806ec35ea6ab45a24e012cb009fdb84b46971d05593e9fec82756026da76d1c",
+    "cloud": "GCS",
+    "size": 432,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:50.032752",
+    "sha": "29c66458d56f92a8fbf08b319c691ee684c922873f86959c8aa9d7d289841e3d",
+    "cloud": "GitHub",
+    "size": 1954,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:50.742676",
+    "sha": "a19cfacec66f20848ee741c42e405c56e6bf909f623999403541c31be9abb966",
+    "cloud": "GitHub",
+    "size": 2183,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:52.764112",
+    "sha": "016ebaae42d90c8a63fa8dfbf0b87eb0b0051806f6dd3f7d87910fc2a63e464c",
+    "cloud": "GCS",
+    "size": 1829,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:54.796146",
+    "sha": "596ed1029978eeb88b7091647e255dc355b56ca11a4a790c011b12a1936682ff",
+    "cloud": "GCS",
+    "size": 1377,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:56.814340",
+    "sha": "cc1f8a5286029259fccd9b08be4c209803a6700d0b112832ee284b5d685ca727",
+    "cloud": "GCS",
+    "size": 1334,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:30:58.859192",
+    "sha": "ca7100d7a69063970703b660b2ded76fb4202db1de707cd1139045c1f6a04314",
+    "cloud": "GCS",
+    "size": 694,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:00.933922",
+    "sha": "1262d1cbf42b2cf216564a533c0bcbf5334242dcecad6200290a1e17cdbc446a",
+    "cloud": "GCS",
+    "size": 460,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:01.669144",
+    "sha": "cd847f3e30202d816b7d5f24c2cc1c0d4db27e7de50a3339d30d8cd476525474",
+    "cloud": "GitHub",
+    "size": 1193,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:03.758470",
+    "sha": "c2dbbe31ac10e31758c9e979f820ac3474f211015e65db10e207318187ffcd57",
+    "cloud": "GCS",
+    "size": 583,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:04.494761",
+    "sha": "c5124c9fde80e8b08fbbc8262c1a89b410973440c229ce9cc73157e56b293441",
+    "cloud": "GitHub",
+    "size": 1563,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:06.534891",
+    "sha": "8e9b21931fa8e9d4ea1770d73c77dec16d4dc8a4692a46b0892d8fd8e401dd9f",
+    "cloud": "GCS",
+    "size": 1468,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:08.572983",
+    "sha": "d07bcc82fd8a417e408bbdc01c6d264572f5e76a1e90c7ce43cfa4fe349ab4a0",
+    "cloud": "GCS",
+    "size": 860,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:09.301527",
+    "sha": "eb2773c3302c5c962a74445da4979d4eb38f3fbd9382f6e0cbc69469e4015a99",
+    "cloud": "GitHub",
+    "size": 1610,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:11.341508",
+    "sha": "8fc41b6fc2eaa71a2bd5452b5e65c98085b2f1745adee8441bbc4d5c7df26ab3",
+    "cloud": "GCS",
+    "size": 1908,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:12.035951",
+    "sha": "7778b6831588eec32c3595568a7dc003810bad3428fa3d324d912d209a65767b",
+    "cloud": "GitHub",
+    "size": 1308,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:12.777370",
+    "sha": "ebad14cd0360a5acd4637420115e3e14766757a26394ccd80365a3d44c061b25",
+    "cloud": "GitHub",
+    "size": 2005,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:14.819489",
+    "sha": "e75864ee1d37d8487955f3b237ffa7de866c97d0610d807ee91f2fd9ab78e8b7",
+    "cloud": "GCS",
+    "size": 1108,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:16.907302",
+    "sha": "beb276b8186e172cb14c3542d9431528aff40a4722db41a3ca8e8fdd6791b513",
+    "cloud": "GCS",
+    "size": 2463,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:18.937236",
+    "sha": "2fd50880df6d487308644dfd2d2d21dd5de1755ff2212d8192eb150a06cf71ef",
+    "cloud": "GCS",
+    "size": 2248,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:20.964895",
+    "sha": "393aa7d06d49e82bf50ce6ed529001df3b3de9fa7a3589a78c406931d8665f5c",
+    "cloud": "GCS",
+    "size": 565,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:21.642230",
+    "sha": "32f2362d54c7ef71a92946c580cc06360395a847b8efbfe109791ed914874723",
+    "cloud": "GitHub",
+    "size": 1356,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:22.349121",
+    "sha": "c170bb7cbdeb3a71681d6e95b7458bf22a2ab27d107d38cfe08d19d1139d208c",
+    "cloud": "GitHub",
+    "size": 4717,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:23.057948",
+    "sha": "9f165be81c2f0aee08039ad005432f965d5aac7ee563083c013d4eae38b6bcee",
+    "cloud": "GitHub",
+    "size": 1606,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:23.092014",
+    "sha": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "cloud": "MongoDB",
+    "size": 1,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:25.186142",
+    "sha": "13b0a9f7e5e9b7f4226fd33d6eab54b141a4e17f0e9595f9fedfe11990b5db21",
+    "cloud": "GCS",
+    "size": 1476,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:27.239096",
+    "sha": "8f5e94a93a416652843fcf2aa9e622a3609a30dbf2edb5d3db031f153afc065f",
+    "cloud": "GCS",
+    "size": 1759,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:29.265799",
+    "sha": "cbe87c159f1e5d7e39a244c9e5081858a5ea4a2cbaba5422402b00b498fd5c9b",
+    "cloud": "GCS",
+    "size": 1813,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:31.306652",
+    "sha": "b8f3c8ce90d08ab3ddfcc802734499b9ea08f48414b121e037e7772b9ca71d7a",
+    "cloud": "GCS",
+    "size": 59,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:33.316408",
+    "sha": "533b575a78df27cf45f8f2d7e1c74df859792edf3276255269a49206aa087862",
+    "cloud": "GCS",
+    "size": 297,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:35.391853",
+    "sha": "aa7e133308952507ed267d3cb4512b27ad8226725f93131c01e6a600fb7c5f08",
+    "cloud": "GCS",
+    "size": 1851,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:37.451543",
+    "sha": "0b266b60a9a0dc646e7fe896e5e6adb4d13c65c130b219c2d9de9926de6ec051",
+    "cloud": "GCS",
+    "size": 1394,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:38.143768",
+    "sha": "d22fd6e7c7819e7c768509058b6cd1b22464bae067e6f1d0b5c93d04edc7a0ae",
+    "cloud": "GitHub",
+    "size": 656,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:38.835771",
+    "sha": "3b1e03c6db6fb95d57b0f34fec96fba41667d576d8d4afd9c5c8933829d0ecbe",
+    "cloud": "GitHub",
+    "size": 1499,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:40.878608",
+    "sha": "51ceca49b6f09a71392b83ce9ff58fa59e061ac1dfa71573df6cc1455a5dce1e",
+    "cloud": "GCS",
+    "size": 3584,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:42.957877",
+    "sha": "b092a6bce60731746b57050231620f642eaeed636bafe8aa8247975816a07ead",
+    "cloud": "GCS",
+    "size": 562,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:45.013961",
+    "sha": "137a9bb388b4afab56cff5aef4fd70d940162253c6940eed7df856da04159e28",
+    "cloud": "GCS",
+    "size": 2928,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:47.055198",
+    "sha": "22a098a7b524c1724e85cb4f1f1c95bde3ae5cab64c8c2ef8df01e6494791ed2",
+    "cloud": "GCS",
+    "size": 2626,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:49.094397",
+    "sha": "3e2a5f1c97a7736e604b9cd8e1c39bfb66e0f621a22678443a57e1541d2142cc",
+    "cloud": "GCS",
+    "size": 832,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:49.882505",
+    "sha": "d034d26cc7b98c4ab54dc7d1f503ad2331f04005c5b13876538d78930e452374",
+    "cloud": "GitHub",
+    "size": 1668,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:50.746211",
+    "sha": "8e36b5854b4b26d76753d699befa67c05ae8442382c1a7be42e7434cb496cd6c",
+    "cloud": "GitHub",
+    "size": 2170,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:51.397812",
+    "sha": "5a69f7c1f7d62d7512af86548e9b60d637e3934563f9238cb59596cfb9ff29de",
+    "cloud": "GitHub",
+    "size": 749,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:53.438804",
+    "sha": "bc3a90d7b405581c18fe94ef0e91598e73f87350fccd30b1a2cb31173a32f3da",
+    "cloud": "GCS",
+    "size": 1756,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:55.508572",
+    "sha": "e650007b47dcb5923cc9c277e206560d540cd814e7031cbb72fb4f9551fd9fe7",
+    "cloud": "GCS",
+    "size": 3753,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:57.564390",
+    "sha": "58c41d2974f62d539a14a0cf15da78168581554293d535c9c5ea992c8941bb65",
+    "cloud": "GCS",
+    "size": 768,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:31:59.603102",
+    "sha": "e0cb5c63323965a4f1b234926e8aed3f1f7cd6ad21673385669a3e076237e466",
+    "cloud": "GCS",
+    "size": 1066,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:01.714997",
+    "sha": "15fd5dcdecf71fa682a6e0687330858a599ad20138a793073fd3d42865382d17",
+    "cloud": "GCS",
+    "size": 742,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:03.816749",
+    "sha": "4921356f19f4cdc7570f96e93d8295bd771781bfbdeaa33d49540a707ac76094",
+    "cloud": "GCS",
+    "size": 1260,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:05.930787",
+    "sha": "7b0b07fa565893dc6744f9a6a27a3b3b6580298b7c0aa93b10d634c4fe9499c4",
+    "cloud": "GCS",
+    "size": 526,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:08.024136",
+    "sha": "46e3b97a6751b78003bbe59621f224cdaa7c40bc2ad7f4d1b59d631ca1ceabad",
+    "cloud": "GCS",
+    "size": 536,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:10.104375",
+    "sha": "cbf7412193fd8bc7befe65c6e754443d1a7f3fb80fac9e853599de2f51260716",
+    "cloud": "GCS",
+    "size": 754,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:12.175847",
+    "sha": "de6c9d96983316a0bff106848e2a1f7a4f17998e77aa7dfd48a7315e53dc2ac8",
+    "cloud": "GCS",
+    "size": 641,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:14.182030",
+    "sha": "3aba19083e3c175bfad887185b74fdc101efcccda0bfb46098f19581b609110f",
+    "cloud": "GCS",
+    "size": 625,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:16.269310",
+    "sha": "04c4c338479df0339fb51ddb7f04f5d56aa26cb964905d3b21e2b54a2d91170c",
+    "cloud": "GCS",
+    "size": 440,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:18.292049",
+    "sha": "1bcae9eaf2eff982c182ca2b8ccd4d375e43b4eafc05921333cfdee4f3a25b94",
+    "cloud": "GCS",
+    "size": 444,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:20.351469",
+    "sha": "7fc29245f7acdc579b55d099a26c582ff9de2bf5bf660db4f38f342cf23b7c5c",
+    "cloud": "GCS",
+    "size": 1607,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:22.419298",
+    "sha": "221f12148037f627585be356cfdad46a3e4468da5a3c19df061c21fb47250d8c",
+    "cloud": "GCS",
+    "size": 1260,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:24.462093",
+    "sha": "d6282a59c8d25f7db867b719c960ec6093bcb377ee8393a4a249569b33c0a355",
+    "cloud": "GCS",
+    "size": 936,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:26.545327",
+    "sha": "9507603f3847d3b1223f7fd89041a54b373c1767e4ba3bd2916100962088850e",
+    "cloud": "GCS",
+    "size": 1476,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:28.633854",
+    "sha": "a0578f009bb65ec1752e22ef6ef4f16f230fe958b1bbc5861e4bb8d0e431a6df",
+    "cloud": "GCS",
+    "size": 1222,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:30.664204",
+    "sha": "54281f9777b4e4697b0ff12e6708683feef2f4f7cffbeb0115f7fa4b4f22611f",
+    "cloud": "GCS",
+    "size": 1569,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:32.713285",
+    "sha": "f0e3a246375beea1d2b1af5e9fd387629cf1107341263dd1dc96d4704bdbaeb7",
+    "cloud": "GCS",
+    "size": 1128,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:34.840708",
+    "sha": "b1512fedd668f1d86bdbcab9c5da0afc1203380bb2db120934609aca6a349d92",
+    "cloud": "GCS",
+    "size": 459,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:36.905029",
+    "sha": "557c1557a847dacf18334ad35385ca0f38e20c7c1139c8f676e7b4c59e8493ec",
+    "cloud": "GCS",
+    "size": 1018,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:38.986807",
+    "sha": "63a08f9d2a9de8a7e08777b9b6a099ec2712b247f9d0a8873f7fd211c38b265b",
+    "cloud": "GCS",
+    "size": 584,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:41.051851",
+    "sha": "db347db1e234a917cc9388f35c981710c51c19fdb47b82b4332b36fbc4089562",
+    "cloud": "GCS",
+    "size": 308,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:41.063246",
+    "sha": "05a7aa14cfce13c5439bf4ff719e13c00e006a0e35d27afedbaf42c6881ee2bd",
+    "cloud": "MongoDB",
+    "size": 78,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:41.090122",
+    "sha": "ff99cab859c815adb7cecc6d707137071c813ca8634ee230b51695bec935253b",
+    "cloud": "MongoDB",
+    "size": 140,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:41.197882",
+    "sha": "5c317a40df0c078196252cc11cbef507fee61a49c0b256024e8cc93f69ac9dfd",
+    "cloud": "MongoDB",
+    "size": 20140,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:43.258407",
+    "sha": "7ebd303470316cbad4fd34bfb2644f7e0d62e13abeec60a777a04a1a282ac84f",
+    "cloud": "GCS",
+    "size": 56,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:45.354297",
+    "sha": "1bc5bedd7feebf3173f8c86aebdfd7ea6958c46a314799995e1e583467a4d39b",
+    "cloud": "GCS",
+    "size": 2148,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:45.367600",
+    "sha": "30a4ab973ef8fd561d930d55502df855108ca0b081454b0e761d5141f3778780",
+    "cloud": "MongoDB",
+    "size": 4,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:47.517145",
+    "sha": "3af53717f9d593d66c33a08aefb0b9a64af3bb257ef99f357e2ccbba4b9bb6b1",
+    "cloud": "GCS",
+    "size": 74424,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:49.595525",
+    "sha": "148952d70af09bfa190241769be3ef9135f18b182c50abe35f5626f5a31a026a",
+    "cloud": "GCS",
+    "size": 600292,
+    "chunk_id": "?"
+  },
+  {
+    "timestamp": "2025-06-22T00:32:50.399748",
+    "sha": "c9e50d62084cca045ca2c6b10a706b6bf1ecf6262ebb3d5486db3d6d325b3685",
+    "cloud": "GitHub",
+    "size": 4860,
+    "chunk_id": "?"
+  }
+]
