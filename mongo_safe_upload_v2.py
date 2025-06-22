@@ -2,53 +2,49 @@
 
 import os
 import math
-import bson
 import time
+import bson
 from pymongo import MongoClient
+from pathlib import Path
 
 MAX_CHUNK_SIZE = 13 * 1024 * 1024  # 13MB
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
-DB_NAME = "fusion"
-COLLECTION_NAME = "files"
+client = MongoClient("mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
+db = client["fusion"]
+coll = db["chunks"]
 
-def chunk_file(file_path):
+def safe_upload_to_mongo(file_path):
+    try:
+        file_path = Path(file_path)
+        file_size = file_path.stat().st_size
+        num_parts = math.ceil(file_size / MAX_CHUNK_SIZE)
+
+        with open(file_path, "rb") as f:
+            for i in range(num_parts):
+                chunk_data = f.read(MAX_CHUNK_SIZE)
+                doc = {
+                    "filename": file_path.name,
+                    "sha": get_sha256(file_path),
+                    "part": i,
+                    "total_parts": num_parts,
+                    "data": bson.Binary(chunk_data),
+                    "timestamp": time.time()
+                }
+                coll.insert_one(doc)
+                print(f"📦 Uploaded part {i+1}/{num_parts} → MongoDB")
+
+        return True
+    except Exception as e:
+        print(f"❌ MongoDB upload error: {e}")
+        return False
+
+def get_sha256(file_path):
+    import hashlib
     with open(file_path, "rb") as f:
-        while True:
-            chunk = f.read(MAX_CHUNK_SIZE)
-            if not chunk:
-                break
-            yield chunk
-
-def upload_in_chunks(file_path):
-    client = MongoClient(MONGO_URI)
-    db = client[DB_NAME]
-    coll = db[COLLECTION_NAME]
-
-    file_name = os.path.basename(file_path)
-    print(f"🔩 Preparing Mongo upload for: {file_name}")
-    chunks = list(chunk_file(file_path))
-    total = len(chunks)
-
-    if total == 0:
-        print("⚠️ Empty file.")
-        return
-
-    for i, chunk in enumerate(chunks):
-        doc = {
-            "filename": file_name,
-            "chunk_index": i,
-            "total_chunks": total,
-            "data": bson.binary.Binary(chunk),
-            "timestamp": time.time()
-        }
-        coll.insert_one(doc)
-        print(f"✅ Uploaded chunk {i+1}/{total}")
-
-    print(f"🎉 Mongo Upload Complete: {file_name} in {total} chunks")
+        return hashlib.sha256(f.read()).hexdigest()
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python3 mongo_safe_upload_v2.py /path/to/large_file")
-        exit(1)
-    upload_in_chunks(sys.argv[1])
+    path = input("Enter file path to upload: ").strip()
+    if os.path.exists(path):
+        safe_upload_to_mongo(path)
+    else:
+        print("❌ File not found.")
