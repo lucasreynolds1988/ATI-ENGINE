@@ -1,34 +1,45 @@
 # ~/Soap/mongo_safe_upload_v2.py
 
-import sys, os, bson
+import os
+import math
+import time
+import bson
 from pathlib import Path
 from pymongo import MongoClient
+from rotor_overlay import log_event
 
-MAX_SIZE = 13 * 1024 * 1024
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
-client = MongoClient(MONGO_URI)
+MAX_CHUNK_SIZE = 13 * 1024 * 1024  # 13MB
+UPLOAD_DIR = Path.home() / "Soap/uploads"
+LOG_PATH = Path.home() / "Soap/logs/mongo_upload.log"
+
+client = MongoClient("mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
 db = client["fusion"]
-coll = db["files"]
+collection = db["files"]
 
-def upload(file_path):
-    path = Path(file_path)
-    if not path.exists():
-        print(f"❌ File not found: {file_path}")
-        return
+def chunk_and_upload(file_path):
+    file_size = os.path.getsize(file_path)
+    total_parts = math.ceil(file_size / MAX_CHUNK_SIZE)
 
-    data = path.read_bytes()
-    for i in range(0, len(data), MAX_SIZE):
-        chunk = data[i:i+MAX_SIZE]
-        doc = {
-            "filename": path.name,
-            "chunk": i // MAX_SIZE,
-            "data": bson.Binary(chunk)
-        }
-        coll.insert_one(doc)
-        print(f"✅ Uploaded chunk {doc['chunk']}")
+    with open(file_path, "rb") as f:
+        for part in range(total_parts):
+            chunk = f.read(MAX_CHUNK_SIZE)
+            doc = {
+                "filename": file_path.name,
+                "part": part,
+                "total_parts": total_parts,
+                "data": bson.Binary(chunk),
+                "timestamp": time.time()
+            }
+            collection.insert_one(doc)
+            log_event(f"📦 Uploaded {file_path.name} part {part+1}/{total_parts}", LOG_PATH)
+            time.sleep(1)
+
+def upload_all():
+    for file in UPLOAD_DIR.glob("*"):
+        if file.is_file():
+            chunk_and_upload(file)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python3 mongo_safe_upload_v2.py [file]")
-    else:
-        upload(sys.argv[1])
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
+    os.makedirs(LOG_PATH.parent, exist_ok=True)
+    upload_all()

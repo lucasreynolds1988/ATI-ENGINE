@@ -1,35 +1,28 @@
-# ~/Soap/spin_down.py
-
-import os
+#!/usr/bin/env python3
+"""
+spin_down.py: Gracefully sync and stop rotors.
+"""
 import subprocess
 import time
 from pathlib import Path
 
-def stop_rotors():
-    print("🛑 Stopping rotor processes...")
-    os.system("pkill -f rotor_overlay.py")
-    os.system("pkill -f rotor_fusion.py")
-    os.system("pkill -f fusion_restore_v2.py")
-    os.system("pkill -f spin_up.py")
-    time.sleep(1)
+LOG_PATH = Path.home() / "Soap/logs/spin_down.log"
+LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-def push_to_github():
-    print("⬆️ Final GitHub push...")
-    repo_path = Path.home() / "Soap"
-    subprocess.run(["git", "-C", str(repo_path), "add", "."], check=False)
-    subprocess.run(["git", "-C", str(repo_path), "commit", "-m", "🔒 Safe shutdown commit"], check=False)
-    subprocess.run(["git", "-C", str(repo_path), "push"], check=False)
-
-def sync_to_gcs():
-    print("☁️ Syncing entire Soap folder to GCS...")
-    subprocess.run(["gsutil", "-m", "cp", "-r", str(Path.home() / "Soap"), "gs://ati-rotor-fusion/Soap_backup"], check=False)
+def log(msg):
+    with open(LOG_PATH, "a") as f:
+        f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
 
 def main():
-    print("🔻 [+SPIN-DOWN+] INITIATED...")
-    stop_rotors()
-    push_to_github()
-    sync_to_gcs()
-    print("✅ All systems safely shut down.")
+    print("🧹 [SPIN-DOWN] Saving state and offloading…")
+    log("Spin-Down initiated.")
+    try:
+        subprocess.run(["python3", str(Path.home() / "Soap" / "code_red.py")], check=True)
+        log("Code-Red offload complete.")
+    except subprocess.CalledProcessError:
+        log("Code-Red failed during Spin-Down.")
+    print("💤 [SPIN-DOWN] All systems synced. Shutting down.")
+    log("Spin-Down complete.")
 
 if __name__ == "__main__":
     main()

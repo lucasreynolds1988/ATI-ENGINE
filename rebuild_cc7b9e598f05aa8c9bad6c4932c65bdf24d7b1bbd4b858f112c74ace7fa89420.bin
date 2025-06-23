@@ -1,0 +1,49 @@
+# ~/Soap/system_status_dashboard.py
+
+import os
+import time
+from pathlib import Path
+
+def check_process(keyword):
+    try:
+        result = os.popen(f"ps aux | grep '{keyword}' | grep -v grep").read()
+        return "✅ RUNNING" if result else "❌ OFFLINE"
+    except:
+        return "❌ ERROR"
+
+def check_dir(path, min_files=1):
+    p = Path(path).expanduser()
+    if not p.exists():
+        return "❌ MISSING"
+    count = len(list(p.glob("*")))
+    return f"✅ {count} files" if count >= min_files else "⚠️ Low files"
+
+def pulse_bar():
+    bars = ["▁","▃","▄","▅","▆","▇","█","▇","▆","▅","▄","▃","▁"]
+    for b in bars:
+        yield b
+
+def display():
+    print("\033c", end="")  # Clear screen
+    print("🧠 ATI SYSTEM STATUS MONITOR\n")
+    print("🔁 Rotor Engine     :", check_process("rotor_fusion"))
+    print("🧩 Watson Agent     :", check_process("watson_phase"))
+    print("🔎 Arbiter Logic    :", check_process("arbiter_knowledge"))
+    print("🧠 Soap Engine      :", check_process("soap_complete"))
+    print("🕷️  Web Scraper     :", check_process("web_scraper_agent"))
+    print("☁️ MongoDB Status   :", check_dir("~/Soap/data/mongo_chunks", 2))
+    print("📂 GCS Sync Check   :", check_dir("~/Soap_overlay", 2))
+    print("📜 Harvested HTML   :", check_dir("~/Soap/data/web_scrape", 10))
+    print("📄 SOP Queue        :", check_dir("~/Soap/agent_queue", 1))
+    print("🧾 Relay Log File   :", check_dir("~/Soap/data/logs/relay_log.json", 1))
+    print("🔄 Pulse: ", next(pulser))
+
+if __name__ == "__main__":
+    pulser = pulse_bar()
+    try:
+        while True:
+            display()
+            time.sleep(4)
+    except KeyboardInterrupt:
+        print("\n🛑 Exiting System Monitor.")
+

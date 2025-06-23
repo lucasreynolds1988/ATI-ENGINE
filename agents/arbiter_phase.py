@@ -1,76 +1,70 @@
-# ~/Soap/agents/arbiter_phase.py
-
+#!/usr/bin/env python3
+"""
+arbiter_phase.py: Conflict resolution and orchestration agent for ATI SOP system.
+Resolves logical or safety conflicts and finalizes SOP status.
+"""
 import json
+import logging
 from pathlib import Path
-import hashlib
-import os
-from arbiter_knowledge import resolve_conflict
 
-QUEUE_DIR = Path.home() / "Soap/agent_queue"
-os.makedirs(QUEUE_DIR, exist_ok=True)
+# Configuration
+HOME_DIR = Path.home()
+QUEUE_DIR = HOME_DIR / "Soap" / "agent_queue"
+LOG_DIR = HOME_DIR / "Soap" / "data" / "logs"
+LOG_FILE = LOG_DIR / "arbiter_phase.log"
 
-def hash_field(value):
-    if isinstance(value, list):
-        value = "\n".join(value)
-    elif isinstance(value, dict):
-        value = json.dumps(value, sort_keys=True)
-    elif not isinstance(value, str):
-        value = str(value)
-    return hashlib.md5(value.encode()).hexdigest()
+# Setup logging
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    filename=str(LOG_FILE),
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
+logger = logging.getLogger()
 
-def detect_conflict(watson, father, mother):
-    fields = ["procedure", "safety", "tools", "materials"]
+def log(message, level=logging.INFO):
+    print(message)
+    logger.log(level, message)
+
+
+def resolve_conflicts(sop: dict) -> bool:
+    """Check for logic_issues or missing safety and mark conflicts."""
     conflicts = []
+    # Check for unresolved logic issues
+    if sop.get("logic_issues"):
+        conflicts.extend(sop["logic_issues"])
+    # Check safety completeness
+    if not sop.get("safety"):
+        conflicts.append("Missing safety procedures.")
 
-    for field in fields:
-        w_hash = hash_field(watson.get(field, ""))
-        f_hash = hash_field(father.get(field, ""))
-        m_hash = hash_field(mother.get(field, ""))
+    # Mark conflict flag in SOP data
+    if conflicts:
+        sop["conflict_fields"] = conflicts
+        return False
+    return True
 
-        if not (w_hash == f_hash == m_hash):
-            conflicts.append(field)
-
-    return conflicts
 
 def run_arbiter():
     tasks = sorted(QUEUE_DIR.glob("*.json"))
     for task in tasks:
-        with open(task, "r") as f:
-            data = json.load(f)
-
-        if data.get("status") != "mother_complete":
-            continue
-
-        print(f"⚖️ Arbiter reviewing: {task.name}")
-        conflicts = detect_conflict(
-            data.get("watson_backup", {}),
-            data.get("father_backup", {}),
-            data.get("mother_backup", {})
-        )
-
-        if not conflicts:
-            data["status"] = "fully_verified"
-            print(f"✅ Consensus achieved: {task.name}")
-        else:
-            print(f"🚨 Conflicts found: {conflicts}")
-            resolution, context = resolve_conflict(data)
-
-            if resolution == "resolved":
-                data["status"] = "fully_verified"
-                data["arbiter_notes"] = ["Logic rules passed on re-check."]
-                print(f"✅ Resolved via logic.")
-            elif resolution.startswith("reference_found"):
-                data["status"] = "fully_verified"
-                data["arbiter_notes"] = [f"Resolved by reference: {context}"]
-                print(f"📚 Verified with external source.")
+        try:
+            data = json.loads(task.read_text())
+            status = data.get("status")
+            if status not in {"father_complete", "mother_complete", "needs_human_review"}:
+                continue
+            log(f"⚖️ Arbiter processing: {task.name}")
+            # Backup before changes
+            data["arbiter_backup"] = json.loads(json.dumps(data))
+            if resolve_conflicts(data):
+                data["status"] = "arbiter_complete"
+                log(f"✅ Arbiter: No conflicts for {task.name}")
             else:
-                data["status"] = "needs_human_review"
-                data["conflict_fields"] = conflicts
-                data["arbiter_notes"] = [f"Unresolved issues: {context}"]
-                print(f"🛑 Needs human review.")
+                data["status"] = "arbiter_conflict"
+                log(f"⚠️ Arbiter: Conflicts found in {task.name}: {data.get('conflict_fields')}")
+            task.write_text(json.dumps(data, indent=2))
+        except Exception as e:
+            log(f"❌ Arbiter error on {task.name}: {e}", level=logging.ERROR)
 
-        with open(task, "w") as f:
-            json.dump(data, f, indent=2)
 
 if __name__ == "__main__":
     run_arbiter()

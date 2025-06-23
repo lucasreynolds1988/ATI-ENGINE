@@ -1,72 +1,107 @@
 # ~/Soap/web_scraper_agent_v2.py
 
+"""
+Deep Recursive Web Scraper — Crawls target site, extracts docs, routes through rotor
+"""
+
 import os
 import sys
 import time
+import json
 import hashlib
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from pathlib import Path
 
-BASE_DIR = Path.home() / "Soap/data/web_scrape"
-VISITED_LOG = BASE_DIR / "visited_urls.txt"
-SCRAPER_LOG = BASE_DIR / "scraper.log"
-MAX_DEPTH = 10
-ALLOWED_EXTENSIONS = [".pdf", ".docx", ".jpeg", ".jpg", ".png", ".txt", ".html"]
+ROOT_DIR     = Path.home() / "Soap"
+SCRAPE_LOG   = ROOT_DIR / "logs" / "scavenger.log"
+VISITED_PATH = ROOT_DIR / "data" / "visited_urls.json"
+SAVE_DIR     = ROOT_DIR / "web_scrape"
+ROTOR_QUEUE  = ROOT_DIR / "rotor_queue"
+MAX_DEPTH    = 5
+SESSION_LIMIT = 10 * 1024 * 1024 * 1024  # 10GB max
 
-os.makedirs(BASE_DIR, exist_ok=True)
+for d in [SAVE_DIR, ROTOR_QUEUE, SCRAPE_LOG.parent, VISITED_PATH.parent]:
+    d.mkdir(parents=True, exist_ok=True)
+
 visited = set()
+if VISITED_PATH.exists():
+    try:
+        with open(VISITED_PATH) as f:
+            visited = set(json.load(f))
+    except:
+        visited = set()
 
-if VISITED_LOG.exists():
-    with open(VISITED_LOG, "r") as f:
-        visited.update(line.strip() for line in f)
+downloaded_bytes = 0
 
-def log(message):
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    with open(SCRAPER_LOG, "a") as f:
-        f.write(f"[{timestamp}] {message}\n")
-    print(f"[{timestamp}] {message}")
+def hash_url(url):
+    return hashlib.sha256(url.encode()).hexdigest()[:12]
 
-def save_file(content, url):
-    sha = hashlib.sha256(url.encode()).hexdigest()
-    ext = os.path.splitext(urlparse(url).path)[1] or ".html"
-    if ext not in ALLOWED_EXTENSIONS and not url.endswith("/"):
-        return
-    filename = BASE_DIR / f"{sha}{ext}"
-    with open(filename, "wb") as f:
+def save_file(content, filename):
+    global downloaded_bytes
+    if downloaded_bytes + len(content) > SESSION_LIMIT:
+        with open(SCRAPE_LOG, "a") as log:
+            log.write(f"[{time.ctime()}] ⚠️ Session limit reached. Skipping {filename}\n")
+        return None
+
+    path = SAVE_DIR / filename
+    with open(path, "wb") as f:
         f.write(content)
-    log(f"Saved {url} -> {filename.name}")
+    downloaded_bytes += len(content)
+
+    rotor_path = ROTOR_QUEUE / filename
+    path.rename(rotor_path)
+    return rotor_path
 
 def crawl(url, depth=0):
     if depth > MAX_DEPTH or url in visited:
         return
     visited.add(url)
-    with open(VISITED_LOG, "a") as f:
-        f.write(url + "\n")
 
     try:
         res = requests.get(url, timeout=10)
-        if res.status_code != 200:
-            log(f"Failed to load {url} (code {res.status_code})")
+        if "text/html" not in res.headers.get("Content-Type", ""):
             return
-        content_type = res.headers.get("Content-Type", "")
-        save_file(res.content, url)
+        soup = BeautifulSoup(res.text, "html.parser")
+        links = soup.find_all("a", href=True)
 
-        if "text/html" in content_type:
-            soup = BeautifulSoup(res.text, "html.parser")
-            for link_tag in soup.find_all("a", href=True):
-                next_url = urljoin(url, link_tag['href'])
-                if urlparse(next_url).netloc == urlparse(url).netloc:
-                    crawl(next_url, depth + 1)
+        for tag in links:
+            href = tag["href"]
+            abs_url = urljoin(url, href)
+            parsed = urlparse(abs_url)
+            if not parsed.scheme.startswith("http"):
+                continue
+
+            if abs_url.endswith((".pdf", ".docx", ".txt", ".jpg", ".jpeg", ".png")):
+                try:
+                    doc = requests.get(abs_url, timeout=10)
+                    if doc.status_code == 200:
+                        fname = f"{hash_url(abs_url)}_{os.path.basename(parsed.path)}"
+                        path = save_file(doc.content, fname)
+                        if path:
+                            with open(SCRAPE_LOG, "a") as log:
+                                log.write(f"[{time.ctime()}] 📄 Saved: {abs_url} → {path.name}\n")
+                except Exception as e:
+                    with open(SCRAPE_LOG, "a") as log:
+                        log.write(f"[{time.ctime()}] ❌ Download failed: {abs_url} — {str(e)}\n")
+            else:
+                crawl(abs_url, depth + 1)
+                time.sleep(0.75)  # pacing
+
     except Exception as e:
-        log(f"Error on {url}: {e}")
+        with open(SCRAPE_LOG, "a") as log:
+            log.write(f"[{time.ctime()}] ❌ Crawl error: {url} — {str(e)}\n")
+
+def main():
+    if len(sys.argv) < 2:
+        print("❌ Usage: python3 web_scraper_agent_v2.py <url>")
+        return
+    start_url = sys.argv[1]
+    crawl(start_url)
+
+    with open(VISITED_PATH, "w") as f:
+        json.dump(list(visited), f)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("❌ Usage: python3 web_scraper_agent_v2.py <URL>")
-        sys.exit(1)
-    root_url = sys.argv[1]
-    log(f"🌐 Starting crawl: {root_url}")
-    crawl(root_url)
-    log("✅ Crawl complete.")
+    main()

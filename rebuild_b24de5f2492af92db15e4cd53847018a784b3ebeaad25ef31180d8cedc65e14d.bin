@@ -1,0 +1,8 @@
+alias +BOOT+='nohup python3 ~/Soap/boot.py > ~/Soap/logs/boot.log 2>&1 &'
+alias +SPIN-UP+='python3 ~/Soap/spin_up.py'
+alias +SPIN-DOWN+='python3 ~/Soap/spin_down.py'
+alias +CODE-RED+='python3 ~/Soap/code_red.py'
+
+if [ -f "/google/devshell/bashrc.google" ]; then
+  source "/google/devshell/bashrc.google"
+fi

@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""
+Rotor Overlay: Sync files from GCS overlay to local Soap directory in timed loop.
+Usage:
+  python3 rotor_overlay.py
+"""
+import time
+import subprocess
+import logging
+from pathlib import Path
+
+# Configuration
+HOME_DIR = Path.home()
+GCS_OVERLAY_DIR = HOME_DIR / "Soap_overlay"
+SOAP_DIR = HOME_DIR / "Soap"
+LOG_DIR = SOAP_DIR / "data" / "logs"
+LOG_FILE = LOG_DIR / "overlay.log"
+SYNC_INTERVAL = 8  # seconds between syncs
+
+
+def setup_logging():
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=str(LOG_FILE),
+        level=logging.INFO,
+        format='%(asctime)s [%(levelname)s] %(message)s'
+    )
+
+logger = logging.getLogger()
+
+def log(message, level=logging.INFO):
+    print(message)
+    logger.log(level, message)
+
+
+def sync_overlay():
+    if GCS_OVERLAY_DIR.exists():
+        log("🟢 Syncing overlay to Soap directory.")
+        try:
+            subprocess.run([
+                "cp", "-r", f"{GCS_OVERLAY_DIR}/.", str(SOAP_DIR)
+            ], check=True)
+            log("✅ Overlay sync complete.")
+        except subprocess.CalledProcessError as e:
+            log(f"❌ Overlay sync failed: {e}", logging.ERROR)
+    else:
+        log("⚠️ Overlay directory not mounted. Skipping sync.", logging.WARNING)
+
+
+def main():
+    setup_logging()
+    log("🔁 [Rotor Overlay] Starting overlay sync loop.")
+    while True:
+        sync_overlay()
+        time.sleep(SYNC_INTERVAL)
+
+if __name__ == "__main__":
+    main()

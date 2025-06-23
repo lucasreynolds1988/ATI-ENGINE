@@ -1,49 +1,66 @@
-# ~/Soap/agents/watson_phase.py
-
+#!/usr/bin/env python3
+"""
+watson_phase.py: Formatting engine for ATI SOP system.
+Reads queued raw SOP JSON tasks, structures content per Watson style, and updates status.
+"""
 import json
+import logging
 from pathlib import Path
-import time
-import os
 
-QUEUE_DIR = Path.home() / "Soap/agent_queue"
-os.makedirs(QUEUE_DIR, exist_ok=True)
+# Configuration
+HOME_DIR = Path.home()
+QUEUE_DIR = HOME_DIR / "Soap" / "agent_queue"
+LOG_DIR = HOME_DIR / "Soap" / "data" / "logs"
+LOG_FILE = LOG_DIR / "watson_phase.log"
 
-def structure_sop(raw_text):
-    structured = {
-        "title": "Auto SOP - Watson Structured",
-        "purpose": "Describe the purpose of this SOP.",
-        "scope": "Covers the procedure for the specified system.",
-        "tools": ["Tool A", "Tool B"],
-        "materials": ["Material X"],
-        "safety": ["Wear PPE", "Disconnect power source"],
-        "procedure": [
-            "Step 1: Begin safely.",
-            "Step 2: Follow diagnostic flow.",
-            "Step 3: Complete all checks."
-        ]
+# Setup logging
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    filename=str(LOG_FILE),
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
+logger = logging.getLogger()
+
+def log(message, level=logging.INFO):
+    print(message)
+    logger.log(level, message)
+
+
+def structure_sop(raw_text: str) -> dict:
+    """Parse raw text into a structured SOP format."""
+    # Basic example; replace with improved parsing logic as needed
+    lines = [line.strip() for line in raw_text.splitlines() if line.strip()]
+    return {
+        "title": lines[0] if lines else "Untitled SOP",
+        "purpose": "Describe the purpose.",
+        "scope": "Define the scope here.",
+        "tools": [],
+        "materials": [],
+        "safety": [],
+        "procedure": lines[1:],
+        "watson_backup": None  # will be set after deep copy
     }
-    structured["watson_backup"] = json.loads(json.dumps(structured))  # Deep copy snapshot
-    return structured
+
 
 def run_watson():
     tasks = sorted(QUEUE_DIR.glob("*.json"))
     for task in tasks:
-        with open(task, "r") as f:
-            data = json.load(f)
+        try:
+            data = json.loads(task.read_text())
+            if data.get("status") != "queued":
+                continue
+            log(f"🧠 Watson processing: {task.name}")
+            structured = structure_sop(data.get("raw_text", ""))
+            # Deep copy backup
+            structured["watson_backup"] = json.loads(json.dumps(structured))
+            data.update(structured)
+            data["status"] = "watson_complete"
+            task.write_text(json.dumps(data, indent=2))
+            log(f"✅ Watson complete: {task.name}")
+        except Exception as e:
+            log(f"❌ Watson error on {task.name}: {e}", level=logging.ERROR)
 
-        if data.get("status") != "queued":
-            continue
-
-        print(f"🧠 Watson processing: {task.name}")
-        structured = structure_sop(data.get("raw_text", ""))
-
-        data.update(structured)
-        data["status"] = "watson_complete"
-
-        with open(task, "w") as f:
-            json.dump(data, f, indent=2)
-
-        print(f"✅ Watson complete: {task.name}")
 
 if __name__ == "__main__":
     run_watson()

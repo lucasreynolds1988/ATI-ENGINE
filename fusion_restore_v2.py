@@ -1,69 +1,113 @@
-# ~/Soap/fusion_restore_v2.py
-
+#!/usr/bin/env python3
+"""
+fusion_restore_v2.py: Restore local files from GitHub, MongoDB, and GCS overlay
+in a timed rotor loop.
+Usage:
+  python3 fusion_restore_v2.py
+"""
 import os
 import time
 import subprocess
 import logging
+import sys
 from pathlib import Path
 from pymongo import MongoClient
-import bson
 
+HOME_DIR = Path.home()
+SOAP_DIR = HOME_DIR / "Soap"
+LOG_DIR = SOAP_DIR / "data" / "logs"
+LOG_FILE = LOG_DIR / "restore.log"
 GITHUB_REPO = "https://github.com/lucasr610/Soap.git"
-LOCAL_PATH = str(Path.home() / "Soap")
-LOG_PATH = Path(LOCAL_PATH) / "logs/restore.log"
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net"
-MAX_MONGO_CHUNK = 13 * 1024 * 1024
+GCS_OVERLAY_DIR = HOME_DIR / "Soap_overlay"
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net")
 MONGO_DB = "rotor"
-MONGO_COLLECTION = "fusion_chunks"
+MONGO_COLL = "fusion_chunks"
+CYCLE_INTERVAL = 4  # seconds between cycles
 
-LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-logging.basicConfig(filename=LOG_PATH, level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
-def log(msg): print(msg); logging.info(msg)
+def setup_logging():
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=str(LOG_FILE),
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+    console = logging.StreamHandler(sys.stdout)
+    console.setLevel(logging.INFO)
+    console.setFormatter(logging.Formatter("[%(levelname)s] %(message)s"))
+    logging.getLogger().addHandler(console)
+
+logger = logging.getLogger()
+
+def log(msg, level=logging.INFO):
+    logger.log(level, msg)
 
 def pull_latest_github():
-    if not Path(LOCAL_PATH, ".git").exists():
-        log("📥 Cloning GitHub repo fresh...")
-        subprocess.run(["git", "clone", GITHUB_REPO, LOCAL_PATH])
+    if not (SOAP_DIR / ".git").exists():
+        log("📥 Cloning GitHub repo...", logging.INFO)
+        subprocess.run(["git", "clone", GITHUB_REPO, str(SOAP_DIR)], check=False)
     else:
-        log("🔄 Pulling latest from GitHub...")
-        subprocess.run(["git", "-C", LOCAL_PATH, "pull"])
+        log("🔄 Pulling latest from GitHub...", logging.INFO)
+        subprocess.run(["git", "-C", str(SOAP_DIR), "pull"], check=False)
 
 def restore_from_mongo():
-    client = MongoClient(MONGO_URI)
-    collection = client[MONGO_DB][MONGO_COLLECTION]
-    log("🔍 Fetching chunked files from MongoDB...")
-    sha_index = {}
-    for doc in collection.find().sort("timestamp", 1):
-        sha, index, total, data = doc["sha"], doc["index"], doc["total_parts"], doc["data"]
-        if sha not in sha_index: sha_index[sha] = [None] * total
-        sha_index[sha][index] = data
-    for sha, parts in sha_index.items():
-        if None in parts: log(f"⚠️ Incomplete file {sha}"); continue
-        full_data = b''.join(parts)
-        output_path = Path(LOCAL_PATH) / f"rebuild_{sha}.bin"
-        with open(output_path, "wb") as f: f.write(full_data)
-        log(f"✅ Reassembled file: {output_path.name}")
+    log("🔍 Restoring chunked files from MongoDB...", logging.INFO)
+    try:
+        client = MongoClient(MONGO_URI)
+        coll = client[MONGO_DB][MONGO_COLL]
+        cursor = coll.aggregate([{"$sort": {"timestamp": 1}}], allowDiskUse=True)
+    except Exception as e:
+        log(f"❌ MongoDB error: {e}", logging.ERROR)
+        return
 
-def sync_from_gcs_overlay():
-    overlay = Path.home() / "Soap_overlay"
-    if overlay.exists():
-        log("☁️ Syncing from GCS overlay...")
-        subprocess.run(["cp", "-r", f"{overlay}/.", LOCAL_PATH])
+    file_chunks = {}
+    for doc in cursor:
+        sha = doc.get("sha")
+        idx = doc.get("index")
+        total = doc.get("total_parts")
+        data = doc.get("data")
+        file_chunks.setdefault(sha, {"total": total, "chunks": {}})["chunks"][idx] = data
+
+    for sha, info in file_chunks.items():
+        if len(info["chunks"]) != info["total"]:
+            log(f"⚠️ Incomplete chunks for {sha}, skipping.", logging.WARNING)
+            continue
+        try:
+            assembled = b"".join(info["chunks"][i] for i in range(info["total"]))
+            out_file = SOAP_DIR / f"rebuild_{sha}.bin"
+            out_file.write_bytes(assembled)
+            log(f"✅ Reassembled {out_file.name}", logging.INFO)
+        except Exception as e:
+            log(f"❌ Failed writing {out_file.name}: {e}", logging.ERROR)
+
+def sync_gcs_overlay():
+    if GCS_OVERLAY_DIR.exists():
+        log("☁️ Syncing from GCS overlay...", logging.INFO)
+        subprocess.run(["cp", "-r", f"{GCS_OVERLAY_DIR}/.", str(SOAP_DIR)], check=False)
     else:
-        log("⚠️ GCS overlay not mounted. Skipping GCS restore.")
+        log("⚠️ GCS overlay not found, skipping.", logging.WARNING)
 
 def rotor_timing_loop():
     while True:
-        log("🧠 [Cycle Start] Restoring from all sources...")
-        pull_latest_github(); time.sleep(1.33)
-        restore_from_mongo(); time.sleep(1.33)
-        sync_from_gcs_overlay(); time.sleep(1.33)
-        log("🔁 [Cycle Complete] Waiting before next rotation...")
-        time.sleep(4)
+        log("🧠 [Cycle Start] Executing restore cycle...", logging.INFO)
+        pull_latest_github()
+        time.sleep(1)
+        restore_from_mongo()
+        time.sleep(1)
+        sync_gcs_overlay()
+        log("🔁 [Cycle Complete] Waiting before next cycle...", logging.INFO)
+        time.sleep(CYCLE_INTERVAL)
+
+def main():
+    setup_logging()
+    log("🚀 Starting fusion_restore_v2 rotor...", logging.INFO)
+    try:
+        rotor_timing_loop()
+    except KeyboardInterrupt:
+        log("🛑 Stopping restore rotor (KeyboardInterrupt)", logging.INFO)
+    except Exception as e:
+        log(f"❌ Unexpected error: {e}", logging.ERROR)
+        sys.exit(1)
 
 if __name__ == "__main__":
-    try:
-        log("🚀 Starting Fusion Restore Rotor...")
-        rotor_timing_loop()
-    except Exception as e:
-        log(f"❌ Exception: {e}")
+    main()

@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""
+spin_down.py: Safely shut down all rotor agents, push state to GitHub and GCS.
+Usage:
+  python3 spin_down.py
+"""
+import sys
+import time
+import subprocess
+import logging
+from pathlib import Path
+import os
+
+# Configuration
+HOME_DIR = Path.home()
+SOAP_DIR = HOME_DIR / "Soap"
+LOG_DIR = SOAP_DIR / "data" / "logs"
+LOG_FILE = LOG_DIR / "spin_down.log"
+GCS_BUCKET = os.getenv("GCS_BUCKET", "gs://ati-rotor-fusion/Soap_backup")
+
+# Rotor process identifiers (patterns)
+ROTOR_PROCESSES = [
+    "rotor_overlay.py",
+    "rotor_fusion.py",
+    "fusion_restore_v2.py",
+    "spin_up.py"
+]
+
+# Time to wait after killing processes
+KILL_WAIT = 1  # seconds
+
+
+def setup_logging():
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=str(LOG_FILE),
+        level=logging.INFO,
+        format='%(asctime)s [%(levelname)s] %(message)s'
+    )
+
+logger = logging.getLogger()
+
+def log(message, level=logging.INFO):
+    print(message)
+    logger.log(level, message)
+
+
+def stop_rotors():
+    log("🛑 Stopping rotor processes...", logging.INFO)
+    for proc in ROTOR_PROCESSES:
+        try:
+            subprocess.run(["pkill", "-f", proc], check=False)
+            log(f"Stopped processes matching: {proc}")
+        except Exception as e:
+            log(f"Error stopping {proc}: {e}", logging.WARNING)
+    time.sleep(KILL_WAIT)
+
+
+def push_to_github():
+    log("⬆️ Pushing final state to GitHub...", logging.INFO)
+    try:
+        subprocess.run(["git", "-C", str(SOAP_DIR), "add", "."], check=False)
+        subprocess.run(["git", "-C", str(SOAP_DIR), "commit", "-m", "🔒 Safe shutdown commit"], check=False)
+        subprocess.run(["git", "-C", str(SOAP_DIR), "push"], check=False)
+        log("GitHub push complete.")
+    except Exception as e:
+        log(f"GitHub push error: {e}", logging.ERROR)
+
+
+def sync_to_gcs():
+    log(f"☁️ Syncing Soap folder to GCS bucket: {GCS_BUCKET}", logging.INFO)
+    try:
+        subprocess.run(["gsutil", "-m", "cp", "-r", str(SOAP_DIR), GCS_BUCKET], check=False)
+        log("GCS sync complete.")
+    except Exception as e:
+        log(f"GCS sync error: {e}", logging.ERROR)
+
+
+def main():
+    setup_logging()
+    log("🔻 [+SPIN-DOWN+] Initiating safe shutdown.", logging.INFO)
+    stop_rotors()
+    push_to_github()
+    sync_to_gcs()
+    log("✅ [+SPIN-DOWN+] All systems safely shut down.", logging.INFO)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        log(f"❌ spin_down encountered an error: {e}", logging.ERROR)
+        sys.exit(1)

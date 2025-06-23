@@ -1,20 +1,44 @@
-# ~/Soap/rotor_overlay.py
+#!/usr/bin/env python3
+"""
+rotor_overlay.py — Synchronizes overlay files across all system areas.
+Used for mirroring config, logs, or AI state snapshots across backup channels.
+"""
 
-import time, os
+import os
+import shutil
+import time
 from pathlib import Path
 
-OVERLAY_DIR = Path.home() / "Soap_overlay"
-DEST_DIR = Path.home() / "Soap"
+# === Paths ===
+HOME = Path.home()
+BASE = HOME / "Soap"
+OVERLAY = BASE / "overlay"
+BACKUP = BASE / "overlay_backup"
+LOG = BASE / "logs" / "overlay.log"
+
+# === Setup ===
+for d in [OVERLAY, BACKUP, LOG.parent]:
+    d.mkdir(parents=True, exist_ok=True)
+
+def log(msg):
+    timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+    entry = f"[{timestamp}] {msg}"
+    print(entry)
+    with open(LOG, "a") as f:
+        f.write(entry + "\n")
 
 def sync_overlay():
-    if OVERLAY_DIR.exists():
-        os.system(f"cp -r {OVERLAY_DIR}/. {DEST_DIR}")
-        print("🟢 Overlay sync complete.")
-    else:
-        print("⚠️ Overlay directory not mounted.")
+    log("🔄 Overlay sync started")
+    synced = 0
+    for file in OVERLAY.glob("*"):
+        try:
+            dest = BACKUP / file.name
+            shutil.copy2(file, dest)
+            synced += 1
+            log(f"✅ Synced: {file.name}")
+        except Exception as e:
+            log(f"❌ Failed: {file.name} — {e}")
+    log(f"🔚 Overlay sync complete — {synced} file(s) mirrored.")
 
 if __name__ == "__main__":
-    print("🔁 [Rotor Overlay] Starting...")
-    while True:
-        sync_overlay()
-        time.sleep(8)
+    sync_overlay()
