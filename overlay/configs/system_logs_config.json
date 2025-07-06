@@ -1,0 +1,7 @@
+{
+  "log_rotation_policy": "daily",
+  "max_log_size_mb": 50,
+  "retention_days": 90,
+  "log_level": "INFO",
+  "exclude_sensitive_fields": ["password", "token"]
+}

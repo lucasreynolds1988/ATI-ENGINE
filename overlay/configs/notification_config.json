@@ -1,0 +1,8 @@
+{
+  "email_provider": "SendGrid",
+  "api_key": "env:SENDGRID_API_KEY",
+  "from_email": "noreply@oracleeye.com",
+  "sms_provider": "Twilio",
+  "twilio_account_sid": "env:TWILIO_SID",
+  "twilio_auth_token": "env:TWILIO_TOKEN"
+}

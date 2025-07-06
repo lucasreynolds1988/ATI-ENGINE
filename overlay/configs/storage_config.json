@@ -1,0 +1,20 @@
+{
+  "backends": [
+    {
+      "type": "gcs",
+      "bucket": "gs://ati-oracle-engine/backups",
+      "credentials_file": "/home/lreynolds/Soap/secrets/gcs-creds.json"
+    },
+    {
+      "type": "mongo",
+      "uri": "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/ati_oracle_eye",
+      "database": "ati_oracle_eye",
+      "collection": "backups"
+    },
+    {
+      "type": "github",
+      "repo": "username/oracle-eye",
+      "token": "env:GITHUB_TOKEN"
+    }
+  ]
+}

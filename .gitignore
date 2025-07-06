@@ -1,43 +1,6 @@
-cat > ~/.gitignore << 'EOF'
-# Ignore Python cache
-__pycache__/
-*.pyc
-
-# Ignore logs
+cloud_backup/
+secrets/
+*.zip
+*.bin
 *.log
-Soap/logs/
-ati-web-app/logs/
-
-# Ignore credentials and keys
-*.json
-*key*.json
-ati-access-key.json
-
-# Ignore compressed files
-*.zip
-*.tar.gz
-
-# Ignore uploads and generated outputs
-Soap/uploads/
-ati-web-app/uploads/
-
-# Ignore node_modules if frontend ever uses npm
-node_modules/
-
-# Ignore backup or temp files
-*~ 
-*.bak
-.DS_Store
-EOF
-cloud_backup/
-*.bin
-*.zip
-secrets/
-cloud_backup/
-*.bin
-*.zip
-secrets/
-cloud_backup/
-*.bin
-*.zip
-secrets/
+venv/

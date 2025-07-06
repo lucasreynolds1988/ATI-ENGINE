@@ -1,0 +1,7 @@
+{
+  "retention_days": 180,
+  "aggregation_schedule": "daily",
+  "export_formats": ["csv", "json"],
+  "track_event_types": ["UPLOAD", "APPROVAL", "ERROR", "LOGIN"],
+  "anonymize_user_data": true
+}
