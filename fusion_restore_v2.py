@@ -1,61 +1,120 @@
 #!/usr/bin/env python3
-import os, subprocess, logging, sys, time
-from pathlib import Path
-from pymongo import MongoClient
-from google.cloud import storage
+import asyncio
+import subprocess
+import os
+import shutil
+import time
 
-HOME_DIR = Path.home()
-SOAP_DIR = HOME_DIR / "Soap"
-LOG_DIR = SOAP_DIR / "data/logs"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s", handlers=[
-    logging.FileHandler(LOG_DIR / "fusion_restore.log"),
-    logging.StreamHandler(sys.stdout)
-])
+HOME_DIR = os.path.expanduser("~")
+SOAP_DIR = os.path.join(HOME_DIR, "Soap")
+BACKUP_DIR = os.path.join(SOAP_DIR, "cloud_backup")
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Service2244%23%23@ai-sop-dev.nezgetk.mongodb.net")
-GCS_BUCKET = "ati-oracle-engine"
-GCS_OVERLAY_PATH = "overlay/"
+# Local save state (your original logic)
+def save_state():
+    print("🧭 Saving system state to backup...")
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+    for item in os.listdir(SOAP_DIR):
+        s = os.path.join(SOAP_DIR, item)
+        d = os.path.join(BACKUP_DIR, item)
+        if os.path.isdir(s):
+            if os.path.exists(d):
+                shutil.rmtree(d)
+            shutil.copytree(s, d)
+        else:
+            shutil.copy2(s, d)
+    print("✅ System state saved to cloud_backup.")
 
-def pull_latest_github():
-    logging.info("🔄 Pulling latest from GitHub explicitly...")
-    subprocess.run(["git", "-C", str(SOAP_DIR), "pull"], check=False)
+# Local restore state (your original logic)
+def restore_state():
+    print("🧭 Restoring system state from backup...")
+    if not os.path.exists(BACKUP_DIR):
+        print("❌ No backup found!")
+        return
+    for item in os.listdir(BACKUP_DIR):
+        s = os.path.join(BACKUP_DIR, item)
+        d = os.path.join(SOAP_DIR, item)
+        if os.path.isdir(s):
+            if os.path.exists(d):
+                shutil.rmtree(d)
+            shutil.copytree(s, d)
+        else:
+            shutil.copy2(s, d)
+    print("✅ System restore complete.")
 
-def restore_from_mongo():
-    logging.info("📦 Explicitly restoring files from MongoDB...")
-    client = MongoClient(MONGO_URI)
-    coll = client["rotor"]["fusion_chunks"]
-    docs = coll.aggregate([{"$sort": {"timestamp": 1}}])
-    for doc in docs:
-        sha, idx, total, data = doc["sha"], doc["index"], doc["total_parts"], doc["data"]
-        file = SOAP_DIR / f"rebuild_{sha}.bin"
-        file.write_bytes(data)
-        logging.info(f"✅ Explicitly restored {file.name} from MongoDB.")
+# GitHub pull: lightweight
+async def github_pull():
+    proc = await asyncio.create_subprocess_shell(
+        "git pull origin main",
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+    stdout, stderr = await proc.communicate()
+    if proc.returncode == 0:
+        print("[INFO] ✅ GitHub synced successfully.")
+    else:
+        print(f"[ERROR] ❌ GitHub sync failed: {stderr.decode()}")
 
-def restore_from_gcs():
-    logging.info("☁️ Explicitly syncing overlay from GCS...")
-    client = storage.Client()
-    blobs = client.list_blobs(GCS_BUCKET, prefix=GCS_OVERLAY_PATH)
+# MongoDB restore: restoring binary files
+async def mongo_restore():
+    await asyncio.to_thread(mongo_restore_function)
+
+def mongo_restore_function():
+    from mongo_safe_upload_v2 import MongoChunker
+    chunker = MongoChunker()
+    restored_files = chunker.restore_files()
+    for file in restored_files:
+        print(f"[INFO] ✅ Restored {file} from MongoDB.")
+
+# GCS syncing overlay files
+async def gcs_sync():
+    await asyncio.to_thread(gcs_sync_function)
+
+def gcs_sync_function():
+    from google.cloud import storage
+
+    client = storage.Client.from_service_account_json('secrets/gcs-creds.json')
+    bucket = client.get_bucket("ati-oracle-engine")
+    overlay_prefix = "overlay/"
+    blobs = bucket.list_blobs(prefix=overlay_prefix)
+
     for blob in blobs:
-        rel_path = Path(blob.name).relative_to(GCS_OVERLAY_PATH)
-        # Explicitly prevent overwriting secrets
-        if str(rel_path).startswith("secrets/"):
-            logging.info(f"🔒 Skipping protected file {rel_path}")
-            continue
-        dest_file = SOAP_DIR / rel_path
-        dest_file.parent.mkdir(parents=True, exist_ok=True)
-        blob.download_to_filename(dest_file)
-        logging.info(f"⬇️ Explicitly downloaded {rel_path}")
-    logging.info("✅ GCS overlay explicitly synced successfully.")
+        local_path = os.path.join(SOAP_DIR, blob.name)
+        os.makedirs(os.path.dirname(local_path), exist_ok=True)
 
-def rotor_loop():
+        if blob.name.endswith(('gcs-creds.json', 'github-token.txt', 'mongo-creds.json')):
+            print(f"[INFO] 🔒 Skipping protected file {blob.name}")
+            continue
+
+        blob.download_to_filename(local_path)
+        print(f"[INFO] ⬇️ Explicitly downloaded {blob.name}")
+
+# Unified explicit restore cycle (async zero-state model)
+async def explicit_restore_cycle():
+    interval = 4  # 4-second intervals
     while True:
-        logging.info("🔄 Starting explicit restore cycle.")
-        pull_latest_github()
-        restore_from_mongo()
-        restore_from_gcs()
-        logging.info("✅ Explicit restore cycle complete. Waiting 4s...")
-        time.sleep(4)
+        start_time = time.time()
+
+        print("[INFO] 🔄 Starting explicit restore cycle.")
+        await asyncio.gather(
+            github_pull(),
+            mongo_restore(),
+            gcs_sync()
+        )
+
+        elapsed = time.time() - start_time
+        sleep_duration = max(0, interval - elapsed)
+        print(f"[INFO] ⏳ Cycle complete in {elapsed:.2f}s, sleeping for {sleep_duration:.2f}s.")
+        await asyncio.sleep(sleep_duration)
+
+# Main function to handle CLI arguments and run loop
+def main():
+    import sys
+    if "--save" in sys.argv:
+        save_state()
+    elif "--restore-local" in sys.argv:
+        restore_state()
+    else:
+        asyncio.run(explicit_restore_cycle())
 
 if __name__ == "__main__":
-    rotor_loop()
+    main()
