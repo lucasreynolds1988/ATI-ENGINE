@@ -29,3 +29,7 @@ node_modules/
 *.bak
 .DS_Store
 EOF
+cloud_backup/
+*.bin
+*.zip
+secrets/
