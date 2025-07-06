@@ -33,3 +33,7 @@ cloud_backup/
 *.bin
 *.zip
 secrets/
+cloud_backup/
+*.bin
+*.zip
+secrets/
