@@ -1,22 +1,37 @@
+#!/usr/bin/env python3
 import os
-import time
-from pathlib import Path
-from Soap.core.rotor_overlay import log_event
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-def upload_chunks(directory, chunk_size_mb=13):
-    upload_dir = Path(directory)
-    if not upload_dir.exists():
-        log_event("Upload directory missing.", "ERROR")
-        return
+from core.rotor_overlay import log_event
+from pymongo import MongoClient
+import gridfs
 
-    for file in upload_dir.glob("*"):
-        size_mb = file.stat().st_size / (1024 * 1024)
-        if size_mb > chunk_size_mb:
-            log_event(f"{file.name} too big ({size_mb:.2f}MB). Splitting...", "WARNING")
-            # Placeholder for actual splitting logic
-        else:
-            log_event(f"{file.name} ready for MongoDB upload.", "INFO")
-            time.sleep(2)  # Simulate pacing
+MONGO_URI = os.getenv('MONGO_URI')
+UPLOAD_DIR = sys.argv[sys.argv.index('--upload-dir') + 1]
+
+def upload_to_mongo(upload_dir):
+    client = MongoClient(MONGO_URI)
+    db = client["ati_oracle_engine"]
+    fs = gridfs.GridFS(db)
+
+    for filename in os.listdir(upload_dir):
+        filepath = os.path.join(upload_dir, filename)
+
+        if os.path.isdir(filepath):
+            print(f"[INFO] 📂 Skipping directory: {filepath}")
+            continue  # explicitly skip directories
+
+        with open(filepath, 'rb') as file:
+            data = file.read()
+
+            existing = db.fs.files.find_one({"filename": filename})
+            if existing:
+                fs.delete(existing['_id'])
+
+            fs.put(data, filename=filename)
+            print(f"[INFO] ✅ Uploaded {filename} to MongoDB.")
+            log_event(f"Uploaded {filename} to MongoDB.")
 
 if __name__ == "__main__":
-    upload_chunks(str(Path.home() / "Soap/uploads"))
+    upload_to_mongo(UPLOAD_DIR)
