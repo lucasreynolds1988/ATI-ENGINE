@@ -6,6 +6,8 @@ secrets/
 *.bin
 *.log
 venv/
+*.json
+*.key
 
 # Ignore uploads and generated outputs
 Soap/uploads/
@@ -24,4 +26,3 @@ __pycache__/
 *.pyc
 
 # End marker for easier edits
-EOF
