@@ -3,7 +3,7 @@ import os
 from pymongo import MongoClient
 
 # Updated MongoDB URI with new password
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Jenco610##@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Ruko0610%21%21@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
 SECRETS_DIR = os.path.expanduser("~/Soap/secrets")
 
 def upload_secret(filename):

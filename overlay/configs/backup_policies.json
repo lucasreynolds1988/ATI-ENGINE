@@ -1,8 +1,0 @@
-{
-  "rotation_schedule": "daily",
-  "retention_days": 30,
-  "max_backups": 30,
-  "encryption_enabled": true,
-  "cloud_targets": ["GCS"],
-  "notify_on_failure": true
-}
