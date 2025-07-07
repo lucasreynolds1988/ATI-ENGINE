@@ -3,25 +3,41 @@
 
 ### ✅ Core Backend API & Upload System
 /backend/main.py                  # Handles uploads, chunk detection, Mongo test
-/backend/utils/auth.py
-/backend/utils/logger.py
-/backend/utils/mongo.py
-/backend/utils/file_utils.py
-/backend/routes/*.py              # roles, metrics, log, pipeline, final_fetch
-/backend/start.sh
-/backend/requirements.txt
+/backend/utils/auth.py           # API token validation
+/backend/utils/logger.py         # Log event to rotor overlay
+/backend/utils/mongo.py          # Connect to MongoDB, get_collection
+/backend/utils/file_utils.py     # File cleanup, hash tools (TBD)
+/backend/start.sh                # (Optional) manual start script
+/backend/requirements.txt        # Backend Python dependencies
+/backend/routes/synthesize.py    # POST /synthesize → trigger pipeline job
+/backend/routes/upload_manual.py # POST /upload/manual → basic file upload
+/backend/routes/chat.py          # POST /chat → AI chat with soap_phase
+/backend/routes/scrape_url.py    # POST /scrape/url → web_scraper_agent crawl
+/backend/routes/roles.py         # GET /roles → fetch user roles
+/backend/routes/pipeline_status.py # GET /pipeline/status/{file_id}
+/backend/routes/pipeline_history.py # GET /pipeline/history
+/backend/routes/log.py           # GET /log → returns rotor_fusion.log
+/backend/routes/config.py        # GET /config → system info JSON
+/backend/routes/token_check.py   # GET /check-token → validates token
+/backend/routes/upload_list.py   # GET /upload/list → uploaded filenames
+/backend/routes/system_status.py # GET /status → heartbeat + system check
+/backend/routes/heartbeat.py     # GET /heartbeat → simple ping
+/backend/routes/system_ping.py   # GET /ping → alternative health check
+/backend/routes/manual_info.py   # GET /manual/info/{id} → return manual json
+/backend/routes/vector_search.py # POST /vector/search/{engine} → find similar
+/backend/routes/sop_generate.py  # POST /sop/generate → Watson + Soap output
 
 ### 🔁 Rotor Engine & Control
 /core/boot.py                     # +BOOT: trigger attention > code_red > spin_up
-/core/code_red.py                 # +CODE-RED: offload /upload with chunker
-/core/spin_up.py                  # +SPIN-UP: restore from GCS + re-chunk
-/core/spin_down.py                # +SPIN-DOWN: save zip to GCS
-/core/saveall.py                  # +SAVEALL: sync to GitHub, GCS, Mongo
+/core/code_red.py                # +CODE-RED: offload /upload with chunker
+/core/spin_up.py                 # +SPIN-UP: restore from GCS + re-chunk
+/core/spin_down.py               # +SPIN-DOWN: save zip to GCS
+/core/saveall.py                 # +SAVEALL: sync to GitHub, GCS, Mongo
 /core/rotor_fusion.py            # Core rotor: SHA, stream, Mongo, delete
 /core/rotor_overlay.py           # Central logging
 /core/cloud_stream_relay.py      # ✅ Uses gsutil composite mode (no crcmod needed)
 /core/log_compression.py         # Gzips logs for overlay space savings
-/core/fetch_secrets_from_mongo.py
+/core/fetch_secrets_from_mongo.py # (optional) auto-load creds from DB
 
 ### 🔐 MongoDB Chunking + Recovery
 /core/mongo_safe_upload_v2.py     # Uploads full or chunked to Mongo
@@ -35,24 +51,38 @@
 /overlay/*.manifest.json          # Chunk map for large file restoration
 ~/Soap/rebuilds/                  # Rebuilt file output
 
-### 🧠 AI SOP Engine
+### 🧠 AI SOP Engine & Agents
 /core/vectorizer.py               # OpenAI, Gemini, Ollama embeddings
 /core/chunking.py                 # Text splitting
 /core/text_extract.py             # Extract from txt, docx, pdf
 /core/mongo_vectors.py            # Store SOP chunks in Mongo
+/core/warm_vector_loader.py       # Load warm vector memory
 /core/arbiter_phase.py            # Conflict resolver with ⚠️ output
-/core/arbiter_output_test.py
-/core/soap_phase.py
+/core/arbiter_output_test.py      # Arbiter test runner
+/agents/soap_phase.py             # Finalize explanation for techs
+/agents/watson_phase.py           # Format SOP into Watson structure
+/agents/web_scraper_agent.py      # Deep crawler with deduplication
+
+### 🧪 Test Files (safe local validation)
+/tests/route_test.py              # GET /ping endpoint tester
+/tests/vector_test.py            # vectorizer.py test with sample
+/tests/manual_upload_test.py     # Upload sample_manual.txt to backend
+
+### 🧠 Memory & Ontology State
+/memory/vector_memory.json        # Vector results from parsed manuals
+/memory/ontology_index.json       # Keyword → SOP ontology
+/memory/agent_state.json          # Arbiter/warm-start tracking
 
 ### 🔐 Secrets (DO NOT COMMIT)
-/secrets/openai.key
-/secrets/gemini.key
-/secrets/gcs-creds.json
-/secrets/mongo-creds.json
+/secrets/openai.key               # OpenAI API key
+/secrets/gemini.key               # Gemini API key
+/secrets/gcs-creds.json           # GCS service account
+/secrets/mongo-creds.json         # Mongo URI/key
 
 ### 🌐 Config & Status
 /.env                             # Stores API_TOKEN, MONGO_URI
 /_file_inventory.txt              # This file
-/logs/rotor_overlay.log
-/upload/                          # Upload staging area
-/overlay/                         # Rotor active scan folder
+/logs/rotor_overlay.log           # Rotor event log
+/logs/.keep                       # Keep log folder in repo
+/upload/.keep                     # Placeholder for upload staging
+/overlay/.keep                    # Keeps overlay active
