@@ -1,47 +1,69 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File
-from fastapi.responses import JSONResponse
-# from fastapi.staticfiles import StaticFiles  # Comment out for dev, see below
+from fastapi import FastAPI, UploadFile, File, Form
+from fastapi.middleware.cors import CORSMiddleware
 import os
+import uuid
+from core.text_extract import extract_text
+from core.chunking import chunk_text
+from core.vectorizer import vectorize_all, get_openai_vector, get_gemini_vector, get_ollama_vector
+from core.mongo_vectors import store_chunk, find_similar
 
 app = FastAPI()
 
-# -------------------------------
-# (OPTIONAL) Serve React static build (for production only)
-# For development with React, comment out these two lines!
-# frontend_dir = os.path.join(os.path.dirname(__file__), "static")
-# app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="static")
-# -------------------------------
-
-@app.get("/api/hello")
-def hello():
-    return {"message": "Hello from FastAPI backend!"}
-
-@app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    try:
-        while True:
-            data = await websocket.receive_text()
-            await websocket.send_text(f"Message received: {data}")
-    except WebSocketDisconnect:
-        pass
-
-@app.get("/metrics")
-def metrics():
-    return {"status": "ok", "message": "Metrics endpoint is live!"}
-
-@app.get("/log")
-def log():
-    return {"log": ["System started", "No errors detected"]}
-
-@app.get("/pipeline/jobs")
-def jobs():
-    return {"jobs": [{"id": 1, "status": "running"}, {"id": 2, "status": "done"}]}
+# Enable CORS for local/frontend testing
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Change to frontend URL in prod!
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/manuals/upload")
 async def upload_manual(file: UploadFile = File(...)):
-    contents = await file.read()
-    out_path = f"/tmp/{file.filename}"
-    with open(out_path, "wb") as f:
-        f.write(contents)
-    return JSONResponse(content={"filename": file.filename})
+    # Save file temporarily
+    temp_path = f"/tmp/{uuid.uuid4()}_{file.filename}"
+    with open(temp_path, "wb") as f:
+        f.write(await file.read())
+    try:
+        # Extract text and chunk
+        text = extract_text(temp_path)
+        chunks = chunk_text(text)
+        manual_id = str(uuid.uuid4())
+        for idx, chunk in enumerate(chunks):
+            vectors = vectorize_all(chunk)
+            store_chunk(manual_id, idx, chunk, vectors)
+        os.remove(temp_path)
+        return {"status": "ok", "manual_id": manual_id, "chunks": len(chunks)}
+    except Exception as e:
+        os.remove(temp_path)
+        return {"status": "error", "error": str(e)}
+
+@app.post("/ai/query")
+async def ai_query(
+    question: str = Form(...), 
+    engine: str = Form("openai"),
+    top_k: int = Form(5)
+):
+    # Choose the vectorizer function
+    vector_func = {
+        "openai": get_openai_vector,
+        "gemini": get_gemini_vector,
+        "ollama": get_ollama_vector
+    }[engine]
+    q_vec = vector_func(question)
+    results = find_similar(engine, q_vec, top_k=top_k)
+    # Return best matches
+    return {
+        "matches": [
+            {
+                "text": doc["text"],
+                "manual_id": doc["manual_id"],
+                "chunk_index": doc["chunk_index"]
+            }
+            for doc in results
+        ]
+    }
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}

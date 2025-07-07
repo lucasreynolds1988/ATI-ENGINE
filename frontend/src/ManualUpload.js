@@ -1,31 +1,26 @@
 // ~/Soap/frontend/src/ManualUpload.js
 
 import React, { useState } from "react";
-import axios from "axios";
+import { uploadManual } from "./api";
 
-function ManualUpload({ token }) {
+export default function ManualUpload() {
   const [file, setFile] = useState(null);
   const [msg, setMsg] = useState("");
 
-  const handleUpload = async (e) => {
+  const handleUpload = async e => {
     e.preventDefault();
     if (!file) {
-      setMsg("Please select a file.");
+      setMsg("Select a file first.");
       return;
     }
     const formData = new FormData();
     formData.append("file", file);
 
     try {
-      // **** FIX: Use relative path, NOT localhost/port! ****
-      const resp = await axios.post(
-        "/manuals/upload",
-        formData,
-        { headers: { "x-api-token": token /* No Content-Type needed, axios sets it for FormData */ } }
-      );
-      setMsg(`Upload successful: ${resp.data.filename}`);
+      const resp = await uploadManual(formData);
+      setMsg(`Upload successful! Chunks: ${resp.data.chunks || "?"}`);
     } catch (err) {
-      setMsg("Upload failed: " + (err.response?.data?.detail || err.message));
+      setMsg("Upload failed.");
     }
   };
 
@@ -35,7 +30,7 @@ function ManualUpload({ token }) {
       <form onSubmit={handleUpload}>
         <input
           type="file"
-          accept=".pdf,.docx,.txt,.jpeg"
+          accept=".pdf,.docx,.txt"
           onChange={e => setFile(e.target.files[0])}
         />
         <button type="submit">Upload</button>
@@ -44,5 +39,3 @@ function ManualUpload({ token }) {
     </div>
   );
 }
-
-export default ManualUpload;

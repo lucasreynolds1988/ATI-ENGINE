@@ -1,0 +1,13 @@
+.btn {
+  background: linear-gradient(120deg, #32aaff, #1682a7);
+  border-radius: 0.6em;
+  padding: 0.6em 1.2em;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px #32aaffaa;
+}

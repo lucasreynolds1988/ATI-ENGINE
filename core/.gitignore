@@ -1,0 +1,4 @@
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+GEMINI_API_KEY=AIzaSyA-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+API_TOKEN=SUPERSECRET123
+MONGO_URI=mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev

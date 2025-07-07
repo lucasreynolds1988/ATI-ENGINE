@@ -4,6 +4,7 @@ import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_API_URL || "";
 
+// Legacy endpoints (keep for backwards compatibility)
 export function getConfig(token) {
   return axios.get(`${BASE_URL}/config`, { headers: { "x-api-token": token } });
 }
@@ -36,5 +37,21 @@ export function getJobs(token) {
   return axios.get(`${BASE_URL}/pipeline/jobs`, { headers: { "x-api-token": token } });
 }
 
-// --- Manual upload, Scavenger, SOP generation POST endpoints would be here. ---
-// Add more as you complete backend routes.
+// --- UNIVERSAL AI API ENDPOINTS (NEW) ---
+
+// AI/SOP query (multi-engine)
+export function askAI(question, engine = "openai") {
+  return axios.post("/frontend/ask_ai", { question, engine });
+}
+
+// Manual upload (with FormData)
+export function uploadManual(formData) {
+  return axios.post("/manuals/upload", formData, {
+    headers: { "Content-Type": "multipart/form-data" }
+  });
+}
+
+// Feedback/correction
+export function submitFeedback(data) {
+  return axios.post("/feedback/submit", data);
+}
