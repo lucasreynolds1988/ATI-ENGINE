@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 import os
 import sys
 from pymongo import MongoClient
 from core.rotor_overlay import log_event
 
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
+# Use env var if available, else fallback to your hardcoded URI
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
 CHUNK_SIZE = 12 * 1024 * 1024  # 12MB per chunk
 
 def mongo_safe_upload(file_path):

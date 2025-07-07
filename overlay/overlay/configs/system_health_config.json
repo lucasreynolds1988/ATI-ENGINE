@@ -1,0 +1,11 @@
+{
+  "heartbeat_interval_sec": 4,
+  "alert_thresholds": {
+    "disk_usage_warn_pct": 75,
+    "disk_usage_critical_pct": 90,
+    "task_queue_warn": 25,
+    "task_queue_critical": 50,
+    "agent_error_rate_warn_pct": 5,
+    "agent_error_rate_critical_pct": 10
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "max_concurrent_tasks": 10,
+  "default_retry_limit": 3,
+  "retry_backoff_sec": 60,
+  "priority_queues": {
+    "high_priority": ["ErrorAlerts", "CriticalNotifications"],
+    "default": ["VectorizeChunk", "OCRProcess"],
+    "low_priority": ["Cleanup"]
+  },
+  "task_timeout_sec": 900
+}
