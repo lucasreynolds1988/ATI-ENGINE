@@ -1,0 +1,15 @@
+{
+  "phases": [
+    {"name": "watson",  "script": "rotor_watson.py"},
+    {"name": "father",  "script": "rotor_father.py"},
+    {"name": "mother",  "script": "rotor_mother.py"},
+    {"name": "arbiter", "script": "rotor_arbiter.py"},
+    {"name": "soap",    "script": "rotor_soap.py"}
+  ],
+  "delay_seconds": 4,
+  "admin_review": true,
+  "role_controls": {
+    "approve_roles": ["admin", "curator", "superadmin"],
+    "run_roles": ["tech", "curator", "admin"]
+  }
+}

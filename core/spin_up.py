@@ -3,7 +3,10 @@ import subprocess
 import time
 from core.rotor_overlay import log_event
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/lucasreynolds1988/Soap/secrets/gcs-creds.json"
+def fetch_secrets():
+    # Pull all secrets from MongoDB before doing anything else
+    os.system("python3 ~/Soap/core/fetch_secrets_from_mongo.py")
+    log_event("spin_up: Pulled secrets from MongoDB.")
 
 def pull_latest_gcs_backup():
     backup_dir = os.path.expanduser("~/Soap/overlay")
@@ -27,6 +30,9 @@ def extract_backup(zip_path):
     log_event(f"spin_up: Extracted {zip_path}")
 
 def restore_core():
+    # Restore secrets first
+    fetch_secrets()
+    # Then restore all core code/assets from GCS
     zip_path = pull_latest_gcs_backup()
     if zip_path:
         extract_backup(zip_path)

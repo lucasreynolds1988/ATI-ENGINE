@@ -1,0 +1,41 @@
+{
+  "title": "Annual Lippert Axle Inspection",
+  "date": "2025-07-10",
+  "version": "1.0",
+  "status": "draft",
+  "purpose": "Verify condition and safety of Lippert 8K axle system on customer RV.",
+  "scope": "All 8K axles in Lippert suspension configurations.",
+  "safety": [
+    "Wear appropriate PPE (gloves, eye protection)",
+    "Ensure vehicle is locked out and properly supported",
+    "Follow lockout/tagout procedures before inspection"
+  ],
+  "materials": [
+    "Lippert Axle Service Kit",
+    "Approved cleaning solution"
+  ],
+  "tools": [
+    "Jack",
+    "Torque wrench",
+    "Wheel chocks"
+  ],
+  "procedure": [
+    "Chock wheels and raise vehicle per Lippert manual.",
+    "Remove wheel assembly and inspect axle beam.",
+    "Check for rust, cracks, or wear.",
+    "Lubricate per OEM spec.",
+    "Reassemble and torque to spec."
+  ],
+  "troubleshooting": [
+    "If cracks or excessive rust found, mark axle for replacement."
+  ],
+  "maintenance": [
+    "Clean and relubricate annually."
+  ],
+  "references": [
+    "Lippert Axle Service Manual v3"
+  ],
+  "definitions": [
+    "PPE: Personal Protective Equipment"
+  ]
+}
