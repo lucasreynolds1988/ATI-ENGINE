@@ -4,14 +4,13 @@ import time
 from core.rotor_overlay import log_event
 
 def fetch_secrets():
-    # Pull all secrets from MongoDB before doing anything else
+    # Always restore secrets from Mongo before ANY operation
     os.system("python3 ~/Soap/core/fetch_secrets_from_mongo.py")
     log_event("spin_up: Pulled secrets from MongoDB.")
 
 def pull_latest_gcs_backup():
     backup_dir = os.path.expanduser("~/Soap/overlay")
     os.makedirs(backup_dir, exist_ok=True)
-    # Find the latest backup in GCS
     list_result = subprocess.run(
         ["gsutil", "ls", "gs://ati-oracle-engine/backups/"],
         capture_output=True, text=True, check=True)
@@ -30,9 +29,7 @@ def extract_backup(zip_path):
     log_event(f"spin_up: Extracted {zip_path}")
 
 def restore_core():
-    # Restore secrets first
-    fetch_secrets()
-    # Then restore all core code/assets from GCS
+    fetch_secrets()  # <-- always pull secrets first
     zip_path = pull_latest_gcs_backup()
     if zip_path:
         extract_backup(zip_path)

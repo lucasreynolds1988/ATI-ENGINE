@@ -21,10 +21,8 @@ def gcs_backup():
     backup_name = f"ATI_BACKUP_{ts}.zip"
     soap_dir = os.path.expanduser("~/Soap")
     subprocess.run(["zip", "-r", backup_name, "./"], cwd=soap_dir, check=True)
-    # Make sure you have gsutil installed and configured!
     subprocess.run(["gsutil", "cp", backup_name, "gs://ati-oracle-engine/backups/"], cwd=soap_dir, check=True)
     print(f"[GCS] ✅ Uploaded backup {backup_name} to GCS.")
-    # Optionally delete zip to save space
     os.remove(os.path.join(soap_dir, backup_name))
     print(f"[GCS] Deleted local zip {backup_name} to save space.")
 
