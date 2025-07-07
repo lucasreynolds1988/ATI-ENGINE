@@ -1,4 +1,6 @@
-import os
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import time
 import hashlib
 from core.rotor_overlay import log_event
@@ -24,7 +26,6 @@ def offload_uploads():
             total += sz
             sha = sha256sum(fpath)
             log_event(f"code_red: {fname} | {sz} bytes | SHA256={sha}")
-            # Insert cloud upload code here if desired
             os.remove(fpath)
             log_event(f"code_red: Deleted {fpath} after offload.")
     log_event(f"code_red: Upload dir processed. Total bytes={total}")

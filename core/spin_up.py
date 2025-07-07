@@ -1,10 +1,11 @@
-import os
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import subprocess
 import time
 from core.rotor_overlay import log_event
 
 def fetch_secrets():
-    # Always restore secrets from Mongo before ANY operation
     os.system("python3 ~/Soap/core/fetch_secrets_from_mongo.py")
     log_event("spin_up: Pulled secrets from MongoDB.")
 
@@ -29,7 +30,7 @@ def extract_backup(zip_path):
     log_event(f"spin_up: Extracted {zip_path}")
 
 def restore_core():
-    fetch_secrets()  # <-- always pull secrets first
+    fetch_secrets()
     zip_path = pull_latest_gcs_backup()
     if zip_path:
         extract_backup(zip_path)
