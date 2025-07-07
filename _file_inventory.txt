@@ -1,13 +1,14 @@
 # ATI Oracle Engine — Essentials Manifest
 # Last Updated: 2025-07-07
 
-### ✅ Core Backend Structure
+### ✅ Core Backend
 /backend/main.py
 /backend/start.sh
 /backend/requirements.txt
 /backend/utils/auth.py
 /backend/utils/logger.py
 /backend/utils/mongo.py
+/backend/utils/file_utils.py
 /backend/routes/roles.py
 /backend/routes/metrics.py
 /backend/routes/log.py
@@ -18,90 +19,43 @@
 /backend/routes/job_table.py
 /backend/routes/admin_review.py
 /backend/routes/scavenger.py
-/backend/test_vector_upload.py
+/backend/routes/final_fetch.py
 
-### 🧠 AI Core Logic
+### 🧠 Core AI Logic
 /core/text_extract.py
 /core/chunking.py
 /core/vectorizer.py
 /core/mongo_vectors.py
-/core/__init__.py
+/core/arbiter_phase.py
+/core/arbiter_output_test.py
+/core/soap_phase.py
+/core/saveall.py
+/core/boot.py
+/core/code_red.py
+/core/spin_up.py
+/core/spin_down.py
+/core/rotor_overlay.py
+/core/rotor_fusion.py
+/core/log_compression.py
+/core/cloud_stream_relay.py
+/core/mongo_safe_upload_v2.py
+/core/fusion_restore_v2.py
+/core/ota_update.py
+/core/gcs_update_checker.py
 
-### 🔐 Secrets Folder (NOT GIT TRACKED)
+### 🔐 Secrets (DO NOT PUSH TO GIT)
 /secrets/openai.key
 /secrets/gemini.key
 /secrets/gcs-creds.json
+/secrets/mongo-creds.json
 
-### 🌐 Frontend Entry
-/frontend/public/index.html
-/frontend/src/index.js
-/frontend/src/index.css
-/frontend/src/App.js
-/frontend/src/constants.js
-/frontend/src/api.js
+### 🔁 Overlay & Logs
+/logs/rotor_overlay.log
+/overlay/
+/upload/
+/chunks/
 
-### 📚 Frontend Pages & Panels
-/frontend/src/Navbar.js
-/frontend/src/Login.js
-/frontend/src/Dashboard.js
-/frontend/src/ManualUpload.js
-/frontend/src/SOPGenerator.js
-/frontend/src/AIChat.js
-/frontend/src/RoleDisplay.js
-/frontend/src/ScavengerBot.js
-/frontend/src/MetricsPanel.js
-/frontend/src/PipelineHistory.js
-/frontend/src/PipelineStatus.js
-/frontend/src/SOPAdminReview.js
-/frontend/src/JobTable.js
-/frontend/src/LiveFeed.js
-/frontend/src/NotFound.js
-/frontend/src/UploadStatus.js
+### 🧪 Dev Tools
+/core/arbiter_output_test.py
+/core/test_vector_upload.py
 
-### 🔧 Utility Hooks
-/frontend/src/hooks/useHeartbeat.js
-/frontend/src/hooks/useSystemStatus.js
-/frontend/src/hooks/usePulseTimer.js
-/frontend/src/hooks/useScrollToTop.js
-/frontend/src/hooks/useLocalStorage.js
-/frontend/src/hooks/useFileReader.js
-
-### ⚙️ Utilities
-/frontend/src/utils/formatBytes.js
-/frontend/src/utils/logHelper.js
-/frontend/src/utils/urlParser.js
-/frontend/src/utils/detectFileType.js
-/frontend/src/utils/sanitizeFilename.js
-/frontend/src/utils/validateToken.js
-/frontend/src/utils/debounce.js
-
-### 🧩 Components
-/frontend/src/components/ErrorBoundary.js
-/frontend/src/components/GlowPanel.js
-/frontend/src/components/PanelGroup.js
-/frontend/src/components/SectionHeader.js
-
-### 🖼️ Icons
-/frontend/src/icons/LockIcon.js
-/frontend/src/icons/UploadIcon.js
-/frontend/src/icons/ChatIcon.js
-/frontend/src/icons/ScavengerIcon.js
-/frontend/src/icons/GearIcon.js
-/frontend/src/icons/OrbitIcon.js
-
-### 🎨 Styles
-/frontend/src/styles/theme.css
-/frontend/src/styles/overrides.css
-/frontend/src/styles/buttons.css
-/frontend/src/styles/cards.css
-/frontend/src/styles/fonts.css
-/frontend/src/styles/animations.css
-
-### 📁 Data Seeds
-/frontend/src/data/engineSpecs.json
-/frontend/src/data/defaultRoles.json
-/frontend/src/data/demoManual.json
-/frontend/src/data/sampleQuery.json
-/frontend/src/data/systemLimits.json
-/frontend/src/data/glossary.json
-/frontend/src/data/sopMetaSchema.json
