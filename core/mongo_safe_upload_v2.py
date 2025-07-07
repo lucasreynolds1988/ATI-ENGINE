@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from pymongo import MongoClient
 from core.rotor_overlay import log_event
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Service%23%232244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Ruko0610%21%21@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
 CHUNK_SIZE = 12 * 1024 * 1024  # 12MB per chunk
 
 def mongo_safe_upload(file_path):

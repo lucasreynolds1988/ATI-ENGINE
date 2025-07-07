@@ -1,61 +1,55 @@
 # ATI Oracle Engine — Essentials Manifest
-# Last Updated: 2025-07-07
+# Last Verified: 2025-07-07
 
-### ✅ Core Backend
-/backend/main.py
-/backend/start.sh
-/backend/requirements.txt
+### ✅ Core Backend API & Upload System
+/backend/main.py                  # Handles uploads, chunk detection, Mongo test
 /backend/utils/auth.py
 /backend/utils/logger.py
 /backend/utils/mongo.py
 /backend/utils/file_utils.py
-/backend/routes/roles.py
-/backend/routes/metrics.py
-/backend/routes/log.py
-/backend/routes/config.py
-/backend/routes/pipeline_history.py
-/backend/routes/pipeline_status.py
-/backend/routes/pipeline_run.py
-/backend/routes/job_table.py
-/backend/routes/admin_review.py
-/backend/routes/scavenger.py
-/backend/routes/final_fetch.py
+/backend/routes/*.py              # roles, metrics, log, pipeline, final_fetch
+/backend/start.sh
+/backend/requirements.txt
 
-### 🧠 Core AI Logic
-/core/text_extract.py
-/core/chunking.py
-/core/vectorizer.py
-/core/mongo_vectors.py
-/core/arbiter_phase.py
+### 🔁 Rotor Engine Core
+/core/boot.py                     # +BOOT: trigger rebuild → code_red → spin_up
+/core/code_red.py                 # +CODE-RED: offload /upload via chunker
+/core/spin_up.py                  # +SPIN-UP: pull GCS, restore, chunk large files
+/core/spin_down.py                # +SPIN-DOWN: zip and GCS upload
+/core/saveall.py                  # +SAVEALL: commit to GitHub + Mongo + GCS
+/core/rotor_fusion.py            # SHA, Mongo, GCS, verify loop
+/core/rotor_overlay.py           # Logging utility
+/core/cloud_stream_relay.py      # Uploads files to GCS
+/core/log_compression.py         # Gzips overlay.log
+/core/fetch_secrets_from_mongo.py
+
+### 🔐 MongoDB Storage Logic
+/core/mongo_safe_upload_v2.py     # Uploads full or chunked to Mongo
+/core/fusion_restore_v2.py        # Rebuilds from MongoDB chunks
+
+### 🧩 Rotor-Native Chunking System
+/core/rotor_chunk_and_stream.py   # Splits + uploads large files to GCS
+/core/manifest_rebuilder.py       # Reassembles chunks from manifest
+~/Soap/rebuilds/                  # Output of rebuilt files
+
+### 🧠 AI SOP System
+/core/vectorizer.py               # Embeds via OpenAI, Gemini, Ollama
+/core/chunking.py                 # Breaks text into chunks
+/core/text_extract.py             # Handles txt, pdf, docx
+/core/mongo_vectors.py            # Stores SOP chunks to Mongo
+/core/arbiter_phase.py            # Conflict resolver
 /core/arbiter_output_test.py
 /core/soap_phase.py
-/core/saveall.py
-/core/boot.py
-/core/code_red.py
-/core/spin_up.py
-/core/spin_down.py
-/core/rotor_overlay.py
-/core/rotor_fusion.py
-/core/log_compression.py
-/core/cloud_stream_relay.py
-/core/mongo_safe_upload_v2.py
-/core/fusion_restore_v2.py
-/core/ota_update.py
-/core/gcs_update_checker.py
 
-### 🔐 Secrets (DO NOT PUSH TO GIT)
+### 🔐 Secrets (excluded from Git)
 /secrets/openai.key
 /secrets/gemini.key
 /secrets/gcs-creds.json
 /secrets/mongo-creds.json
 
-### 🔁 Overlay & Logs
+### 🌎 Config & Logs
+/.env                             # Contains MONGO_URI and API_TOKEN
+/_file_inventory.txt              # This file (essentials manifest)
 /logs/rotor_overlay.log
-/overlay/
-/upload/
-/chunks/
-
-### 🧪 Dev Tools
-/core/arbiter_output_test.py
-/core/test_vector_upload.py
-
+/upload/                          # Upload staging dir
+/overlay/                         # Working rotor folder

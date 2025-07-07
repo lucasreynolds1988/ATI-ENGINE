@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import subprocess
 import time
 from core.rotor_overlay import log_event
+from core.rotor_chunk_and_stream import rotor_chunk_and_upload
 
 def fetch_secrets():
     os.system("python3 ~/Soap/core/fetch_secrets_from_mongo.py")
@@ -35,6 +36,12 @@ def restore_core():
     if zip_path:
         extract_backup(zip_path)
         log_event("spin_up: Core files restored from GCS.")
+    # Trigger chunker after restore
+    upload_dir = os.path.expanduser("~/Soap/upload")
+    for f in os.listdir(upload_dir):
+        fpath = os.path.join(upload_dir, f)
+        if os.path.getsize(fpath) > 100 * 1024 * 1024:
+            rotor_chunk_and_upload(fpath)
 
 if __name__ == "__main__":
     restore_core()

@@ -2,7 +2,7 @@ import os
 from pymongo import MongoClient
 from core.rotor_overlay import log_event
 
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Service%23%232244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
+MONGO_URI = "mongodb+srv://lucasreynolds1988:Ruko0610%21%21@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
 RESTORE_DIR = os.path.expanduser("~/Soap/overlay")
 
 def restore_from_mongo(filename):
