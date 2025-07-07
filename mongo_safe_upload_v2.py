@@ -1,45 +1,34 @@
-# ~/Soap/mongo_safe_upload_v2.py
-
+#!/usr/bin/env python3
 import os
-import math
-import time
-import bson
-from pathlib import Path
 from pymongo import MongoClient
-from rotor_overlay import log_event
+import gridfs
 
-MAX_CHUNK_SIZE = 13 * 1024 * 1024  # 13MB
-UPLOAD_DIR = Path.home() / "Soap/uploads"
-LOG_PATH = Path.home() / "Soap/logs/mongo_upload.log"
+class MongoChunker:
+    def __init__(self, mongo_uri, database_name):
+        self.client = MongoClient(mongo_uri)
+        self.db = self.client[database_name]
+        self.fs = gridfs.GridFS(self.db)
 
-client = MongoClient("mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
-db = client["fusion"]
-collection = db["files"]
+    def upload_file(self, filepath):
+        filename = os.path.basename(filepath)
+        with open(filepath, 'rb') as file:
+            data = file.read()
+            existing = self.db.fs.files.find_one({"filename": filename})
+            if existing:
+                self.fs.delete(existing['_id'])
+            self.fs.put(data, filename=filename)
+            print(f"[INFO] ✅ Uploaded {filename} to MongoDB.")
 
-def chunk_and_upload(file_path):
-    file_size = os.path.getsize(file_path)
-    total_parts = math.ceil(file_size / MAX_CHUNK_SIZE)
-
-    with open(file_path, "rb") as f:
-        for part in range(total_parts):
-            chunk = f.read(MAX_CHUNK_SIZE)
-            doc = {
-                "filename": file_path.name,
-                "part": part,
-                "total_parts": total_parts,
-                "data": bson.Binary(chunk),
-                "timestamp": time.time()
-            }
-            collection.insert_one(doc)
-            log_event(f"📦 Uploaded {file_path.name} part {part+1}/{total_parts}", LOG_PATH)
-            time.sleep(1)
-
-def upload_all():
-    for file in UPLOAD_DIR.glob("*"):
-        if file.is_file():
-            chunk_and_upload(file)
+    def upload_directory(self, upload_dir):
+        for root, dirs, files in os.walk(upload_dir):
+            for file in files:
+                full_path = os.path.join(root, file)
+                self.upload_file(full_path)
 
 if __name__ == "__main__":
-    os.makedirs(UPLOAD_DIR, exist_ok=True)
-    os.makedirs(LOG_PATH.parent, exist_ok=True)
-    upload_all()
+    import sys
+    MONGO_URI = os.getenv('MONGO_URI')
+    DATABASE_NAME = "ati_oracle_engine"
+    UPLOAD_DIR = sys.argv[sys.argv.index('--upload-dir') + 1]
+    chunker = MongoChunker(MONGO_URI, DATABASE_NAME)
+    chunker.upload_directory(UPLOAD_DIR)

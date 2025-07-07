@@ -1,15 +1,20 @@
-import time
-from pathlib import Path
+import os
+import zipfile
+from core.rotor_overlay import log_event
 
-def heartbeat(agent_name):
-    log_dir = Path.home() / "Soap/logs"
-    log_dir.mkdir(parents=True, exist_ok=True)
-    with open(log_dir / "rotor_pulse_beat.log", "a") as f:
-        f.write(f"{agent_name} ALIVE {time.time()}\n")
+ZIP_DIR = os.path.expanduser("~/Soap")
+LOG_FILE = os.path.expanduser("~/Soap/logs/ziplog_playback.log")
+
+def replay_zip(zip_filename):
+    path = os.path.join(ZIP_DIR, zip_filename)
+    if not os.path.exists(path):
+        log_event(f"ziplog_playback: {zip_filename} not found!")
+        return
+    with zipfile.ZipFile(path, 'r') as zip_ref:
+        zip_ref.extractall(ZIP_DIR)
+        log_event(f"ziplog_playback: Extracted {zip_filename}")
 
 if __name__ == "__main__":
-    while True:
-        # --- Place ziplog playback logic here in the future ---
-        heartbeat("fusion_ziplog_playback")
-        print("[fusion_ziplog_playback] Heartbeat sent.")
-        time.sleep(4)
+    import sys
+    if len(sys.argv) > 1:
+        replay_zip(sys.argv[1])

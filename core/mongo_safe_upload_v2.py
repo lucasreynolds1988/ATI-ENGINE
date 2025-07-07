@@ -1,37 +1,36 @@
-#!/usr/bin/env python3
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from core.rotor_overlay import log_event
 from pymongo import MongoClient
-import gridfs
+from core.rotor_overlay import log_event
 
-MONGO_URI = os.getenv('MONGO_URI')
-UPLOAD_DIR = sys.argv[sys.argv.index('--upload-dir') + 1]
+MONGO_URI = "mongodb+srv://lucasreynolds1988:Service2244@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
+CHUNK_SIZE = 12 * 1024 * 1024  # 12MB per chunk
 
-def upload_to_mongo(upload_dir):
+def mongo_safe_upload(file_path):
     client = MongoClient(MONGO_URI)
-    db = client["ati_oracle_engine"]
-    fs = gridfs.GridFS(db)
+    db = client['fusion']
+    col = db['files']
+    file_size = os.path.getsize(file_path)
+    basename = os.path.basename(file_path)
 
-    for filename in os.listdir(upload_dir):
-        filepath = os.path.join(upload_dir, filename)
-
-        if os.path.isdir(filepath):
-            print(f"[INFO] 📂 Skipping directory: {filepath}")
-            continue  # explicitly skip directories
-
-        with open(filepath, 'rb') as file:
-            data = file.read()
-
-            existing = db.fs.files.find_one({"filename": filename})
-            if existing:
-                fs.delete(existing['_id'])
-
-            fs.put(data, filename=filename)
-            print(f"[INFO] ✅ Uploaded {filename} to MongoDB.")
-            log_event(f"Uploaded {filename} to MongoDB.")
+    if file_size <= CHUNK_SIZE:
+        with open(file_path, 'rb') as f:
+            content = f.read()
+        col.insert_one({"filename": basename, "data": content})
+        log_event(f"MongoDB: Uploaded {basename} ({file_size} bytes)")
+    else:
+        with open(file_path, 'rb') as f:
+            idx = 0
+            while True:
+                chunk = f.read(CHUNK_SIZE)
+                if not chunk:
+                    break
+                partname = f"{basename}.part{idx:03d}"
+                col.insert_one({"filename": partname, "data": chunk})
+                log_event(f"MongoDB: Uploaded chunk {partname} ({len(chunk)} bytes)")
+                idx += 1
+        log_event(f"MongoDB: Finished uploading {basename} in {idx} chunks")
 
 if __name__ == "__main__":
-    upload_to_mongo(UPLOAD_DIR)
+    if len(sys.argv) > 1:
+        mongo_safe_upload(sys.argv[1])
