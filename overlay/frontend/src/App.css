@@ -1,0 +1,158 @@
+/* ~/Soap/frontend/src/App.css */
+
+/* Cleanroom base */
+body, html, #root, .App {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(120deg, #f7fafd 0%, #e8ecef 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #263146;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: linear-gradient(90deg, #e3e8ec 0%, #f2f5f8 100%);
+  border-bottom: 2px solid #c2d3dc;
+  box-shadow: 0 1px 4px rgba(30, 60, 80, 0.08);
+  height: 60px;
+  gap: 20px;
+}
+.navbar a, .navbar .login-link {
+  color: #1682a7;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin-right: 4px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.navbar a.active {
+  background: #d2e4ec;
+  color: #12526b;
+}
+.navbar a:hover, .navbar .login-link:hover {
+  background: #e7f6fa;
+}
+
+/* Token status icon */
+.token-status {
+  margin-left: auto;
+  font-size: 22px;
+  color: #1ab19f;
+}
+
+/* Section cards */
+.App > div, .section-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(22, 80, 110, 0.04);
+  padding: 30px 32px;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafcff;
+  margin: 18px 0;
+  font-size: 16px;
+}
+th, td {
+  border: 1px solid #e2e9f0;
+  padding: 14px 8px;
+  text-align: left;
+}
+th {
+  background: #e8f1f7;
+  color: #1682a7;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+tr:nth-child(even) td {
+  background: #f6fbfd;
+}
+tr:hover td {
+  background: #e7f6fa;
+}
+
+/* Buttons */
+button, input[type="submit"] {
+  background: linear-gradient(90deg, #53c3d0 0%, #8ce7d1 100%);
+  color: #174a5c;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(30,60,80,0.05);
+  transition: background 0.18s, color 0.18s;
+}
+button:hover, input[type="submit"]:hover {
+  background: linear-gradient(90deg, #69c0e6 0%, #c1faee 100%);
+  color: #0b3550;
+}
+
+/* Forms & Inputs */
+input[type="file"], input[type="text"], input[type="password"] {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 8px 0 18px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #c2d3dc;
+  font-size: 1rem;
+  background: #f8fafb;
+  color: #263146;
+}
+input[type="file"] {
+  padding: 6px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #1682a7;
+  margin-top: 0;
+}
+h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.01em;
+}
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+/* Misc */
+.live-feed, .history-log {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #e2e9f0;
+  background: #f7fafb;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+pre {
+  background: #e6f0f5;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1rem;
+}
+@media (max-width: 700px) {
+  .App > div, .section-card { padding: 10px 5vw; margin: 20px 1vw; }
+  table, th, td { font-size: 14px; }
+  .navbar { flex-wrap: wrap; gap: 4px; padding: 4px 0; height: auto; }
+}
+
+/* Page container */
+.App {
+  background: linear-gradient(115deg, #eef6fa 0%, #dbe5e8 100%);
+  min-height: 100vh;
+}

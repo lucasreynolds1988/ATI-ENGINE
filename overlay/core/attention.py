@@ -1,11 +1,12 @@
-import subprocess
-from Soap.core.rotor_overlay import log_event
+import os
+from core.rotor_overlay import log_event
 
-def run_attention_sequence():
-    log_event("+ATTENTION+ STARTED", "INFO")
-    subprocess.run(["python3", str(Path.home() / "Soap/core/code_red.py")])
-    subprocess.run(["python3", str(Path.home() / "Soap/startup/spin_up.py")])
-    log_event("+ATTENTION+ COMPLETE", "SUCCESS")
+def wake_up_sequence():
+    marker = os.path.expanduser("~/Soap/.trigger.rebuild")
+    with open(marker, "w") as f:
+        f.write("rebuild\n")
+    log_event("Attention: System wake-up marker created.")
+    log_event("Attention: System ready for code_red and spin_up.")
 
 if __name__ == "__main__":
-    run_attention_sequence()
+    wake_up_sequence()

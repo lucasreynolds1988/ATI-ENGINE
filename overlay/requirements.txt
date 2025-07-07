@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-socketio[asyncio]
+bidict
+simple-websocket
+wsproto
+python-engineio
+fpdf
+yagmail
+pymongo
+# (add any more agent or pipeline specific dependencies here)

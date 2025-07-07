@@ -1,8 +1,10 @@
-import os
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import time
 import hashlib
 from core.rotor_overlay import log_event
-from core.cloud_stream_relay import stream_to_cloud, execute_relay_cycle
+from core.cloud_stream_relay import stream_to_cloud
 from core.mongo_safe_upload_v2 import mongo_safe_upload
 from core.fusion_restore_v2 import verify_gcs_file_integrity
 
@@ -27,20 +29,24 @@ def run_rotor():
                 continue
             sha = sha256sum(fpath)
             log_event(f"Rotor: Processing {fname} | SHA256={sha}")
-            # Route to cloud (GCS)
-            stream_to_cloud(fpath)
-            # Route to MongoDB if small enough
-            if os.path.getsize(fpath) <= 12*1024*1024:
-                mongo_safe_upload(fpath)
-            # Optionally verify upload
-            verify_gcs_file_integrity(fpath)
-            # Delete local after upload
-            if DELETION_AFTER_UPLOAD:
-                os.remove(fpath)
-                log_event(f"Deleted {fpath} after upload")
+            try:
+                # Route to GCS
+                stream_to_cloud(fpath)
+                # Route to Mongo if small enough
+                if os.path.getsize(fpath) <= 12 * 1024 * 1024:
+                    mongo_safe_upload(fpath)
+                # Verify integrity (stub)
+                verify_gcs_file_integrity(fpath)
+                # Delete local copy
+                if DELETION_AFTER_UPLOAD:
+                    os.remove(fpath)
+                    log_event(f"Rotor: Deleted {fpath} after upload")
+            except Exception as e:
+                log_event(f"Rotor ERROR: {e}")
     log_event("Rotor Fusion: Cycle complete.")
 
 if __name__ == "__main__":
+    print("Rotor loop started.")
     while True:
         run_rotor()
         time.sleep(4)

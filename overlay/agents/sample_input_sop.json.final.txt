@@ -1,0 +1,10 @@
+--- SOP FINAL OUTPUT FOR TECHNICIAN ---
+Title: Annual Lippert Axle Inspection
+APPROVED FOR USE
+Procedure:
+- Chock wheels and raise vehicle per Lippert manual.
+- Remove wheel assembly and inspect axle beam.
+- Check for rust, cracks, or wear.
+- Lubricate per OEM spec.
+- Reassemble and torque to spec.
+Safety:
