@@ -1,3 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 from fastapi import APIRouter, Header, Request
 from backend.utils.auth import validate_token
 from backend.pipeline_runner import run_pipeline_job

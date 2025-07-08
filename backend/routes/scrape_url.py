@@ -1,6 +1,14 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 from fastapi import APIRouter, Request, Header
 from backend.utils.auth import validate_token
-from backend.agents.web_scraper_agent import run_scraper
+from agents.web_scraper_agent import run_scraper
 
 router = APIRouter()
 
