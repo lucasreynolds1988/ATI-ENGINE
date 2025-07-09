@@ -1,14 +1,15 @@
-import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
+import os
 from core.rotor_overlay import log_event
 
-def wake_up_sequence():
-    marker = os.path.expanduser("~/Soap/.trigger.rebuild")
-    with open(marker, "w") as f:
-        f.write("rebuild\n")
-    log_event("Attention: System wake-up marker created.")
-    log_event("Attention: System ready for code_red and spin_up.")
+def create_trigger():
+    path = os.path.expanduser("~/Soap/overlay/.trigger.rebuild")
+    with open(path, "w") as f:
+        f.write("SYSTEM WAKE-UP\n")
+    log_event("[ATTENTION] 🚨 Trigger file created.")
+
+def main():
+    create_trigger()
+    log_event("[ATTENTION] 🧠 Wake sequence executed.")
 
 if __name__ == "__main__":
-    wake_up_sequence()
+    main()

@@ -1,27 +1,26 @@
-import os
-import json
+# ~/Soap/agents/father_phase.py
+
 from core.rotor_overlay import log_event
 
-def father_check(sop_path, out_path):
-    """
-    Add logic/tech validation. Returns SOP with logic notes.
-    """
-    with open(sop_path) as f:
-        sop = json.load(f)
-    notes = []
-    # Check for required fields, sample logic
-    if not sop.get("procedure"):
-        notes.append("No procedure steps found.")
-    if not sop.get("materials"):
-        notes.append("No materials listed.")
-    sop["logic_notes"] = notes
-    with open(out_path, "w") as f:
-        json.dump(sop, f, indent=2)
-    log_event(f"Father: Checked SOP, notes: {notes}")
+def verify_logic(sop_data):
+    log_event("[FATHER] 🧠 Verifying technical logic...")
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 2:
-        father_check(sys.argv[1], sys.argv[2])
+    errors = []
+
+    tools = sop_data.get("tools", [])
+    procedure = sop_data.get("procedure", {})
+
+    flat_steps = []
+    for section in procedure.values():
+        flat_steps.extend(section if isinstance(section, list) else [])
+
+    for tool in tools:
+        if not any(tool.lower() in step.lower() for step in flat_steps):
+            errors.append(f"Tool '{tool}' not mentioned in procedure.")
+
+    if errors:
+        sop_data["technical_validation"] = {"status": "issues", "details": errors}
     else:
-        print("Usage: python father_phase.py <input_sop.json> <output_sop.json>")
+        sop_data["technical_validation"] = {"status": "pass"}
+
+    return sop_data

@@ -1,50 +1,72 @@
-import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-import subprocess
-import time
+import os
+import json
+import shutil
+from core.fusion_restore_v2 import restore_from_manifest
 from core.rotor_overlay import log_event
-from core.rotor_chunk_and_stream import rotor_chunk_and_upload
 
-def fetch_secrets():
-    os.system("python3 ~/Soap/core/fetch_secrets_from_mongo.py")
-    log_event("spin_up: Pulled secrets from MongoDB.")
+BASE = os.path.expanduser("~/Soap")
+MANIFEST_PATH = os.path.join(BASE, "overlay/manifest.json")
+PROTECTED_DIRS = ["core", "agents", "overlay", "eyes", "rotors", "wraps", "triggers"]
+SKIP_EXT = [".tmp", ".gstmp", ".part", ".pyc", ".DS_Store", ".zip"]
 
-def pull_latest_gcs_backup():
-    backup_dir = os.path.expanduser("~/Soap/overlay")
-    os.makedirs(backup_dir, exist_ok=True)
-    list_result = subprocess.run(
-        ["gsutil", "ls", "gs://ati-oracle-engine/backups/"],
-        capture_output=True, text=True, check=True)
-    zips = [line for line in list_result.stdout.splitlines() if line.endswith(".zip")]
-    if not zips:
-        log_event("spin_up: No backups found in GCS.")
-        return None
-    latest = sorted(zips)[-1]
-    local_zip = os.path.join(backup_dir, os.path.basename(latest))
-    subprocess.run(["gsutil", "cp", latest, local_zip], check=True)
-    log_event(f"spin_up: Pulled latest backup {latest}")
-    return local_zip
+def load_manifest_paths():
+    if not os.path.exists(MANIFEST_PATH):
+        return []
+    with open(MANIFEST_PATH, "r") as f:
+        return [os.path.expanduser(entry["path"]) for entry in json.load(f)]
 
-def extract_backup(zip_path):
-    subprocess.run(["unzip", "-o", zip_path, "-d", os.path.dirname(zip_path)], check=True)
-    log_event(f"spin_up: Extracted {zip_path}")
+def purge_bloat():
+    protected = load_manifest_paths()
+    log_event("[SPIN-UP] 🧹 Purging temp files...")
+    for root, dirs, files in os.walk(BASE, topdown=False):
+        for file in files:
+            full_path = os.path.join(root, file)
+            if full_path in protected or any(p in full_path for p in PROTECTED_DIRS):
+                continue
+            if any(full_path.endswith(ext) for ext in SKIP_EXT):
+                try:
+                    os.remove(full_path)
+                    log_event(f"[PURGE] 🗑️ {full_path}")
+                except: pass
+        for d in dirs:
+            if d in PROTECTED_DIRS:
+                continue
+            try:
+                if not os.listdir(os.path.join(root, d)):
+                    shutil.rmtree(os.path.join(root, d))
+            except: pass
 
-def restore_core():
-    fetch_secrets()
-    zip_path = pull_latest_gcs_backup()
-    if zip_path:
-        extract_backup(zip_path)
-        log_event("spin_up: Core files restored from GCS.")
-    # Trigger chunker after restore
-    upload_dir = os.path.expanduser("~/Soap/upload")
-    for f in os.listdir(upload_dir):
-        fpath = os.path.join(upload_dir, f)
-        if os.path.getsize(fpath) > 100 * 1024 * 1024:
-            rotor_chunk_and_upload(fpath)
+def load_manifest_data():
+    try:
+        with open(MANIFEST_PATH, "r") as f:
+            return json.load(f)
+    except Exception as e:
+        log_event(f"[SPIN-UP] ❌ Manifest load failed: {str(e)}")
+        return []
+
+def restore_files():
+    protected = load_manifest_paths()
+    for entry in load_manifest_data():
+        path = os.path.expanduser(entry["path"])
+        if path in protected or any(p in path for p in PROTECTED_DIRS):
+            log_event(f"[SPIN-UP] 🔒 Skipping protected file: {path}")
+            continue
+        restore_from_manifest(entry)
+
+def rebuild_trigger():
+    trigger = os.path.join(BASE, "overlay/.trigger.rebuild")
+    if not os.path.exists(trigger):
+        with open(trigger, "w") as f:
+            f.write("TRIGGER")
+        log_event("[SPIN-UP] 🧪 Rebuild trigger created.")
+
+def main():
+    log_event("[SPIN-UP] 🚀 Starting safe restore...")
+    purge_bloat()
+    rebuild_trigger()
+    restore_files()
+    purge_bloat()
+    log_event("[SPIN-UP] ✅ Restore complete.")
 
 if __name__ == "__main__":
-    restore_core()
-    time.sleep(2)
-    log_event("spin_up: Now launching rotor_fusion.")
-    subprocess.Popen(["python3", os.path.expanduser("~/Soap/core/rotor_fusion.py")])
+    main()

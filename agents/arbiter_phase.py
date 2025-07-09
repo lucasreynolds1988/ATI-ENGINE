@@ -1,28 +1,25 @@
-import os
-import json
+# ~/Soap/agents/arbiter_phase.py
+
 from core.rotor_overlay import log_event
+from core.arbiter_knowledge import resolve_conflict
 
-def arbiter(input_path, output_path):
-    """
-    Detects any conflicts or flags from Father/Mother.
-    Marks for admin if found, else passes.
-    """
-    with open(input_path) as f:
-        sop = json.load(f)
-    notes = []
-    if sop.get("logic_notes"):
-        notes.append("Logic Issue: " + "; ".join(sop["logic_notes"]))
-    if sop.get("safety_flags"):
-        notes.append("Safety Issue: " + "; ".join(sop["safety_flags"]))
-    sop["arbiter_flags"] = notes
-    sop["approved"] = not bool(notes)
-    with open(output_path, "w") as f:
-        json.dump(sop, f, indent=2)
-    log_event(f"Arbiter: SOP {'FLAGGED' if notes else 'APPROVED'}: {output_path}")
+def detect_conflicts(sop_data):
+    log_event("[ARBITER] 🧮 Running conflict detection scan...")
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 2:
-        arbiter(sys.argv[1], sys.argv[2])
+    conflict_sections = []
+    if sop_data.get("technical_validation", {}).get("status") == "issues":
+        conflict_sections.append("technical_validation")
+
+    if "⚠️" in str(sop_data.get("safety", "")):
+        conflict_sections.append("safety")
+
+    if conflict_sections:
+        sop_data["status"] = "draft"
+        sop_data["conflict"] = resolve_conflict(
+            "AR-101",
+            f"Conflicts in sections: {', '.join(conflict_sections)}"
+        )
     else:
-        print("Usage: python arbiter_phase.py <input_sop.json> <output_sop.json>")
+        sop_data["status"] = "clean"
+
+    return sop_data

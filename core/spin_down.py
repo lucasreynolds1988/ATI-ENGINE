@@ -1,40 +1,64 @@
 import os
-import subprocess
-import time
+import json
+import zipfile
 from core.rotor_overlay import log_event
+from core.cloud_stream_relay import stream_to_cloud
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/lucasreynolds1988/Soap/secrets/gcs-creds.json"
+BASE = os.path.expanduser("~/Soap")
+MANIFEST_PATH = os.path.join(BASE, "overlay/manifest.json")
+PROTECTED_DIRS = ["core", "agents", "overlay", "eyes"]
+SAFE_EXT = [".py", ".json", ".log", ".zip"]
+TRASH_EXT = [".tmp", ".gstmp", ".part"]
 
-def create_core_backup():
-    backup_dir = os.path.expanduser("~/Soap/overlay")
-    zip_path = os.path.expanduser("~/Soap/ATI_CORE_SNAPSHOT.zip")
-    # Only backup core files and not logs or overlay
-    subprocess.run([
-        "zip", "-r", zip_path,
-        "core", "agents", "admin", "backend", "engine", "install_required_pips.py", "requirements.txt",
-        "README_ENGINE_RULES.txt", "+BOOT+", "+START+", "+START+.py", "startup"
-    ], cwd=os.path.expanduser("~/Soap"))
-    log_event(f"spin_down: Created core backup {zip_path}")
-    return zip_path
+def load_manifest_paths():
+    if not os.path.exists(MANIFEST_PATH):
+        log_event("[SPIN-DOWN] ⚠️ No manifest found.")
+        return []
+    with open(MANIFEST_PATH, "r") as f:
+        data = json.load(f)
+        return [os.path.expanduser(entry["path"]) for entry in data]
 
-def upload_backup_gcs(zip_path):
-    subprocess.run(["gsutil", "cp", zip_path, "gs://ati-oracle-engine/backups/"], check=True)
-    log_event(f"spin_down: Uploaded backup to GCS: {zip_path}")
+def zip_safe_data(zip_path):
+    with zipfile.ZipFile(zip_path, "w") as zipf:
+        for root, _, files in os.walk(BASE):
+            if any(x in root for x in PROTECTED_DIRS):
+                continue
+            for file in files:
+                fpath = os.path.join(root, file)
+                arcname = os.path.relpath(fpath, BASE)
+                zipf.write(fpath, arcname)
 
-def purge_nonessential_files():
-    preserve = {"core", "secrets", "overlay", "ATI_CORE_SNAPSHOT.zip"}
-    root = os.path.expanduser("~/Soap")
-    for entry in os.listdir(root):
-        if entry not in preserve:
-            path = os.path.join(root, entry)
-            if os.path.isfile(path):
-                os.remove(path)
-            elif os.path.isdir(path):
-                subprocess.run(["rm", "-rf", path])
-    log_event("spin_down: Purged non-essential files.")
+def purge_unneeded():
+    protected = load_manifest_paths()
+    for root, dirs, files in os.walk(BASE, topdown=False):
+        for file in files:
+            fpath = os.path.join(root, file)
+            if any(p in fpath for p in protected) or any(x in fpath for x in PROTECTED_DIRS):
+                log_event(f"[PROTECT] 🔒 {fpath}")
+                continue
+            if any(file.endswith(ext) for ext in TRASH_EXT) or file.startswith("."):
+                try:
+                    os.remove(fpath)
+                    log_event(f"[TRASHED] 🗑️ {fpath}")
+                except Exception as e:
+                    log_event(f"[SKIP] ❌ {fpath}: {str(e)}")
+        for d in dirs:
+            dpath = os.path.join(root, d)
+            if d in PROTECTED_DIRS or dpath in protected:
+                continue
+            try:
+                os.rmdir(dpath)
+                log_event(f"[DIR] ❌ Removed empty dir: {dpath}")
+            except:
+                pass
+
+def main():
+    log_event("[SPIN-DOWN] 🔻 Starting protected compression...")
+    zip_path = os.path.join(BASE, "backups/ATI_SPINDOWN_BACKUP.zip")
+    zip_safe_data(zip_path)
+    stream_to_cloud(zip_path)
+    purge_unneeded()
+    log_event("[SPIN-DOWN] ✅ Completed safe purge.")
 
 if __name__ == "__main__":
-    zip_path = create_core_backup()
-    upload_backup_gcs(zip_path)
-    time.sleep(2)
-    purge_nonessential_files()
+    main()

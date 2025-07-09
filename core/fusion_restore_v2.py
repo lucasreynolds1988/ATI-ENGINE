@@ -1,28 +1,27 @@
+# ~/Soap/core/fusion_restore_v2.py
+
 import os
-from pymongo import MongoClient
+import json
 from core.rotor_overlay import log_event
+from core.mongo_safe_upload_v2 import fetch_chunks_from_mongo
 
-MONGO_URI = "mongodb+srv://lucasreynolds1988:Ruko0610%21%21@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev"
-RESTORE_DIR = os.path.expanduser("~/Soap/overlay")
+RESTORE_DIR = os.path.expanduser("~/Soap/")
 
-def restore_from_mongo(filename):
-    client = MongoClient(MONGO_URI)
-    db = client['fusion']
-    col = db['files']
-    docs = list(col.find({"filename": {"$regex": f"^{filename}(\\.part\\d+)?$"}}).sort("filename"))
-    if not docs:
-        log_event(f"Restore: No files found for {filename}")
-        return
-    with open(os.path.join(RESTORE_DIR, filename), 'wb') as f:
-        for doc in docs:
-            f.write(doc['data'])
-    log_event(f"Restore: {filename} restored from MongoDB in {len(docs)} part(s)")
+def restore_from_manifest(manifest):
+    for file_entry in manifest.get("files", []):
+        path = os.path.join(RESTORE_DIR, file_entry["path"].replace("~/Soap/", ""))
+        source = file_entry.get("source", "unknown")
+        sha = file_entry.get("sha256", "")
+        
+        if source == "mongo":
+            log_event(f"🔁 Restoring from MongoDB: {file_entry['path']}")
+            fetch_chunks_from_mongo(file_entry['path'], sha, RESTORE_DIR)
 
-def verify_gcs_file_integrity(file_path):
-    # Placeholder for real SHA verification logic
-    log_event(f"Verified integrity for {os.path.basename(file_path)} (stub).")
+        elif source == "gcs":
+            log_event(f"☁️ GCS restore not yet implemented for: {file_entry['path']}")
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1:
-        restore_from_mongo(sys.argv[1])
+        elif source == "github":
+            log_event(f"🔃 GitHub pull not supported in restore_from_manifest yet.")
+
+        else:
+            log_event(f"❓ Unknown source for {file_entry['path']}, skipping.")

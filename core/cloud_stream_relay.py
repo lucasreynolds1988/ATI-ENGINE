@@ -1,31 +1,37 @@
-#!/usr/bin/env python3
-import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# ~/Soap/core/cloud_stream_relay.py
 
+import os
 import subprocess
+import json
 from core.rotor_overlay import log_event
 
-# Google Cloud credentials and GCS target
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/lucasreynolds1988/Soap/secrets/gcs-creds.json"
-GCS_BUCKET = "gs://ati-oracle-engine/backups/"
+BASE = os.path.expanduser("~/Soap")
+PROTECTED_DIRS = ["core", "agents", "overlay", "eyes", "rotors", "wraps", "triggers"]
+MANIFEST_PATH = os.path.join(BASE, "overlay/manifest.json")
+
+def load_manifest_paths():
+    if not os.path.exists(MANIFEST_PATH):
+        return []
+    with open(MANIFEST_PATH, "r") as f:
+        return [os.path.expanduser(entry["path"]) for entry in json.load(f)]
 
 def stream_to_cloud(file_path):
     try:
-        subprocess.run([
-            "gsutil",
-            "-o", "GSUtil:parallel_composite_upload_threshold=150M",
-            "cp", file_path, GCS_BUCKET
-        ], check=True)
-        log_event(f"[RELAY] 🚀 Parallel upload (composite) to GCS: {file_path}")
+        cmd = [
+            "gcloud", "storage", "cp", file_path,
+            "gs://ati-cold-storage/", "--parallel-thread-count=4"
+        ]
+        subprocess.run(cmd, check=True)
+        log_event(f"[RELAY] ✅ Uploaded to GCS: {file_path}")
+
+        # Remove only if not protected
+        protected = load_manifest_paths()
+        if not any(p in file_path for p in PROTECTED_DIRS) and file_path not in protected:
+            os.remove(file_path)
+            log_event(f"[RELAY] 🧼 Deleted local copy: {file_path}")
+
     except Exception as e:
-        log_event(f"[RELAY] ❌ Upload failed: {file_path} | {e}")
+        log_event(f"[RELAY] ❌ Upload failed: {str(e)}")
 
-def execute_relay_cycle():
-    overlay = os.path.expanduser("~/Soap/overlay")
-    for fname in os.listdir(overlay):
-        fpath = os.path.join(overlay, fname)
-        if os.path.isfile(fpath):
-            stream_to_cloud(fpath)
-
-if __name__ == "__main__":
-    execute_relay_cycle()
+def execute_relay_cycle(file_path):
+    stream_to_cloud(file_path)

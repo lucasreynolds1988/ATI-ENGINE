@@ -1,27 +1,19 @@
-import os
-import json
+# ~/Soap/agents/mother_phase.py
+
 from core.rotor_overlay import log_event
 
-def mother_check(sop_path, out_path):
-    """
-    Add safety/OSHA logic. Flags missing warnings, PPE, lockout/tagout.
-    """
-    with open(sop_path) as f:
-        sop = json.load(f)
-    safety_flags = []
-    safety_section = sop.get("safety", [])
-    if not any("PPE" in str(item).upper() for item in safety_section):
-        safety_flags.append("No PPE listed in safety section.")
-    if not any("lockout" in str(item).lower() for item in safety_section):
-        safety_flags.append("No lockout/tagout statement.")
-    sop["safety_flags"] = safety_flags
-    with open(out_path, "w") as f:
-        json.dump(sop, f, indent=2)
-    log_event(f"Mother: Checked SOP, flags: {safety_flags}")
+def inject_safety(sop_data):
+    log_event("[MOTHER] 🧯 Enforcing OSHA-compliant safety formatting...")
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 2:
-        mother_check(sys.argv[1], sys.argv[2])
-    else:
-        print("Usage: python mother_phase.py <input_sop.json> <output_sop.json>")
+    safety = sop_data.get("safety", "")
+    if not all(x in safety for x in ["WHAT", "WHY", "CORRECTION"]):
+        structured_safety = "\n".join([
+            "WHAT: Identify the potential hazard involved.",
+            "WHY: Explain the risk to technician or equipment.",
+            "CORRECTION: Describe how to mitigate or prevent the hazard."
+        ])
+        sop_data["safety"] = f"{safety.strip()}\n\n{structured_safety}".strip()
+
+    sop_data["safety_validation"] = {"status": "enforced"}
+
+    return sop_data

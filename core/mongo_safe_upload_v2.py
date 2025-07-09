@@ -1,38 +1,48 @@
-#!/usr/bin/env python3
-import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# ~/Soap/core/mongo_safe_upload_v2.py
 
-from pymongo import MongoClient
+import os
+import base64
+import json
+import pymongo
 from core.rotor_overlay import log_event
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://lucasreynolds1988:Ruko0610%21%21@ai-sop-dev.nezgetk.mongodb.net/?retryWrites=true&w=majority&appName=ai-sop-dev")
-CHUNK_SIZE = 12 * 1024 * 1024  # 12MB per chunk
+MAX_SIZE_MB = 13
+BASE = os.path.expanduser("~/Soap")
+MANIFEST_PATH = os.path.join(BASE, "overlay/manifest.json")
+PROTECTED_DIRS = ["core", "agents", "overlay", "eyes", "rotors", "wraps", "triggers"]
 
-def mongo_safe_upload(file_path):
-    client = MongoClient(MONGO_URI)
-    db = client['fusion']
-    col = db['files']
+def load_manifest_paths():
+    if not os.path.exists(MANIFEST_PATH):
+        return []
+    with open(MANIFEST_PATH, "r") as f:
+        return [os.path.expanduser(entry["path"]) for entry in json.load(f)]
+
+def upload_file_to_mongo(file_path, mongo_uri, db_name, collection_name):
+    client = pymongo.MongoClient(mongo_uri)
+    db = client[db_name]
+    collection = db[collection_name]
+
     file_size = os.path.getsize(file_path)
-    basename = os.path.basename(file_path)
+    if file_size > MAX_SIZE_MB * 1024 * 1024:
+        log_event(f"[MONGO] ⚠️ Skipped too large: {file_path}")
+        return
 
-    if file_size <= CHUNK_SIZE:
-        with open(file_path, 'rb') as f:
-            content = f.read()
-        col.insert_one({"filename": basename, "data": content})
-        log_event(f"MongoDB: Uploaded {basename} ({file_size} bytes)")
-    else:
-        with open(file_path, 'rb') as f:
-            idx = 0
-            while True:
-                chunk = f.read(CHUNK_SIZE)
-                if not chunk:
-                    break
-                partname = f"{basename}.part{idx:03d}"
-                col.insert_one({"filename": partname, "data": chunk})
-                log_event(f"MongoDB: Uploaded chunk {partname} ({len(chunk)} bytes)")
-                idx += 1
-        log_event(f"MongoDB: Finished uploading {basename} in {idx} chunks")
+    with open(file_path, "rb") as f:
+        encoded = base64.b64encode(f.read()).decode("utf-8")
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        mongo_safe_upload(sys.argv[1])
+    record = {
+        "filename": os.path.basename(file_path),
+        "data": encoded
+    }
+
+    try:
+        collection.insert_one(record)
+        log_event(f"[MONGO] ✅ Uploaded: {file_path}")
+
+        protected = load_manifest_paths()
+        if not any(p in file_path for p in PROTECTED_DIRS) and file_path not in protected:
+            os.remove(file_path)
+            log_event(f"[MONGO] 🧼 Deleted local copy: {file_path}")
+
+    except Exception as e:
+        log_event(f"[MONGO] ❌ Upload failed: {str(e)}")
